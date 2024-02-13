@@ -1,0 +1,1100 @@
+[{
+  "_id": {
+    "$oid": "65c4f44a021c101b628ddf25"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1080733657,
+      "collectionId": 1667414099,
+      "trackId": 1667414102,
+      "artistName": "Lil Yachty",
+      "collectionName": "Let’s Start Here.",
+      "trackName": "the BLACK seminole.",
+      "collectionCensoredName": "Let’s Start Here.",
+      "trackCensoredName": "the BLACK seminole.",
+      "artistViewUrl": "https://music.apple.com/us/artist/lil-yachty/1080733657?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/the-black-seminole/1667414099?i=1667414102&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/the-black-seminole/1667414099?i=1667414102&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/11/2b/ad/112baded-8fb1-cc00-a4a4-97e144b5d348/mzaf_17021972015193112885.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/42/e0/ea42e096-991f-eff5-ae81-b67bd9fdd1c4/22UM1IM13152.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/42/e0/ea42e096-991f-eff5-ae81-b67bd9fdd1c4/22UM1IM13152.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/42/e0/ea42e096-991f-eff5-ae81-b67bd9fdd1c4/22UM1IM13152.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 10.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2023-01-27T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 1,
+      "trackTimeMillis": 411912,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/ea/42/e0/ea42e096-991f-eff5-ae81-b67bd9fdd1c4/22UM1IM13152.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f606021c101b628ddf27"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1237012992,
+      "collectionId": 1587804188,
+      "trackId": 1587804191,
+      "artistName": "Don Toliver",
+      "collectionName": "Life of a DON",
+      "trackName": "XSCAPE",
+      "collectionCensoredName": "Life of a DON",
+      "trackCensoredName": "XSCAPE",
+      "artistViewUrl": "https://music.apple.com/us/artist/don-toliver/1237012992?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/xscape/1587804188?i=1587804191&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/xscape/1587804188?i=1587804191&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/71/91/8a/71918ac6-8577-045b-0bd9-305c967caf48/mzaf_16015020654643772936.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fc/ca/a0/fccaa0f7-0c60-0f80-ab06-5b3c7e23e240/075679767868.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fc/ca/a0/fccaa0f7-0c60-0f80-ab06-5b3c7e23e240/075679767868.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fc/ca/a0/fccaa0f7-0c60-0f80-ab06-5b3c7e23e240/075679767868.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2021-10-08T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 16,
+      "trackNumber": 1,
+      "trackTimeMillis": 156248,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video126/v4/0f/ee/ac/0feeac4a-7b43-49ab-dce6-cfb90cb98557/Jobaad6102f-71d8-49a2-abbe-d2a5a406e7e8-125010937-PreviewImage_preview_image_nonvideo_sdr-Time1634595252596.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f691021c101b628ddf29"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 487574169,
+      "collectionId": 1006913665,
+      "trackId": 1006913664,
+      "artistName": "Travis Scott",
+      "collectionName": "Rodeo",
+      "trackName": "Nightcrawler (feat. Swae Lee & Chief Keef)",
+      "collectionCensoredName": "Rodeo",
+      "trackCensoredName": "Nightcrawler (feat. Swae Lee & Chief Keef)",
+      "artistViewUrl": "https://music.apple.com/us/artist/travis-scott/487574169?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/nightcrawler-feat-swae-lee-chief-keef/1006913665?i=1006913664&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/nightcrawler-feat-swae-lee-chief-keef/1006913665?i=1006913664&uo=4",
+      "previewUrl": "https://music.apple.com/us/album/nightcrawler-feat-swae-lee-chief-keef/1456176981?i=1456177232",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/07/8d/52/078d5204-7dd3-f218-f2d7-7c6d36eece4e/source/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/07/8d/52/078d5204-7dd3-f218-f2d7-7c6d36eece4e/source/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/07/8d/52/078d5204-7dd3-f218-f2d7-7c6d36eece4e/source/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2015-09-04T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 16,
+      "trackNumber": 14,
+      "trackTimeMillis": 275827,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/75/8e/5f/758e5fae-251f-6330-c663-5be28960f0d3/886445454987.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f82d021c101b628ddf2b"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 442122051,
+      "collectionId": 1146195596,
+      "trackId": 1146195714,
+      "artistName": "Frank Ocean",
+      "collectionName": "Blonde",
+      "trackName": "Pink + White",
+      "collectionCensoredName": "Blonde",
+      "trackCensoredName": "Pink + White",
+      "artistViewUrl": "https://music.apple.com/us/artist/frank-ocean/442122051?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/pink-white/1146195596?i=1146195714&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/pink-white/1146195596?i=1146195714&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f6/93/77/f69377c1-cfa9-57f2-362a-618c3a37f957/mzaf_863186858324274998.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2016-08-20T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 17,
+      "trackNumber": 3,
+      "trackTimeMillis": 184516,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Pop",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bb/45/68/bb4568f3-68cd-619d-fbcb-4e179916545d/BlondCover-Final.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f8a8021c101b628ddf2d"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1104179033,
+      "collectionId": 1521345121,
+      "trackId": 1521345538,
+      "artistName": "Dominic Fike",
+      "collectionName": "What Could Possibly Go Wrong",
+      "trackName": "Politics & Violence",
+      "collectionCensoredName": "What Could Possibly Go Wrong",
+      "trackCensoredName": "Politics & Violence",
+      "artistViewUrl": "https://music.apple.com/us/artist/dominic-fike/1104179033?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/politics-violence/1521345121?i=1521345538&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/politics-violence/1521345121?i=1521345538&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/91/b8/b0/91b8b0be-e6f7-7202-4eda-7c2cb58e523d/mzaf_1835191830297899848.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/a5/2c/6c/a52c6c69-64cb-15a3-a81d-e30e3720f70b/886448586340.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/a5/2c/6c/a52c6c69-64cb-15a3-a81d-e30e3720f70b/886448586340.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/a5/2c/6c/a52c6c69-64cb-15a3-a81d-e30e3720f70b/886448586340.jpg/100x100bb.jpg",
+      "collectionPrice": 10.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2020-07-09T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 11,
+      "trackTimeMillis": 197847,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/a5/2c/6c/a52c6c69-64cb-15a3-a81d-e30e3720f70b/886448586340.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f90d021c101b628ddf2f"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 2715720,
+      "collectionId": 1440742903,
+      "trackId": 1440742916,
+      "artistName": "Kanye West",
+      "collectionName": "My Beautiful Dark Twisted Fantasy",
+      "trackName": "Devil In a New Dress (feat. Rick Ross)",
+      "collectionCensoredName": "My Beautiful Dark Twisted Fantasy",
+      "trackCensoredName": "Devil In a New Dress (feat. Rick Ross)",
+      "artistViewUrl": "https://music.apple.com/us/artist/kanye-west/2715720?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/devil-in-a-new-dress-feat-rick-ross/1440742903?i=1440742916&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/devil-in-a-new-dress-feat-rick-ross/1440742903?i=1440742916&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6a/d9/09/6ad90912-09c0-524a-b38c-9f6e98f5fa6e/mzaf_6138948305743329811.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0a/0b/31/0a0b31cc-077c-31bf-e7fe-612191774948/10UMGIM30072.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0a/0b/31/0a0b31cc-077c-31bf-e7fe-612191774948/10UMGIM30072.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0a/0b/31/0a0b31cc-077c-31bf-e7fe-612191774948/10UMGIM30072.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2010-01-01T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 2,
+      "discNumber": 1,
+      "trackCount": 13,
+      "trackNumber": 8,
+      "trackTimeMillis": 351947,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0a/0b/31/0a0b31cc-077c-31bf-e7fe-612191774948/10UMGIM30072.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f969021c101b628ddf31"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 420368335,
+      "collectionId": 1463409338,
+      "trackId": 1463409601,
+      "artistName": "Tyler, The Creator",
+      "collectionName": "IGOR",
+      "trackName": "NEW MAGIC WAND",
+      "collectionCensoredName": "IGOR",
+      "trackCensoredName": "NEW MAGIC WAND",
+      "artistViewUrl": "https://music.apple.com/us/artist/tyler-the-creator/420368335?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/new-magic-wand/1463409338?i=1463409601&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/new-magic-wand/1463409338?i=1463409601&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/df/4b/56/df4b5615-4208-123d-046a-b0c18c6c6237/mzaf_14539926456374492598.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0c/06/05/0c060581-6242-6a2a-a677-20170f2cf8da/886447710180.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0c/06/05/0c060581-6242-6a2a-a677-20170f2cf8da/886447710180.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0c/06/05/0c060581-6242-6a2a-a677-20170f2cf8da/886447710180.jpg/100x100bb.jpg",
+      "collectionPrice": 10.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2019-05-16T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 12,
+      "trackNumber": 6,
+      "trackTimeMillis": 195327,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0c/06/05/0c060581-6242-6a2a-a677-20170f2cf8da/886447710180.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f9ae021c101b628ddf33"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 273058501,
+      "collectionId": 1472484829,
+      "trackId": 1472484932,
+      "artistName": "Kid Cudi",
+      "collectionName": "Man on the Moon: The End of Day (Deluxe)",
+      "trackName": "Sky Might Fall",
+      "collectionCensoredName": "Man on the Moon: The End of Day (Deluxe)",
+      "trackCensoredName": "Sky Might Fall",
+      "artistViewUrl": "https://music.apple.com/us/artist/kid-cudi/273058501?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/sky-might-fall/1472484829?i=1472484932&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/sky-might-fall/1472484829?i=1472484932&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/92/d9/12/92d912e5-eb50-459e-cfb0-a20ca46551bf/mzaf_6381015722625700984.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/f5/50/ddf55058-b181-4099-bc12-4862b800cf96/09UMGIM33419.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/f5/50/ddf55058-b181-4099-bc12-4862b800cf96/09UMGIM33419.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/f5/50/ddf55058-b181-4099-bc12-4862b800cf96/09UMGIM33419.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 11.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2009-09-15T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 18,
+      "trackNumber": 8,
+      "trackTimeMillis": 220907,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/dd/f5/50/ddf55058-b181-4099-bc12-4862b800cf96/09UMGIM33419.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4f9f8021c101b628ddf35"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 5468295,
+      "collectionId": 697194953,
+      "trackId": 697195787,
+      "artistName": "Daft Punk",
+      "collectionName": "Discovery",
+      "trackName": "Harder Better Faster Stronger",
+      "collectionCensoredName": "Discovery",
+      "trackCensoredName": "Harder Better Faster Stronger",
+      "artistViewUrl": "https://music.apple.com/us/artist/daft-punk/5468295?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/harder-better-faster-stronger/697194953?i=697195787&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/harder-better-faster-stronger/697194953?i=697195787&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/35/74/45/35744546-b9ee-cae8-7dc5-745f7007be32/mzaf_8180458273804607770.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/9e/f3/19/9ef31946-26de-0a95-c771-30457c5c01ec/dj.huxlnxyy.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/9e/f3/19/9ef31946-26de-0a95-c771-30457c5c01ec/dj.huxlnxyy.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/9e/f3/19/9ef31946-26de-0a95-c771-30457c5c01ec/dj.huxlnxyy.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2001-02-26T08:00:00Z",
+      "collectionExplicitness": "notExplicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 4,
+      "trackTimeMillis": 224693,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Dance",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/9e/f3/19/9ef31946-26de-0a95-c771-30457c5c01ec/dj.huxlnxyy.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fa4e021c101b628ddf37"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1210275020,
+      "collectionId": 1631909576,
+      "trackId": 1631909589,
+      "artistName": "Steve Lacy",
+      "collectionName": "Gemini Rights",
+      "trackName": "Sunshine (feat. Fousheé)",
+      "collectionCensoredName": "Gemini Rights",
+      "trackCensoredName": "Sunshine (feat. Fousheé)",
+      "artistViewUrl": "https://music.apple.com/us/artist/steve-lacy/1210275020?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/sunshine-feat-foushe%C3%A9/1631909576?i=1631909589&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/sunshine-feat-foushe%C3%A9/1631909576?i=1631909589&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/27/e6/81/27e681f6-cf3b-e19a-fb6b-f0f977865c73/mzaf_6445521677838015072.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/2a/cb/e3/2acbe3f1-7a65-e2c1-8f12-ba04c6ee05dc/196589099631.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/2a/cb/e3/2acbe3f1-7a65-e2c1-8f12-ba04c6ee05dc/196589099631.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/2a/cb/e3/2acbe3f1-7a65-e2c1-8f12-ba04c6ee05dc/196589099631.jpg/100x100bb.jpg",
+      "collectionPrice": 7.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2022-07-15T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 10,
+      "trackNumber": 9,
+      "trackTimeMillis": 293429,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video122/v4/73/85/d3/7385d370-8538-3c59-a770-8f62275d196d/Job787b57bb-cff5-4945-a9c5-c0b9b4ef626a-134046936-PreviewImage_preview_image_nonvideo_sdr-Time1657833201556.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fa96021c101b628ddf39"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 420368335,
+      "collectionId": 1254572564,
+      "trackId": 1254572582,
+      "artistName": "Tyler, The Creator",
+      "collectionName": "Flower Boy",
+      "trackName": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+      "collectionCensoredName": "Flower Boy",
+      "trackCensoredName": "911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)",
+      "artistViewUrl": "https://music.apple.com/us/artist/tyler-the-creator/420368335?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/911-mr-lonely-feat-frank-ocean-steve-lacy/1254572564?i=1254572582&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/911-mr-lonely-feat-frank-ocean-steve-lacy/1254572564?i=1254572582&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/08/6b/f8/086bf882-0202-47fd-1cb5-65d41f176bf7/mzaf_10605939892375968364.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fd/fd/8c/fdfd8c26-b8f9-4768-41d3-b24773250c65/886446605814.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fd/fd/8c/fdfd8c26-b8f9-4768-41d3-b24773250c65/886446605814.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fd/fd/8c/fdfd8c26-b8f9-4768-41d3-b24773250c65/886446605814.jpg/100x100bb.jpg",
+      "collectionPrice": 11.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2017-07-06T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 10,
+      "trackTimeMillis": 255651,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fd/fd/8c/fdfd8c26-b8f9-4768-41d3-b24773250c65/886446605814.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fae3021c101b628ddf3b"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 982372505,
+      "collectionId": 1546163603,
+      "trackId": 1546163992,
+      "artistName": "Playboi Carti",
+      "collectionName": "Whole Lotta Red",
+      "trackName": "Over",
+      "collectionCensoredName": "Whole Lotta Red",
+      "trackCensoredName": "Over",
+      "artistViewUrl": "https://music.apple.com/us/artist/playboi-carti/982372505?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/over/1546163603?i=1546163992&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/over/1546163603?i=1546163992&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/15/28/22/15282238-68eb-b93c-c47d-64b94256756e/mzaf_5395282907936344768.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ba/1e/05/ba1e058e-5637-e53c-563c-f5b9a1a6c344/20UM1IM18331.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ba/1e/05/ba1e058e-5637-e53c-563c-f5b9a1a6c344/20UM1IM18331.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ba/1e/05/ba1e058e-5637-e53c-563c-f5b9a1a6c344/20UM1IM18331.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 10.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2020-12-25T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 24,
+      "trackNumber": 20,
+      "trackTimeMillis": 166234,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video124/v4/bc/b6/6b/bcb66bf1-fec2-986e-84d6-84a7dfdb86f0/Job0f4be1b9-a6e6-4679-a3f7-4b3e8c673a26-110364727-PreviewImage_preview_image_nonvideo_sdr-Time1616599248172.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fb35021c101b628ddf3d"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1413572916,
+      "collectionId": 1584419112,
+      "trackId": 1584419119,
+      "artistName": "Baby Keem",
+      "collectionName": "The Melodic Blue",
+      "trackName": "issues",
+      "collectionCensoredName": "The Melodic Blue",
+      "trackCensoredName": "issues",
+      "artistViewUrl": "https://music.apple.com/us/artist/baby-keem/1413572916?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/issues/1584419112?i=1584419119&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/issues/1584419112?i=1584419119&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/2d/47/96/2d479654-fd5a-cbcf-24c9-74a4b8d45673/mzaf_16571046679322715517.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d5/2f/51/d52f518b-f8bb-6aa1-8f9a-890fb9721322/886449551941.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d5/2f/51/d52f518b-f8bb-6aa1-8f9a-890fb9721322/886449551941.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d5/2f/51/d52f518b-f8bb-6aa1-8f9a-890fb9721322/886449551941.jpg/100x100bb.jpg",
+      "collectionPrice": 12.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2021-09-10T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 16,
+      "trackNumber": 5,
+      "trackTimeMillis": 219813,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://i.discogs.com/t0clho9I31nxRFGTV8T0REnQoIVxwq7u6uDvWLOXobg/rs:fit/g:sm/q:90/h:600/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0ODMx/OTE3LTE2NjgwODY3/OTgtODgxOC5qcGVn.jpeg"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fb9b021c101b628ddf3f"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 442122051,
+      "collectionId": 1440765580,
+      "trackId": 1440766589,
+      "artistName": "Frank Ocean",
+      "collectionName": "channel ORANGE",
+      "trackName": "Pyramids",
+      "collectionCensoredName": "channel ORANGE",
+      "trackCensoredName": "Pyramids",
+      "artistViewUrl": "https://music.apple.com/us/artist/frank-ocean/442122051?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/pyramids/1440765580?i=1440766589&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/pyramids/1440765580?i=1440766589&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/63/b0/d0/63b0d06f-f47c-3f84-4e06-5605a42023b8/mzaf_18261820815069159597.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/f8/63/04f863fc-2852-604f-c910-a97ac069506b/12UMGIM40339.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/f8/63/04f863fc-2852-604f-c910-a97ac069506b/12UMGIM40339.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/f8/63/04f863fc-2852-604f-c910-a97ac069506b/12UMGIM40339.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2012-06-08T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 17,
+      "trackNumber": 10,
+      "trackTimeMillis": 592920,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Pop",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/04/f8/63/04f863fc-2852-604f-c910-a97ac069506b/12UMGIM40339.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fbe3021c101b628ddf41"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1352195584,
+      "collectionId": 1705102318,
+      "trackId": 1705102863,
+      "artistName": "Teezo Touchdown",
+      "collectionName": "How Do You Sleep At Night?",
+      "trackName": "Impossible",
+      "collectionCensoredName": "How Do You Sleep At Night?",
+      "trackCensoredName": "Impossible",
+      "artistViewUrl": "https://music.apple.com/us/artist/teezo-touchdown/1352195584?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/impossible/1705102318?i=1705102863&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/impossible/1705102318?i=1705102863&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/13/e7/2c/13e72c53-5a31-eebf-3ee4-27d465fa72c4/mzaf_9575280474447362932.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/e3/56/1fe356ff-d5d2-a3c4-37c3-7b0a15e6b5c2/196589967268.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/e3/56/1fe356ff-d5d2-a3c4-37c3-7b0a15e6b5c2/196589967268.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1f/e3/56/1fe356ff-d5d2-a3c4-37c3-7b0a15e6b5c2/196589967268.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2023-09-08T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 5,
+      "trackTimeMillis": 166627,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video126/v4/4c/37/7e/4c377eb8-ec2f-8276-9a8c-ed0890d59823/Jobabdbc7ca-a3f4-4cef-84a0-4a55e7f90646-155408212-PreviewImage_Preview_Image_Intermediate_nonvideo_sdr_297783336_1550607541-Time1694192035082.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fc3a021c101b628ddf43"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1085415083,
+      "collectionId": 1531816414,
+      "trackId": 1531816569,
+      "artistName": "Jean Dawson & A$AP Rocky",
+      "collectionName": "Pixel Bath",
+      "trackName": "Triple Double",
+      "collectionCensoredName": "Pixel Bath",
+      "trackCensoredName": "Triple Double",
+      "collectionArtistName": "Jean Dawson",
+      "artistViewUrl": "https://music.apple.com/us/artist/jean-dawson/1085415083?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/triple-double/1531816414?i=1531816569&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/triple-double/1531816414?i=1531816569&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/3a/b3/2a/3ab32a45-92d5-bd92-11cb-c2411d9a8ba7/mzaf_16146526147361542018.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0f/81/72/0f81721d-7016-e051-5a3e-cf200a49b33f/766871784141_Cover.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0f/81/72/0f81721d-7016-e051-5a3e-cf200a49b33f/766871784141_Cover.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0f/81/72/0f81721d-7016-e051-5a3e-cf200a49b33f/766871784141_Cover.jpg/100x100bb.jpg",
+      "collectionPrice": 10.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2020-10-23T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 13,
+      "trackNumber": 2,
+      "trackTimeMillis": 222622,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/0f/81/72/0f81721d-7016-e051-5a3e-cf200a49b33f/766871784141_Cover.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fcc5021c101b628ddf45"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 2715720,
+      "collectionId": 1451901307,
+      "trackId": 1451903287,
+      "artistName": "Kanye West",
+      "collectionName": "Graduation",
+      "trackName": "Can't Tell Me Nothing",
+      "collectionCensoredName": "Graduation",
+      "trackCensoredName": "Can't Tell Me Nothing",
+      "artistViewUrl": "https://music.apple.com/us/artist/kanye-west/2715720?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/cant-tell-me-nothing/1451901307?i=1451903287&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/cant-tell-me-nothing/1451901307?i=1451903287&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/56/49/27/5649275f-84c9-095a-decd-db1d923fde44/mzaf_5843676828916202438.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/db/2c/2fdb2c9d-171c-c6dc-57ee-4bae2b4bb11a/07UMGIM12671.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/db/2c/2fdb2c9d-171c-c6dc-57ee-4bae2b4bb11a/07UMGIM12671.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/db/2c/2fdb2c9d-171c-c6dc-57ee-4bae2b4bb11a/07UMGIM12671.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2007-05-15T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 6,
+      "trackTimeMillis": 271600,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://m.media-amazon.com/images/I/71pxGj4RoVS._AC_UF894,1000_QL80_.jpg"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fd66021c101b628ddf47"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 466842536,
+      "collectionId": 1451062686,
+      "trackId": 1451062959,
+      "artistName": "Childish Gambino",
+      "collectionName": "Because the Internet",
+      "trackName": "3005",
+      "collectionCensoredName": "Because the Internet",
+      "trackCensoredName": "3005",
+      "artistViewUrl": "https://music.apple.com/us/artist/childish-gambino/466842536?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/3005/1451062686?i=1451062959&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/3005/1451062686?i=1451062959&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/22/58/24/225824c4-7f15-2e16-16e5-ac2a1fc5f57e/mzaf_5131830758535565654.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/28/a0/7a/28a07a5e-f81b-b2ca-d87a-49541f541e14/44003173460.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/28/a0/7a/28a07a5e-f81b-b2ca-d87a-49541f541e14/44003173460.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/28/a0/7a/28a07a5e-f81b-b2ca-d87a-49541f541e14/44003173460.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2013-10-22T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 19,
+      "trackNumber": 9,
+      "trackTimeMillis": 234215,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/28/a0/7a/28a07a5e-f81b-b2ca-d87a-49541f541e14/44003173460.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fda5021c101b628ddf49"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1187613837,
+      "collectionId": 1465125166,
+      "trackId": 1465125468,
+      "artistName": "Clairo",
+      "collectionName": "Immunity",
+      "trackName": "Softly",
+      "collectionCensoredName": "Immunity",
+      "trackCensoredName": "Softly",
+      "artistViewUrl": "https://music.apple.com/us/artist/clairo/1187613837?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/softly/1465125166?i=1465125468&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/softly/1465125166?i=1465125468&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9b/20/d4/9b20d43b-f3d2-1709-67d7-ec5e9d61ee91/mzaf_937037703963096492.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3c/7d/ec/3c7dec29-623e-1915-c111-03cfccc4d136/19UMGIM43559.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3c/7d/ec/3c7dec29-623e-1915-c111-03cfccc4d136/19UMGIM43559.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3c/7d/ec/3c7dec29-623e-1915-c111-03cfccc4d136/19UMGIM43559.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2019-08-02T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 11,
+      "trackNumber": 6,
+      "trackTimeMillis": 185307,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/3c/7d/ec/3c7dec29-623e-1915-c111-03cfccc4d136/19UMGIM43559.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fdde021c101b628ddf4b"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1396520066,
+      "collectionId": 1396710872,
+      "trackId": 1396711559,
+      "artistName": "KIDS SEE GHOSTS",
+      "collectionName": "KIDS SEE GHOSTS",
+      "trackName": "Reborn",
+      "collectionCensoredName": "KIDS SEE GHOSTS",
+      "trackCensoredName": "Reborn",
+      "collectionArtistName": "KIDS SEE GHOSTS, Kanye West & Kid Cudi",
+      "artistViewUrl": "https://music.apple.com/us/artist/kids-see-ghosts/1396520066?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/reborn/1396710872?i=1396711559&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/reborn/1396710872?i=1396711559&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4d/d7/27/4dd72763-9062-16a3-107a-087272e2de8c/mzaf_4340288324069793012.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2c/bc/1c/2cbc1cca-7881-2605-875c-536f553cc79a/00602567803881.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2c/bc/1c/2cbc1cca-7881-2605-875c-536f553cc79a/00602567803881.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2c/bc/1c/2cbc1cca-7881-2605-875c-536f553cc79a/00602567803881.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 6.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-06-08T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 7,
+      "trackNumber": 5,
+      "trackTimeMillis": 324674,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/2c/bc/1c/2cbc1cca-7881-2605-875c-536f553cc79a/00602567803881.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4fe51021c101b628ddf4d"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 280708839,
+      "collectionId": 1409248063,
+      "trackId": 1409248076,
+      "artistName": "Jaden",
+      "collectionName": "SYRE: THE ELECTRIC ALBUM - EP",
+      "trackName": "Lost Boy",
+      "collectionCensoredName": "SYRE: THE ELECTRIC ALBUM - EP",
+      "trackCensoredName": "Lost Boy (Electric)",
+      "artistViewUrl": "https://music.apple.com/us/artist/jaden/280708839?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/lost-boy-electric/1409248063?i=1409248076&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/lost-boy-electric/1409248063?i=1409248076&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5d/13/97/5d139796-2d99-b6a7-0d54-5158cf2c3ae2/mzaf_17414368805856894881.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ae/66/7d/ae667de2-9099-633c-f6d5-14c4082d5f9d/18UMGIM41759.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ae/66/7d/ae667de2-9099-633c-f6d5-14c4082d5f9d/18UMGIM41759.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ae/66/7d/ae667de2-9099-633c-f6d5-14c4082d5f9d/18UMGIM41759.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 5.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-07-12T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 5,
+      "trackNumber": 3,
+      "trackTimeMillis": 294243,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ae/66/7d/ae667de2-9099-633c-f6d5-14c4082d5f9d/18UMGIM41759.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c4feac021c101b628ddf4f"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 290242959,
+      "collectionId": 1440838039,
+      "trackId": 1440838488,
+      "artistName": "Tame Impala",
+      "collectionName": "Currents",
+      "trackName": "The Less I Know the Better",
+      "collectionCensoredName": "Currents",
+      "trackCensoredName": "The Less I Know the Better",
+      "artistViewUrl": "https://music.apple.com/us/artist/tame-impala/290242959?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/the-less-i-know-the-better/1440838039?i=1440838488&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/the-less-i-know-the-better/1440838039?i=1440838488&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/83/5a/2b/835a2b42-cfad-2bd0-117b-8150f6f0cb30/mzaf_733122625819472017.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/2e/b4/a82eb490-f30a-a321-461a-0383c88fec95/15UMGIM23316.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 7.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2015-07-17T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 13,
+      "trackNumber": 7,
+      "trackTimeMillis": 218880,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video116/v4/b8/7f/5d/b87f5dc2-d047-dd46-7aa5-8c65605f23f6/Job74b4a5ff-5be8-4c56-a1a8-3958c5885e8d-128370359-PreviewImage_preview_image_nonvideo_sdr-Time1643827412445.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65c50a92021c101b628ddf51"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 479756766,
+      "collectionId": 1499378108,
+      "trackId": 1499378134,
+      "artistName": "The Weeknd",
+      "collectionName": "After Hours",
+      "trackName": "Hardest To Love",
+      "collectionCensoredName": "After Hours",
+      "trackCensoredName": "Hardest To Love",
+      "artistViewUrl": "https://music.apple.com/us/artist/the-weeknd/479756766?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/hardest-to-love/1499378108?i=1499378134&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/hardest-to-love/1499378108?i=1499378134&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/e4/26/8b/e4268b86-b9e8-568d-7dd1-a62a7e336714/mzaf_15087978564533651317.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 11.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2020-03-20T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 3,
+      "trackTimeMillis": 211402,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video115/v4/f3/38/fa/f338fa6e-e347-bdf3-2ac3-6ed3401bfa25/Job299f5cf8-54d0-4d72-874c-3b5d5ee7d593-114961634-PreviewImage_preview_image_nonvideo_sdr-Time1623163436305.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65cbc7d517458e2629d5b6eb"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 273058501,
+      "collectionId": 1440866929,
+      "trackId": 1440867229,
+      "artistName": "Kid Cudi",
+      "collectionName": "Passion, Pain & Demon Slayin'",
+      "trackName": "By Design (feat. Andre Benjamin)",
+      "collectionCensoredName": "Passion, Pain & Demon Slayin'",
+      "trackCensoredName": "By Design (feat. Andre Benjamin)",
+      "artistViewUrl": "https://music.apple.com/us/artist/kid-cudi/273058501?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/by-design-feat-andre-benjamin/1440866929?i=1440867229&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/by-design-feat-andre-benjamin/1440866929?i=1440867229&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/df/25/af/df25af0d-156a-e08d-5df2-bcb375a60d3f/mzaf_1988685152103200364.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7b/ff/34/7bff3453-053a-3636-f76f-c9298807d3ca/16UMGIM77681.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7b/ff/34/7bff3453-053a-3636-f76f-c9298807d3ca/16UMGIM77681.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7b/ff/34/7bff3453-053a-3636-f76f-c9298807d3ca/16UMGIM77681.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2016-12-16T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 19,
+      "trackNumber": 4,
+      "trackTimeMillis": 257058,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/7b/ff/34/7bff3453-053a-3636-f76f-c9298807d3ca/16UMGIM77681.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-13T19:51:12.873Z"
+  }
+}]
