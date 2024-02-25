@@ -1,0 +1,10 @@
+to find and get json to add to mongodb, use:
+https://itunes.apple.com/search?term=songName&entity=musicTrack&limit=1
+
+to view all the mongodb data, use:
+http://localhost:5050/api/v1/bsm25/music
+
+you can also filter with a track name and/or artist name:
+http://localhost:5050/api/v1/bsm25/music?trackName=song
+http://localhost:5050/api/v1/bsm25/music?artistName=artist
+http://localhost:5050/api/v1/bsm25/music?trackName=song&artistName=artist
