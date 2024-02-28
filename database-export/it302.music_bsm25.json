@@ -1824,4 +1824,461 @@
   "lastUpdated": {
     "$date": "2024-02-25T06:04:57.120Z"
   }
+},
+{
+  "_id": {
+    "$oid": "65de5d964580de302dbf1461"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 479756766,
+      "collectionId": 1363309866,
+      "trackId": 1363310498,
+      "artistName": "The Weeknd & Gesaffelstein",
+      "collectionName": "My Dear Melancholy,",
+      "trackName": "I Was Never There",
+      "collectionCensoredName": "My Dear Melancholy,",
+      "trackCensoredName": "I Was Never There",
+      "collectionArtistName": "The Weeknd",
+      "artistViewUrl": "https://music.apple.com/us/artist/the-weeknd/479756766?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/i-was-never-there/1363309866?i=1363310498&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/i-was-never-there/1363309866?i=1363310498&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/d3/a3/c6/d3a3c6ec-3de0-54d9-8b97-c53e89858fd0/mzaf_17306779634950077535.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2a/aa/b4/2aaab42a-a4cb-a600-4a25-d78961495960/18UMGIM17204.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2a/aa/b4/2aaab42a-a4cb-a600-4a25-d78961495960/18UMGIM17204.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2a/aa/b4/2aaab42a-a4cb-a600-4a25-d78961495960/18UMGIM17204.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 5.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-03-30T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 6,
+      "trackNumber": 4,
+      "trackTimeMillis": 241070,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2a/aa/b4/2aaab42a-a4cb-a600-4a25-d78961495960/18UMGIM17204.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de5e014580de302dbf1463"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 466842536,
+      "collectionId": 1410352782,
+      "trackId": 1410352803,
+      "artistName": "Childish Gambino",
+      "collectionName": "Summer Pack",
+      "trackName": "Feels Like Summer",
+      "collectionCensoredName": "Summer Pack",
+      "trackCensoredName": "Feels Like Summer",
+      "artistViewUrl": "https://music.apple.com/us/artist/childish-gambino/466842536?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/feels-like-summer/1410352782?i=1410352803&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/feels-like-summer/1410352782?i=1410352803&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e6/d5/49/e6d54997-3e20-f09c-661f-c767788d9c6e/mzaf_8065028234708302890.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6b/26/22/6b262212-325b-4971-2c47-51ae443aa78d/886447212882.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6b/26/22/6b262212-325b-4971-2c47-51ae443aa78d/886447212882.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/6b/26/22/6b262212-325b-4971-2c47-51ae443aa78d/886447212882.jpg/100x100bb.jpg",
+      "collectionPrice": 1.29,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-07-11T07:00:00Z",
+      "collectionExplicitness": "notExplicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 297404,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "isStreamable": false,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e5/bc/65/e5bc6574-1f2a-24a7-6fe0-d17fd32b9869/886447214268.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de5ecb4580de302dbf1465"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 566639154,
+      "collectionId": 1440887126,
+      "trackId": 1440887464,
+      "artistName": "Vince Staples",
+      "collectionName": "Big Fish Theory",
+      "trackName": "BagBak",
+      "collectionCensoredName": "Big Fish Theory",
+      "trackCensoredName": "BagBak",
+      "artistViewUrl": "https://music.apple.com/us/artist/vince-staples/566639154?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/bagbak/1440887126?i=1440887464&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/bagbak/1440887126?i=1440887464&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/bb/2b/d5/bb2bd54c-c563-550b-e04b-ec901525e235/mzaf_15246446691531060475.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c8/4a/ad/c84aad46-7100-74b6-cdb5-084b79d3af18/17UM1IM00778.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c8/4a/ad/c84aad46-7100-74b6-cdb5-084b79d3af18/17UM1IM00778.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c8/4a/ad/c84aad46-7100-74b6-cdb5-084b79d3af18/17UM1IM00778.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2017-02-03T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 12,
+      "trackNumber": 11,
+      "trackTimeMillis": 160507,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c8/4a/ad/c84aad46-7100-74b6-cdb5-084b79d3af18/17UM1IM00778.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de6b834580de302dbf1469"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 605800394,
+      "collectionId": 1657869377,
+      "trackId": 1657869466,
+      "artistName": "SZA",
+      "collectionName": "SOS",
+      "trackName": "Blind",
+      "collectionCensoredName": "SOS",
+      "trackCensoredName": "Blind",
+      "artistViewUrl": "https://music.apple.com/us/artist/sza/605800394?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/blind/1657869377?i=1657869466&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/blind/1657869377?i=1657869466&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/23/e8/a1/23e8a1e7-d1a3-902b-73ac-e8d214398f68/mzaf_2366074488832767608.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/3b/a9/bd3ba9fb-9609-144f-bcfe-ead67b5f6ab3/196589564931.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/3b/a9/bd3ba9fb-9609-144f-bcfe-ead67b5f6ab3/196589564931.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bd/3b/a9/bd3ba9fb-9609-144f-bcfe-ead67b5f6ab3/196589564931.jpg/100x100bb.jpg",
+      "collectionPrice": 14.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2022-12-09T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 23,
+      "trackNumber": 6,
+      "trackTimeMillis": 150720,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video112/v4/74/13/a5/7413a504-1957-284b-232e-280d14956249/Job8837ae44-3b0c-4b03-ac79-f450e1619e70-140350222-PreviewImage_preview_image_nonvideo_sdr-Time1670432134632.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de6bc74580de302dbf146b"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 605800394,
+      "collectionId": 1239976329,
+      "trackId": 1239976603,
+      "artistName": "SZA",
+      "collectionName": "Ctrl",
+      "trackName": "Love Galore (feat. Travis Scott)",
+      "collectionCensoredName": "Ctrl",
+      "trackCensoredName": "Love Galore (feat. Travis Scott)",
+      "artistViewUrl": "https://music.apple.com/us/artist/sza/605800394?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/love-galore-feat-travis-scott/1239976329?i=1239976603&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/love-galore-feat-travis-scott/1239976329?i=1239976603&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/36/d4/52/36d45249-57c8-a167-2789-b32c62b37796/mzaf_11275712290239795150.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9c/ba/98/9cba98ea-e091-1058-fb14-4631085f8066/886446548432.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9c/ba/98/9cba98ea-e091-1058-fb14-4631085f8066/886446548432.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9c/ba/98/9cba98ea-e091-1058-fb14-4631085f8066/886446548432.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2017-04-28T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 2,
+      "trackTimeMillis": 275085,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Video112/v4/fc/1b/b5/fc1bb5f1-252f-24a3-53d3-38753dcbb135/Job23508cff-ee56-4c24-9025-020e49851f71-132680369-PreviewImage_preview_image_nonvideo_sdr-Time1654619187377.png/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de6c624580de302dbf146d"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 368183298,
+      "collectionId": 1623854804,
+      "trackId": 1623856246,
+      "artistName": "Kendrick Lamar",
+      "collectionName": "Mr. Morale & The Big Steppers",
+      "trackName": "Mirror",
+      "collectionCensoredName": "Mr. Morale & The Big Steppers",
+      "trackCensoredName": "Mirror",
+      "artistViewUrl": "https://music.apple.com/us/artist/kendrick-lamar/368183298?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/mirror/1623854804?i=1623856246&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/mirror/1623854804?i=1623856246&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/fa/71/0f/fa710f01-d601-751f-7f63-313a60d857b5/mzaf_3255268051724143771.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/72/a1/a9/72a1a9a0-6c42-a37f-aad4-7e8772365c6d/22UMGIM52376.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/72/a1/a9/72a1a9a0-6c42-a37f-aad4-7e8772365c6d/22UMGIM52376.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/72/a1/a9/72a1a9a0-6c42-a37f-aad4-7e8772365c6d/22UMGIM52376.rgb.jpg/100x100bb.jpg",
+      "releaseDate": "2022-05-13T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 2,
+      "discNumber": 2,
+      "trackCount": 9,
+      "trackNumber": 9,
+      "trackTimeMillis": 256008,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/72/a1/a9/72a1a9a0-6c42-a37f-aad4-7e8772365c6d/22UMGIM52376.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de6cf94580de302dbf146f"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 2715720,
+      "collectionId": 1440873068,
+      "trackId": 1440873353,
+      "artistName": "Kanye West",
+      "collectionName": "Yeezus",
+      "trackName": "Bound 2",
+      "collectionCensoredName": "Yeezus",
+      "trackCensoredName": "Bound 2",
+      "artistViewUrl": "https://music.apple.com/us/artist/kanye-west/2715720?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/bound-2/1440873068?i=1440873353&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/bound-2/1440873068?i=1440873353&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/be/b7/b9/beb7b904-ac44-6b6b-24d7-442ac9860d55/mzaf_11431443335651220653.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3c/56/e7/3c56e717-06a0-b67d-e694-9b6e6e43a5a8/13UAAIM08444.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3c/56/e7/3c56e717-06a0-b67d-e694-9b6e6e43a5a8/13UAAIM08444.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3c/56/e7/3c56e717-06a0-b67d-e694-9b6e6e43a5a8/13UAAIM08444.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2013-06-18T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 10,
+      "trackNumber": 10,
+      "trackTimeMillis": 229064,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3c/56/e7/3c56e717-06a0-b67d-e694-9b6e6e43a5a8/13UAAIM08444.rgb.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de6da44580de302dbf1471"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 960102996,
+      "collectionId": 1476858989,
+      "trackId": 1476858998,
+      "artistName": "BROCKHAMPTON",
+      "collectionName": "GINGER",
+      "trackName": "IF YOU PRAY RIGHT",
+      "collectionCensoredName": "GINGER",
+      "trackCensoredName": "IF YOU PRAY RIGHT",
+      "artistViewUrl": "https://music.apple.com/us/artist/brockhampton/960102996?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/if-you-pray-right/1476858989?i=1476858998&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/if-you-pray-right/1476858989?i=1476858998&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d3/a9/52/d3a95210-15d1-0e80-3f43-454c30d021aa/mzaf_7434147883693254707.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/55/82/78/558278da-e11f-08bb-e6a4-dcd377d5df5b/886447853481.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/55/82/78/558278da-e11f-08bb-e6a4-dcd377d5df5b/886447853481.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/55/82/78/558278da-e11f-08bb-e6a4-dcd377d5df5b/886447853481.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2019-08-08T07:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 12,
+      "trackNumber": 6,
+      "trackTimeMillis": 302355,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/55/82/78/558278da-e11f-08bb-e6a4-dcd377d5df5b/886447853481.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de901a7a7ca9d0a74c2636"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 960102996,
+      "collectionId": 1322093226,
+      "trackId": 1322094238,
+      "artistName": "BROCKHAMPTON",
+      "collectionName": "SATURATION III",
+      "trackName": "RENTAL",
+      "collectionCensoredName": "SATURATION III",
+      "trackCensoredName": "RENTAL",
+      "artistViewUrl": "https://music.apple.com/us/artist/brockhampton/960102996?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/rental/1a322093226?i=1322094238&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/rental/1322093226?i=1322094238&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f8/b2/de/f8b2dee9-f29e-934e-76b4-24f885d70172/mzaf_7610262752289777267.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d4/8a/89/d48a8942-7a1c-ee42-5c05-e60474375b25/888915487846_cover.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d4/8a/89/d48a8942-7a1c-ee42-5c05-e60474375b25/888915487846_cover.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d4/8a/89/d48a8942-7a1c-ee42-5c05-e60474375b25/888915487846_cover.jpg/100x100bb.jpg",
+      "collectionPrice": 8.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2017-12-15T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 15,
+      "trackNumber": 12,
+      "trackTimeMillis": 213659,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/d4/8a/89/d48a8942-7a1c-ee42-5c05-e60474375b25/888915487846_cover.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65de90b87a7ca9d0a74c2638"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 960102996,
+      "collectionId": 1436535889,
+      "trackId": 1436536065,
+      "artistName": "BROCKHAMPTON",
+      "collectionName": "iridescence",
+      "trackName": "HONEY",
+      "collectionCensoredName": "iridescence",
+      "trackCensoredName": "HONEY",
+      "artistViewUrl": "https://music.apple.com/us/artist/brockhampton/960102996?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/honey/1436535889?i=1436536065&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/honey/1436535889?i=1436536065&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/1f/1d/b3/1f1db39c-430d-620c-85e7-86444859ba28/mzaf_2460871485850441811.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/ab/b5/13abb524-0f07-c0ef-5252-416b4f6dd323/886447096697.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/ab/b5/13abb524-0f07-c0ef-5252-416b4f6dd323/886447096697.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/ab/b5/13abb524-0f07-c0ef-5252-416b4f6dd323/886447096697.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-09-21T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 15,
+      "trackNumber": 11,
+      "trackTimeMillis": 195223,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/13/ab/b5/13abb524-0f07-c0ef-5252-416b4f6dd323/886447096697.jpg/632x632bb.webp"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2024-02-28T01:50:49.382Z"
+  }
 }]
