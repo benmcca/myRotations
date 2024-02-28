@@ -12,23 +12,20 @@ export default class MusicDAO {
             console.error(`unable to connect in MusicDAO: ${e}`)
         }
     }
-
-    static async getMusic({
-        filters = null,
-        page = 0,
-        songsPerPage = 20,
-        } = {}) {
-        
+    // The parameters in here are default parameters. The value will change if a value is passed. 
+    static async getMusic({filters = null, page = 0, songsPerPage = 20,} = {}) {
         let query
         if (filters) {
             const subQueries = []
             
             if ("trackName" in filters) {
+                // 'i' is to specify case insensitive
                 const trackNameSubString = new RegExp(filters["trackName"], 'i')
                 subQueries.push({ "results.trackName": { $regex: trackNameSubString } })
             }
             
             if ("artistName" in filters) {
+                // 'i' is to specify case insensitive
                 const artistNameSubString = new RegExp(filters["artistName"], 'i')
                 subQueries.push({ "results.artistName": { $regex: artistNameSubString } })
             }
