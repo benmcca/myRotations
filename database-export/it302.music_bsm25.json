@@ -2736,4 +2736,305 @@
   "lastUpdated": {
     "$date": "2024-02-28T19:53:08.897Z"
   }
+},
+{
+  "_id": {
+    "$oid": "65e381bf9084d6c928518166"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1104179033,
+      "collectionId": 1438243719,
+      "trackId": 1438243889,
+      "artistName": "Dominic Fike",
+      "collectionName": "Don't Forget About Me, Demos - EP",
+      "trackName": "King of Everything",
+      "collectionCensoredName": "Don't Forget About Me, Demos - EP",
+      "trackCensoredName": "King of Everything",
+      "artistViewUrl": "https://music.apple.com/us/artist/dominic-fike/1104179033?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/king-of-everything/1438243719?i=1438243889&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/king-of-everything/1438243719?i=1438243889&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/25/25/50/252550fd-6eec-a6d6-e6db-f8c4e9947dfa/mzaf_9828773429283565467.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2d/37/18/2d3718e9-8620-b603-d3cc-f34ce817070d/886447290170.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2d/37/18/2d3718e9-8620-b603-d3cc-f34ce817070d/886447290170.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2d/37/18/2d3718e9-8620-b603-d3cc-f34ce817070d/886447290170.jpg/100x100bb.jpg",
+      "collectionPrice": 4.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-10-16T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 6,
+      "trackNumber": 6,
+      "trackTimeMillis": 194360,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Alternative",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2d/37/18/2d3718e9-8620-b603-d3cc-f34ce817070d/886447290170.jpg/316x316bb.webp"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e3822b9084d6c928518168"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1070668868,
+      "collectionId": 1556122764,
+      "trackId": 1556123055,
+      "artistName": "GIVĒON",
+      "collectionName": "When It's All Said And Done... Take Time",
+      "trackName": "This Ain't Love",
+      "collectionCensoredName": "When It's All Said And Done... Take Time",
+      "trackCensoredName": "This Ain't Love",
+      "artistViewUrl": "https://music.apple.com/us/artist/giv%C4%93on/1070668868?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/this-aint-love/1556122764?i=1556123055&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/this-aint-love/1556122764?i=1556123055&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/18/81/27/1881271e-5180-f2a7-8fad-9bfa39ecd671/mzaf_18349573047132502317.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3b/ab/69/3bab69b8-97b6-2c7f-6e5f-86e091696bea/886448745839.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3b/ab/69/3bab69b8-97b6-2c7f-6e5f-86e091696bea/886448745839.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/3b/ab/69/3bab69b8-97b6-2c7f-6e5f-86e091696bea/886448745839.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2020-03-27T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 13,
+      "trackNumber": 5,
+      "trackTimeMillis": 164967,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/01/b8/24/01b8243d-bbe1-478f-7856-2e90424e5b58/886448342465.jpg/316x316bb.webp"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e3827f9084d6c92851816a"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 416903584,
+      "collectionId": 1460702037,
+      "trackId": 1460702042,
+      "artistName": "Kevin Abstract",
+      "collectionName": "ARIZONA BABY",
+      "trackName": "Baby Boy",
+      "collectionCensoredName": "ARIZONA BABY",
+      "trackCensoredName": "Baby Boy",
+      "artistViewUrl": "https://music.apple.com/us/artist/kevin-abstract/416903584?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/baby-boy/1460702037?i=1460702042&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/baby-boy/1460702037?i=1460702042&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/11/72/1a/11721a01-fb76-8369-ea3d-7521add15a51/mzaf_352317171376892539.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/39/9c/6e399c4d-e288-ebe7-3ed8-89bb04408637/886447681329.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/39/9c/6e399c4d-e288-ebe7-3ed8-89bb04408637/886447681329.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/39/9c/6e399c4d-e288-ebe7-3ed8-89bb04408637/886447681329.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2019-04-18T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 11,
+      "trackNumber": 5,
+      "trackTimeMillis": 211669,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Pop",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/6e/39/9c/6e399c4d-e288-ebe7-3ed8-89bb04408637/886447681329.jpg/316x316bb.webp"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e3848a9084d6c92851816c"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 368183298,
+      "collectionId": 1440906927,
+      "trackId": 1440906939,
+      "artistName": "Kendrick Lamar, SZA",
+      "collectionName": "Black Panther: The Album",
+      "trackName": "All The Stars",
+      "collectionCensoredName": "Black Panther: The Album",
+      "trackCensoredName": "All The Stars",
+      "collectionArtistName": "Kendrick Lamar",
+      "artistViewUrl": "https://music.apple.com/us/artist/kendrick-lamar/368183298?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/all-the-stars/1440906927?i=1440906939&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/all-the-stars/1440906927?i=1440906939&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview113/v4/c3/d3/53/c3d3530a-220a-c0b0-96f0-66a4809a5924/mzaf_7578446930341165915.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0f/7c/f9/0f7cf9a6-651f-53ae-e374-6be14630bfae/18UMGIM00001.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0f/7c/f9/0f7cf9a6-651f-53ae-e374-6be14630bfae/18UMGIM00001.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0f/7c/f9/0f7cf9a6-651f-53ae-e374-6be14630bfae/18UMGIM00001.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-01-04T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 14,
+      "trackNumber": 2,
+      "trackTimeMillis": 232190,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/0f/7c/f9/0f7cf9a6-651f-53ae-e374-6be14630bfae/18UMGIM00001.rgb.jpg/316x316bb.webp"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e384c39084d6c92851816e"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 440458549,
+      "collectionId": 1599009985,
+      "trackId": 1599010268,
+      "artistName": "Tory Lanez",
+      "collectionName": "Alone At Prom",
+      "trackName": "The Color Violet",
+      "collectionCensoredName": "Alone At Prom",
+      "trackCensoredName": "The Color Violet",
+      "artistViewUrl": "https://music.apple.com/us/artist/tory-lanez/440458549?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/the-color-violet/1599009985?i=1599010268&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/the-color-violet/1599009985?i=1599010268&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/d4/17/4c/d4174c04-b1ad-75fa-a33a-f2c41ca08f82/mzaf_15967459334367970818.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/16/c8/eb/16c8eb6d-fe23-fa03-5e43-9827972763d3/cover.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/16/c8/eb/16c8eb6d-fe23-fa03-5e43-9827972763d3/cover.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/16/c8/eb/16c8eb6d-fe23-fa03-5e43-9827972763d3/cover.jpg/100x100bb.jpg",
+      "collectionPrice": 10.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2021-12-10T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 11,
+      "trackNumber": 4,
+      "trackTimeMillis": 226467,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "R&B/Soul",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/16/c8/eb/16c8eb6d-fe23-fa03-5e43-9827972763d3/cover.jpg/316x316bb.webp"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e3850a9084d6c928518170"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 1368733420,
+      "collectionId": 1445949265,
+      "trackId": 1445949409,
+      "artistName": "Juice WRLD",
+      "collectionName": "Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)",
+      "trackName": "Hide (feat. Seezyn)",
+      "collectionCensoredName": "Spider-Man: Into the Spider-Verse (Soundtrack From & Inspired by the Motion Picture)",
+      "trackCensoredName": "Hide (feat. Seezyn)",
+      "collectionArtistId": 36270,
+      "collectionArtistName": "Various Artists",
+      "artistViewUrl": "https://music.apple.com/us/artist/juice-wrld/1368733420?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/hide-feat-seezyn/1445949265?i=1445949409&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/hide-feat-seezyn/1445949265?i=1445949409&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/80/e7/5d/80e75d04-30e1-fce2-cbff-9723e31b624d/mzaf_9080484861928902615.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 9.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2018-12-14T12:00:00Z",
+      "collectionExplicitness": "notExplicit",
+      "trackExplicitness": "notExplicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 13,
+      "trackNumber": 7,
+      "trackTimeMillis": 205793,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Soundtrack",
+      "isStreamable": true,
+      "albumCover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4b/30/2c/4b302cb6-7a14-5464-4e97-0577e9d0be49/18UMGIM82277.rgb.jpg/316x316bb.webp"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65e385989084d6c928518172"
+  },
+  "resultCount": 1,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 271256,
+      "collectionId": 1440841363,
+      "trackId": 1440841371,
+      "artistName": "Drake",
+      "collectionName": "Views",
+      "trackName": "Feel No Ways",
+      "collectionCensoredName": "Views",
+      "trackCensoredName": "Feel No Ways",
+      "artistViewUrl": "https://music.apple.com/us/artist/drake/271256?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/feel-no-ways/1440841363?i=1440841371&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/feel-no-ways/1440841363?i=1440841371&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0d/05/00/0d050083-08e4-b92c-6f4a-c1f2cfcca561/mzaf_16829802047810312840.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f2/0d/8b/f20d8bff-a927-ae98-6784-20a1f51cb23e/16UMGIM27642.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f2/0d/8b/f20d8bff-a927-ae98-6784-20a1f51cb23e/16UMGIM27642.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/f2/0d/8b/f20d8bff-a927-ae98-6784-20a1f51cb23e/16UMGIM27642.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 11.99,
+      "trackPrice": 1.29,
+      "releaseDate": "2016-04-29T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 20,
+      "trackNumber": 4,
+      "trackTimeMillis": 240656,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true,
+      "albumCover": "https://upload.wikimedia.org/wikipedia/en/a/af/Drake_-_Views_cover.jpg"
+    }
+  ]
 }]
