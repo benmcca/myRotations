@@ -18,6 +18,7 @@ async function main() {
     try {
         await client.connect()
         await MusicDAO.injectDB(client)
+        await CommentsDAO.injectDB(client)
 
         app.listen(port, () => {
             console.log('server is running on port: ' + port)
@@ -28,4 +29,5 @@ async function main() {
         process.exit(1)
     }
 }
+
 main().catch(console.error)

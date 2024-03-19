@@ -7,9 +7,17 @@
 import express from 'express'
 
 import MusicController from './music.controller.js'
+import CommentsController from './comments.controller.js'
 
 const router = express.Router()
 
+//MUSIC CONTROLLER
 router.route('/').get(MusicController.apiGetMusic)
+
+//COMMENTS CONTROLLER
+router.route('/comments')
+.post(CommentsController.apiPostComment)
+.put(CommentsController.apiUpdateComment)
+.delete(CommentsController.apiDeleteComment)
 
 export default router
