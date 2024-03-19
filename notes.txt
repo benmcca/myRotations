@@ -8,28 +8,3 @@ you can also filter with a track name and/or artist name:
 http://localhost:5050/api/v1/bsm25/music?trackName=song
 http://localhost:5050/api/v1/bsm25/music?artistName=artist
 http://localhost:5050/api/v1/bsm25/music?trackName=song&artistName=artist
-
-comment POST
-http://localhost:5050/api/v1/bsm25/music/comments
-req body:
-{
-    "songId": "65c4f44a021c101b628ddf25",
-    "comment": "Lil Yachty really took a huge step in the opposite direction and did a great job",
-    "name": "Ben McCabe",
-    "userId": "111111"
-}
-
-comment PUT 
-http://localhost:5050/api/v1/bsm25/music/comments
-{
-    "commentId": "65f900eef264fcfb7b8482c6",
-    "userId": "111111",
-    "comment": "I wish Lil Yachty sticked to his older style of music"
-}
-
-comment DELETE 
-http://localhost:5050/api/v1/bsm25/music/comments
-{
-    "commentId": "65f900eef264fcfb7b8482c6",
-    "userId": "111111"
-}

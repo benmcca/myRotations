@@ -28,12 +28,11 @@ export default class CommentsController {
     static async apiUpdateComment(req, res, next){
         try {
             const commentId = req.body.commentId
-            const userId = req.body.userId
             const comment = req.body.comment
             const date = new Date()
             const CommentResponse = await CommentsDAO.updateComment(
                 commentId,
-                userId,
+                req.body.userId,
                 comment,
                 date
             )
