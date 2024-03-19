@@ -8,6 +8,7 @@ import app from './server.js'
 import mongodb from "mongodb"
 import dotenv from "dotenv"
 import MusicDAO from "./dao/musicDAO.js"
+import CommentsDAO from "./dao/commentsDAO.js"
 
 async function main() {
     dotenv.config()
