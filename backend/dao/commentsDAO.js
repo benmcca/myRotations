@@ -19,7 +19,7 @@ export default class CommentsDAO {
         try {
             const commentDoc = {
                 name: userInfo.name,
-                userId: userInfo.userId,
+                userId: userInfo.id,
                 date: date,
                 comment: comment,
                 songId: new ObjectId(songId)
@@ -36,7 +36,7 @@ export default class CommentsDAO {
     static async updateComment(commentId, userId, comment, date) {
         try {
             const updateResponse = await comments.updateOne(
-                { userId: userId, id: new ObjectId(commentId) },
+                { userId: userId, _id: new ObjectId(commentId) },
                 { $set: { comment: comment, date: date} }
             )
             return updateResponse
@@ -51,7 +51,7 @@ export default class CommentsDAO {
     static async deleteComment(commentId, userId) {
         try {
             const deleteResponse = await comments.deleteOne(
-                { id: new ObjectId(commentId), userId: userId }
+                { _id: new ObjectId(commentId), userId: userId }
             )
             return deleteResponse
         }
