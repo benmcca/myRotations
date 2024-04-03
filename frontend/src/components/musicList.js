@@ -1,11 +1,11 @@
 import React from "react";
 
-function SongsList() {
+function MusicList() {
     return (
         <div className="App">
-            Songs List
+            Music List
         </div>
     );
 }
 
-export default SongsList;
+export default MusicList;
