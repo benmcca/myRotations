@@ -14,10 +14,10 @@ const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
+
   useEffect(() => {
     retrieveMusic();
   }, []);
-
 
   const retrieveMusic = () => {
     musicDataService.getAll(0)
@@ -28,15 +28,22 @@ const MusicList = () => {
         console.log(e);
       });
   };
+
   const onChangeSearchTitle = (e) => {
     const searchTitle = e.target.value
     setSearchTitle(searchTitle);
   };
+  useEffect(() => {
+    findByTitle(); // only call the search once searchTitle state is fully updated
+  }, [searchTitle]);
 
   const onChangeSearchArtist = (e) => {
     const searchArtist = e.target.value;
     setSearchArtist(searchArtist);
   };
+  useEffect(() => {
+    findByArtist(); // only call the search once searchArtist state is fully updated
+  }, [searchArtist]);
 
   const find = (query, by) => {
     MusicDataService.find(query, by)
@@ -48,25 +55,22 @@ const MusicList = () => {
         console.log(e)
       })
   }
-
   const findByTitle =
   () => {
-    setSearchTitle("")
     find(searchTitle, "trackName")
   }
 
   const findByArtist =
   () => {
-    setSearchArtist("")
     find(searchArtist, "artistName")
   }
-
 
   return (
     <div className="App">
       <Container>
         <Form>
           <Row>
+
             <Col>
               <Form.Group>
                 <Form.Control
@@ -76,15 +80,7 @@ const MusicList = () => {
                   onChange={onChangeSearchTitle}
                 />
               </Form.Group>
-              <Button
-                variant="primary"
-                type="button"
-                onClick={findByTitle}
-              >
-                Search Songs
-              </Button>
             </Col>
-
             <Col>
               <Form.Group>
                 <Form.Control
@@ -94,13 +90,6 @@ const MusicList = () => {
                   onChange={onChangeSearchArtist}
                 />
               </Form.Group>
-              <Button
-                variant="primary"
-                type="button"
-                onClick={findByArtist}
-              >
-                Search Artist
-              </Button>
             </Col>
           </Row>
         </Form>
@@ -119,7 +108,7 @@ const MusicList = () => {
                     <Card.Text>{song.results[0].artistName}</Card.Text>
                     <Card.Text>{song.results[0].collectionName}</Card.Text>
                     <Card.Text>{new Date(Date.parse(song.results[0].releaseDate)).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</Card.Text>
-                    <Link to={"/music/id/" + song._id} >Comments</Link>
+                    <Link to={"/music/" + song._id} >Comments</Link>
                   </Card.Body>
                 </Card>
               </Col>
