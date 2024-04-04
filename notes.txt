@@ -10,7 +10,7 @@ http://localhost:5050/api/v1/bsm25/music?artistName=artist
 http://localhost:5050/api/v1/bsm25/music?trackName=song&artistName=artist
 
 you can get a track by its id:
-http://localhost:5050/api/v1/bsm25/music/id/65c4f44a021c101b628ddf25
+http://localhost:5050/api/v1/bsm25/music/65c4f44a021c101b628ddf25
 
 
 comment POST

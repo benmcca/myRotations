@@ -11,7 +11,7 @@ class MusicDataService {
 
     get(id) {
       return axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/v1/bsm25/music/id/${id}`
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/bsm25/music/${id}`
       );
     }
 
