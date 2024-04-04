@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import musicDataService from '../services/musicDataService';
 
 const MusicList = () => {
-  const [music, setMusic] = useState([]);
+  const [music, setMusic] = useState(['hello']);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
   useEffect(() => {
@@ -16,7 +16,7 @@ const MusicList = () => {
     musicDataService.getAll()
       .then((response) => {
         console.log(response.data);
-        setMusic(response.data.music);
+        setMusic(response.data.songs);
       })
       .catch((e) => {
         console.log(e);
