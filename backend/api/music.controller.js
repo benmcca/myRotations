@@ -30,4 +30,21 @@ export default class MusicController {
         }
         res.json(response)
     }
+
+    static async apiGetSongById(req, res, next) {
+        try {
+          let id = req.params.id || {}
+          let song = await MusicDAO.getSongById(id)
+          if(!song) {
+            res.status(404).json({ error: "not found"})
+            return
+          }
+          res.json(song)
+        } 
+        catch(e) {
+            console.log(`api, ${e}`)
+            res.status(500).json({error: `${e}`})
+        }
+    }
+    
 }
