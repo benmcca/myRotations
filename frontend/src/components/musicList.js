@@ -20,9 +20,8 @@ const MusicList = () => {
 
 
   const retrieveMusic = () => {
-    musicDataService.getAll()
+    musicDataService.getAll(0)
       .then((response) => {
-        console.log(response.data);
         setMusic(response.data.songs);
       })
       .catch((e) => {
@@ -38,6 +37,30 @@ const MusicList = () => {
     const searchArtist = e.target.value;
     setSearchArtist(searchArtist);
   };
+
+  const find = (query, by) => {
+    MusicDataService.find(query, by)
+      .then(response => {
+        console.log(response.data)
+        setMusic(response.data.songs)
+      })
+      .catch(e => {
+        console.log(e)
+      })
+  }
+
+  const findByTitle =
+  () => {
+    setSearchTitle("")
+    find(searchTitle, "trackName")
+  }
+
+  const findByArtist =
+  () => {
+    setSearchArtist("")
+    find(searchArtist, "artistName")
+  }
+
 
   return (
     <div className="App">
@@ -56,7 +79,7 @@ const MusicList = () => {
               <Button
                 variant="primary"
                 type="button"
-                onClick={null}
+                onClick={findByTitle}
               >
                 Search Songs
               </Button>
@@ -74,7 +97,7 @@ const MusicList = () => {
               <Button
                 variant="primary"
                 type="button"
-                onClick={null}
+                onClick={findByArtist}
               >
                 Search Artist
               </Button>
@@ -83,12 +106,15 @@ const MusicList = () => {
         </Form>
         <Row>
           {music.map((song) => {
-            console.log(song)
             return (
               <Col>
                 <Card style={{ width: '18rem' }}>
                   <Card.Img src={song.results[0].albumCover} />
                   <Card.Body>
+                  {/* <audio controls>
+                    <source src={song.results[0].previewUrl} type="audio/mp4" />
+                    Your browser does not support the audio element.
+                  </audio> */}
                     <Card.Title>{song.results[0].trackName}</Card.Title>
                     <Card.Text>{song.results[0].artistName}</Card.Text>
                     <Card.Text>{song.results[0].collectionName}</Card.Text>
