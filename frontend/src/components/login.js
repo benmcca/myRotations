@@ -1,10 +1,17 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 function Login() {
   return (
-    <div className="App">
+    <motion.div
+      className="App"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       Login
-    </div>
+    </motion.div>
   );
 }
 
