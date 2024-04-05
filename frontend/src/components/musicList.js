@@ -103,7 +103,9 @@ const MusicList = () => {
             return (
               <Col>
                 <Card style={{ width: "18rem" }}>
-                  <Card.Img src={song.results[0].albumCover} />
+                  <a href={"/music/" + song._id}>
+                    <Card.Img src={song.results[0].albumCover} />
+                  </a>
                   <Card.Body>
                     <Card.Title>{song.results[0].trackName}</Card.Title>
                     <Link to={"/music/" + song._id}>Comments</Link>
