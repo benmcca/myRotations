@@ -12,6 +12,13 @@ import Card from "react-bootstrap/Card";
 
 import { motion } from "framer-motion";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
+
 const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
@@ -98,7 +105,55 @@ const MusicList = () => {
             </Col>
           </Row>
         </Form>
-        <Row>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"3"}
+          coverflowEffect={{
+            rotate: 10,
+            stretch: 0,
+            depth: 200,
+            modifier: 2.5,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper_container"
+        >
+          {music.map((song) => {
+            return (
+              <SwiperSlide>
+                <a href={"/music/" + song._id}>
+                  <img
+                    src={song.results[0].albumCover}
+                    style={{
+                      borderRadius: "5px",
+                      maxWidth: "400px",
+                      maxHeight: "400px",
+                    }}
+                  />
+                </a>
+              </SwiperSlide>
+            );
+          })}
+          <div className="slider-controler">
+            <div className="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div className="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div className="swiper-pagination"></div>
+          </div>
+        </Swiper>
+
+        {/* <Row>
           {music.map((song) => {
             return (
               <Col>
@@ -114,7 +169,7 @@ const MusicList = () => {
               </Col>
             );
           })}
-        </Row>
+        </Row> */}
       </Container>
     </motion.div>
   );
