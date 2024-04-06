@@ -1,81 +1,61 @@
-import React, { useState, useEffect } from "react";
-import MusicDataService from "../services/musicDataService";
-import { Link, useParams } from "react-router-dom";
+import React, {useState, useEffect} from 'react'
+import MusicDataService from '../services/musicDataService'
+import { Link, useParams } from 'react-router-dom'
 
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
-import { motion } from "framer-motion";
+const Movie = (user) => {
 
-const Song = (user) => {
   const [song, setSong] = useState({
     id: null,
     title: "",
-    comments: [],
-    results: [],
-  });
-  let { id } = useParams();
+    comments:[]
+  })
+ let { id } = useParams();
 
-  useEffect(() => {
-    const getSong = async () => {
-      try {
-        const response = await MusicDataService.get(id);
-        setSong(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getSong();
-  }, [id]);
-
-  // Wait for song to be loaded
-  if (!song.results.length) {
-    return <div>Loading...</div>;
-  }
+ const getSong = id => {
+  MusicDataService.get(id)
+    .then(response => {
+      setSong(response.data)
+      console.log(response.data)
+    })
+    .catch(e => {
+      console.log(e);
+    })
+}
+  useEffect( () => {
+    getSong(id)
+      },[id])
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <div>
       <Container>
         <Row>
-          <Col>
-            <Image src={song.results[0].albumCover} fluid />
-          </Col>
-          <Col>
-            <Card>
-              <Card.Header as="h5">{song.results[0].trackName}</Card.Header>
-              <Card.Body>
-                <audio controls>
-                  <source src={song.results[0].previewUrl} type="audio/mp4" />
-                  Your browser does not support the audio element.
-                </audio>
-                <Card.Text>{song.results[0].artistName}</Card.Text>
-                <Card.Text>{song.results[0].collectionName}</Card.Text>
-                <Card.Text>
-                  {new Date(
-                    Date.parse(song.results[0].releaseDate)
-                  ).toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </Card.Text>
-                {user && (
-                  <Link to={"/music/" + id + "/comments"}>Add Comment</Link>
-                )}
-              </Card.Body>
-            </Card>
-          </Col>
+        {/* <Col>
+          <Image src={song.results[0].albumCover} fluid />
+        </Col> */}
+        <Col>
+          <Card>
+            <Card.Header as="h5">{song._id}</Card.Header>
+            {/* <Card.Body>
+              <Card.Text>
+               {song.results[0].artistName}
+              </Card.Text>
+              {user &&
+              <Link to={"/music/" + id + "/comments"}>
+              Add Comment
+              </Link>}
+            </Card.Body> */}
+          </Card>
+        </Col>
         </Row>
-      </Container>
-    </motion.div>
+        </Container>
+    </div>
   );
-};
+}
 
-export default Song;
+export default Movie;
