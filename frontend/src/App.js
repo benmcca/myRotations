@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
+import { flushSync } from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import MusicList from "./components/musicList";
@@ -11,7 +12,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   async function login(user = null) {
     setUser(user);
@@ -20,15 +21,38 @@ function App() {
     setUser(null);
   }
 
+  const navigate = useNavigate();
+  const navigateToSong = (route) => {
+    if (!document.startViewTransition) {
+      navigate(`${route}`);
+    } else {
+      document.startViewTransition(() => {
+        flushSync(() => {
+          navigate(`${route}`);
+        });
+      });
+    }
+  };
+
   return (
-   <div className="App">
+    <div className="App">
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand as={NavLink} to={"/"}>My Rotation</Navbar.Brand>
+        <Navbar.Brand
+          // as={NavLink}
+          // to={"/"}
+          onClick={() => navigateToSong("/music")}
+        >
+          My Rotation
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-            <Nav.Link as={NavLink} to={"/music"}>Songs</Nav.Link>
-            <Nav.Link as={NavLink} to={user ? "" : "/login"}>{user ? "Logout" : "Login"}</Nav.Link>
+          <Nav className="mr-auto">
+            {/* <Nav.Link as={NavLink} to={"/music"}>
+              Songs
+            </Nav.Link> */}
+            <Nav.Link as={NavLink} to={user ? "" : "/login"}>
+              {user ? "Logout" : "Login"}
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -37,10 +61,12 @@ function App() {
         <Route path="/" element={<MusicList />}></Route>
         <Route path="/music" element={<MusicList />}></Route>
         <Route path="/music/:id/" element={<Song user={user} />}></Route>
-        <Route path="/music/:id/comment" element={<AddComment user={user} />}></Route>
+        <Route
+          path="/music/:id/comment"
+          element={<AddComment user={user} />}
+        ></Route>
         <Route path="/login" element={<Login login={login} />}></Route>
       </Routes>
-
     </div>
   );
 }

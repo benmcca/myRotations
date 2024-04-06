@@ -38,12 +38,20 @@ const Song = (user) => {
     <Container>
       <Row>
         <Col>
-          <Image src={song.results[0].albumCover} fluid />
+          <img
+            src={song.results[0].albumCover}
+            style={{
+              borderRadius: "5px",
+              viewTransitionName: `${song._id}`,
+              contain: "paint",
+            }}
+          />
         </Col>
         <Col>
           <Card>
-            <Card.Header as="h5">{song.results[0].trackName}</Card.Header>
+            <Card.Header as="h5">{song.results[0].collectionName}</Card.Header>
             <Card.Body>
+              <Card.Title as="h6">{song.results[0].trackName}</Card.Title>
               <audio controls>
                 <source src={song.results[0].previewUrl} type="audio/mp4" />
                 Your browser does not support the audio element.

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MusicDataService from "../services/musicDataService";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { flushSync } from "react-dom";
 import musicDataService from "../services/musicDataService";
 
 import Form from "react-bootstrap/Form";
@@ -21,7 +22,7 @@ const MusicList = () => {
 
   const retrieveMusic = () => {
     musicDataService
-      .getAll(0)
+      .getAll()
       .then((response) => {
         setMusic(response.data.songs);
       })
@@ -64,6 +65,19 @@ const MusicList = () => {
     find(searchArtist, "artistName");
   };
 
+  const navigate = useNavigate();
+  const navigateToSong = (_id) => {
+    if (!document.startViewTransition) {
+      navigate(`/music/${_id}`);
+    } else {
+      document.startViewTransition(() => {
+        flushSync(() => {
+          navigate(`/music/${_id}`);
+        });
+      });
+    }
+  };
+
   return (
     <div className="App">
       <Container>
@@ -96,14 +110,17 @@ const MusicList = () => {
             return (
               <Col>
                 <Card style={{ width: "18rem" }}>
-                  <a href={"/music/" + song._id}>
-                    <Card.Img src={song.results[0].albumCover} />
-                  </a>
+                  <img
+                    src={song.results[0].albumCover}
+                    onClick={() => navigateToSong(song._id)}
+                    key={song._id}
+                    style={{
+                      borderRadius: "5px",
+                      viewTransitionName: `${song._id}`,
+                      contain: "paint",
+                    }}
+                  />
                   <Card.Body>
-                    {/* <audio controls>
-                    <source src={song.results[0].previewUrl} type="audio/mp4" />
-                    Your browser does not support the audio element.
-                  </audio> */}
                     <Card.Title>{song.results[0].trackName}</Card.Title>
                     <Card.Text>{song.results[0].artistName}</Card.Text>
                   </Card.Body>
