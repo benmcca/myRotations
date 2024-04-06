@@ -13,16 +13,19 @@ import Card from "react-bootstrap/Card";
 import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
+
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
+  const [activeSong, setActiveSong] = useState(null);
 
   useEffect(() => {
     retrieveMusic();
@@ -58,7 +61,6 @@ const MusicList = () => {
   const find = (query, by) => {
     MusicDataService.find(query, by)
       .then((response) => {
-        console.log(response.data);
         setMusic(response.data.songs);
       })
       .catch((e) => {
@@ -71,6 +73,11 @@ const MusicList = () => {
 
   const findByArtist = () => {
     find(searchArtist, "artistName");
+  };
+
+  const onSwiperSlideChange = (swiper) => {
+    const activeIndex = swiper.activeIndex;
+    setActiveSong(music[activeIndex]); // Update active song based on active slide
   };
 
   return (
@@ -109,8 +116,8 @@ const MusicList = () => {
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          loop={true}
-          slidesPerView={"3"}
+          loop={false}
+          slidesPerView={"1"}
           coverflowEffect={{
             rotate: 10,
             stretch: 0,
@@ -125,10 +132,11 @@ const MusicList = () => {
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="swiper_container"
+          onSlideChange={onSwiperSlideChange}
         >
-          {music.map((song) => {
+          {music.map((song, index) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <a href={"/music/" + song._id}>
                   <img
                     src={song.results[0].albumCover}
@@ -152,24 +160,13 @@ const MusicList = () => {
             <div className="swiper-pagination"></div>
           </div>
         </Swiper>
-
-        {/* <Row>
-          {music.map((song) => {
-            return (
-              <Col>
-                <Card style={{ width: "18rem" }}>
-                  <a href={"/music/" + song._id}>
-                    <Card.Img src={song.results[0].albumCover} />
-                  </a>
-                  <Card.Body>
-                    <Card.Title>{song.results[0].trackName}</Card.Title>
-                    <Link to={"/music/" + song._id}>Comments</Link>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
-        </Row> */}
+        {/* Display text below the Swiper outside of it */}
+        {activeSong && (
+          <div>
+            {activeSong.results[0].trackName} by{" "}
+            {activeSong.results[0].artistName}
+          </div>
+        )}
       </Container>
     </motion.div>
   );
