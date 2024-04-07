@@ -39,12 +39,12 @@ const Song = (user) => {
       <Row>
         <Col>
           <img
-            src={song.results[0].albumCover}
             style={{
-              borderRadius: "5px",
               viewTransitionName: `${song._id}`,
-              contain: "paint",
             }}
+            src={song.results[0].albumCover}
+            width="600"
+            height="600"
           />
         </Col>
         <Col>

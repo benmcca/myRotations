@@ -15,6 +15,7 @@ const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     retrieveMusic();
@@ -65,18 +66,6 @@ const MusicList = () => {
     find(searchArtist, "artistName");
   };
 
-  const navigate = useNavigate();
-  const navigateToSong = (_id) => {
-    if (!document.startViewTransition) {
-      navigate(`/music/${_id}`);
-    } else {
-      document.startViewTransition(() => {
-        flushSync(() => {
-          navigate(`/music/${_id}`);
-        });
-      });
-    }
-  };
 
   return (
     <div className="App">
@@ -110,16 +99,28 @@ const MusicList = () => {
             return (
               <Col>
                 <Card style={{ width: "18rem" }}>
-                  <img
-                    src={song.results[0].albumCover}
-                    onClick={() => navigateToSong(song._id)}
-                    key={song._id}
-                    style={{
-                      borderRadius: "5px",
-                      viewTransitionName: `${song._id}`,
-                      contain: "paint",
+                  <a
+                    onClick={() => {
+                      if (!document.startViewTransition) {
+                        navigate(`/music/${song._id}`);
+                      } else {
+                        document.startViewTransition(() => {
+                          flushSync(() => {
+                            navigate(`/music/${song._id}`);
+                          });
+                        });
+                      }
                     }}
-                  />
+                  >
+                    <img
+                      style={{
+                        viewTransitionName: `${song._id}`,
+                      }}
+                      src={song.results[0].albumCover}
+                      width="200"
+                    />
+                  </a>
+
                   <Card.Body>
                     <Card.Title>{song.results[0].trackName}</Card.Title>
                     <Card.Text>{song.results[0].artistName}</Card.Text>
