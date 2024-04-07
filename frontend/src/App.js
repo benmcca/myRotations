@@ -13,6 +13,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function App() {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   async function login(user = null) {
     setUser(user);
@@ -21,26 +22,23 @@ function App() {
     setUser(null);
   }
 
-  const navigate = useNavigate();
-  const navigateToSong = (route) => {
-    if (!document.startViewTransition) {
-      navigate(`${route}`);
-    } else {
-      document.startViewTransition(() => {
-        flushSync(() => {
-          navigate(`${route}`);
-        });
-      });
-    }
-  };
-
   return (
     <div className="App">
       <Navbar bg="light" expand="lg">
         <Navbar.Brand
           // as={NavLink}
           // to={"/"}
-          onClick={() => navigateToSong("/music")}
+          onClick={() => {
+            if (!document.startViewTransition) {
+              navigate(`/music`);
+            } else {
+              document.startViewTransition(() => {
+                flushSync(() => {
+                  navigate(`/music`);
+                });
+              });
+            }
+          }}
         >
           My Rotation
         </Navbar.Brand>

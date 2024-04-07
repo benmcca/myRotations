@@ -66,7 +66,6 @@ const MusicList = () => {
     find(searchArtist, "artistName");
   };
 
-
   return (
     <div className="App">
       <Container>
@@ -123,7 +122,7 @@ const MusicList = () => {
 
                   <Card.Body>
                     <Card.Title>{song.results[0].trackName}</Card.Title>
-                    <Card.Text>{song.results[0].artistName}</Card.Text>
+                    <Card.Text>{song._id}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>

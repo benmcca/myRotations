@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MusicDataService from "../services/musicDataService";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { flushSync } from "react-dom";
 
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
@@ -16,6 +17,7 @@ const Song = (user) => {
     results: [],
   });
   let { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getSong = async () => {
@@ -42,6 +44,17 @@ const Song = (user) => {
             style={{
               viewTransitionName: `${song._id}`,
             }}
+            onClick={() => {
+              if (!document.startViewTransition) {
+                navigate(`/music`);
+              } else {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    navigate(`/music`);
+                  });
+                });
+              }
+            }}
             src={song.results[0].albumCover}
             width="600"
             height="600"
@@ -58,6 +71,7 @@ const Song = (user) => {
               </audio>
               <Card.Text>{song.results[0].artistName}</Card.Text>
               <Card.Text>{song.results[0].collectionName}</Card.Text>
+              <Card.Text>{song._id}</Card.Text>
               <Card.Text>
                 {new Date(
                   Date.parse(song.results[0].releaseDate)
