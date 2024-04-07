@@ -51,7 +51,6 @@ const MusicList = () => {
   const find = (query, by) => {
     MusicDataService.find(query, by)
       .then((response) => {
-        console.log(response.data);
         setMusic(response.data.songs);
       })
       .catch((e) => {
@@ -100,15 +99,12 @@ const MusicList = () => {
                 <Card style={{ width: "18rem" }}>
                   <a
                     onClick={() => {
-                      if (!document.startViewTransition) {
-                        navigate(`/music/${song._id}`);
-                      } else {
-                        document.startViewTransition(() => {
-                          flushSync(() => {
-                            navigate(`/music/${song._id}`);
-                          });
+                      document.startViewTransition(() => {
+                        flushSync(() => {
+                          console.log(`going to /music/${song._id}`);
+                          navigate(`/music/${song._id}`);
                         });
-                      }
+                      });
                     }}
                   >
                     <img

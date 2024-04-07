@@ -33,6 +33,7 @@ const Song = (user) => {
 
   // Wait for song to be loaded
   if (!song.results.length) {
+    console.log("song not fully loaded");
     return <div>Loading...</div>;
   }
 
@@ -45,20 +46,18 @@ const Song = (user) => {
               viewTransitionName: `${song._id}`,
             }}
             onClick={() => {
-              if (!document.startViewTransition) {
-                navigate(`/music`);
-              } else {
-                document.startViewTransition(() => {
-                  flushSync(() => {
-                    navigate(`/music`);
-                  });
+              document.startViewTransition(() => {
+                flushSync(() => {
+                  console.log("going to /music");
+                  navigate(`/music`);
                 });
-              }
+              });
             }}
             src={song.results[0].albumCover}
             width="600"
             height="600"
           />
+          {console.log(`image ${song._id}`)}
         </Col>
         <Col>
           <Card>
