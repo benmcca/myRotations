@@ -5,16 +5,16 @@ import { flushSync } from "react-dom";
 
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-const Song = (user) => {
+const Song = ({ user }) => {
   const [song, setSong] = useState({
     id: null,
     title: "",
     comments: [],
   });
+  const [songPreview, setSongPreview] = useState(null);
   let { id } = useParams();
   const navigate = useNavigate();
 
@@ -22,6 +22,7 @@ const Song = (user) => {
     MusicDataService.get(id)
       .then((response) => {
         setSong(response.data);
+        setSongPreview(response.data.previewUrl);
         console.log(response.data);
       })
       .catch((e) => {
@@ -62,10 +63,15 @@ const Song = (user) => {
               <Card.Header as="h5">{song.collectionName}</Card.Header>
               <Card.Body>
                 <Card.Title as="h6">{song.trackName}</Card.Title>
-                <audio controls>
-                  <source src={song.previewUrl} type="audio/mp4" />
-                  Your browser does not support the audio element.
-                </audio>
+                {songPreview && (
+                  <>
+                    <audio controls>
+                      <source src={songPreview} type="audio/mp4" />
+                      Your browser does not support the audio element.
+                    </audio>
+                    <Card.Text>{songPreview}</Card.Text>
+                  </>
+                )}
                 <Card.Text>{song.artistName}</Card.Text>
                 <Card.Text>{song.collectionName}</Card.Text>
                 <Card.Text>{song._id}</Card.Text>
