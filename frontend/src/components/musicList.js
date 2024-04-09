@@ -111,13 +111,13 @@ const MusicList = () => {
                       style={{
                         viewTransitionName: `${song._id}`,
                       }}
-                      src={song.results[0].albumCover}
+                      src={song.albumCover}
                       width="200"
                     />
                   </a>
 
                   <Card.Body>
-                    <Card.Title>{song.results[0].trackName}</Card.Title>
+                    <Card.Title>{song.trackName}</Card.Title>
                     <Card.Text>{song._id}</Card.Text>
                   </Card.Body>
                 </Card>

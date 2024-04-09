@@ -28,13 +28,13 @@ export default class MusicDAO {
             if ("trackName" in filters) {
                 // 'i' is to specify case insensitive
                 const trackNameSubString = new RegExp(filters["trackName"], 'i')
-                subQueries.push({ "results.trackName": { $regex: trackNameSubString } })
+                subQueries.push({ "trackName": { $regex: trackNameSubString } })
             }
             
             if ("artistName" in filters) {
                 // 'i' is to specify case insensitive
                 const artistNameSubString = new RegExp(filters["artistName"], 'i')
-                subQueries.push({ "results.artistName": { $regex: artistNameSubString } })
+                subQueries.push({ "artistName": { $regex: artistNameSubString } })
             }
             
             // Combine sub-queries using logical AND
