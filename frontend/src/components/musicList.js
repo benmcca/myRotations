@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import MusicDataService from "../services/musicDataService";
 import { Link, useNavigate } from "react-router-dom";
 import { flushSync } from "react-dom";
@@ -11,10 +11,14 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 
+import "./style.css";
+
 const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeUser, setActiveUser] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -65,6 +69,71 @@ const MusicList = () => {
     find(searchArtist, "artistName");
   };
 
+  const ITEM_DISTANCE = 200;
+  const ITEM_ANGLE = -45;
+  const CENTER_ITEM_POP = 500;
+  const CENTER_ITEM_DISTANCE = 80;
+
+  const el = useRef(null);
+
+  // Help function to set element style transform property
+  function setTransform(el, xpos, zpos, yAngle) {
+    el.style.transform = `translateX(${xpos}px) translateZ(${zpos}px) rotateY(${yAngle}deg)`;
+  }
+
+  useEffect(() => {
+    target(Math.floor(0));
+    // target(Math.floor(music.length * 0.5));
+  }, [music]);
+
+  function target(index, _id) {
+    if (el.current) {
+      if (index == currentIndex && activeUser) {
+        document.startViewTransition(() => {
+          flushSync(() => {
+            console.log(`going to /music/${_id}`);
+            navigate(`/music/${_id}`);
+          });
+        });
+      } else {
+        setCurrentIndex(index);
+      }
+
+      const items = el.current.children;
+
+      for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+
+        // Center item position and angle
+        if (i === index) {
+          setTransform(item, 0, CENTER_ITEM_POP, 0);
+        }
+        // Left items position and angle
+        else if (i < index) {
+          setTransform(
+            item,
+            (i - index) * ITEM_DISTANCE - CENTER_ITEM_DISTANCE,
+            0,
+            -ITEM_ANGLE
+          );
+        }
+        // Right items position and angle
+        else {
+          setTransform(
+            item,
+            (i - index) * ITEM_DISTANCE + CENTER_ITEM_DISTANCE,
+            0,
+            ITEM_ANGLE
+          );
+        }
+      }
+    }
+  }
+
+  const handleMouseEnter = () => {
+    setActiveUser(true);
+  };
+
   return (
     <div className="App">
       <Container>
@@ -92,39 +161,20 @@ const MusicList = () => {
             </Col>
           </Row>
         </Form>
-        <Row>
-          {music.map((song) => {
-            return (
-              <Col>
-                <Card style={{ width: "18rem" }}>
-                  <a
-                    onClick={() => {
-                      document.startViewTransition(() => {
-                        flushSync(() => {
-                          console.log(`going to /music/${song._id}`);
-                          navigate(`/music/${song._id}`);
-                        });
-                      });
-                    }}
-                  >
-                    <img
-                      style={{
-                        viewTransitionName: `${song._id}`,
-                      }}
-                      src={song.albumCover}
-                      width="200"
-                    />
-                  </a>
 
-                  <Card.Body>
-                    <Card.Title>{song.trackName}</Card.Title>
-                    <Card.Text>{song._id}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
-        </Row>
+        <div className="coverflow" ref={el}>
+          {music.map((song, index) => (
+            <img
+              key={index}
+              src={song.albumCover}
+              width="300"
+              height="300"
+              onClick={() => target(index, song._id)}
+              onMouseEnter={() => handleMouseEnter()}
+              className="coverflow-item"
+            />
+          ))}
+        </div>
       </Container>
     </div>
   );
