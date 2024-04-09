@@ -86,13 +86,16 @@ const MusicList = () => {
     // target(Math.floor(music.length * 0.5));
   }, [music]);
 
-  function target(index, _id) {
+  function target(index, _id, albumCover) {
     if (el.current) {
       if (index == currentIndex && activeUser) {
         document.startViewTransition(() => {
           flushSync(() => {
             console.log(`going to /music/${_id}`);
-            navigate(`/music/${_id}`);
+            console.log(_id);
+            navigate(`/music/${_id}`, {
+              state: { imageId: _id, imageURL: albumCover },
+            });
           });
         });
       } else {
@@ -165,13 +168,12 @@ const MusicList = () => {
         <div className="coverflow" ref={el}>
           {music.map((song, index) => (
             <img
+              onClick={() => target(index, song._id, song.albumCover)}
               key={index}
               src={song.albumCover}
-              width="300"
-              height="300"
-              onClick={() => target(index, song._id)}
               onMouseEnter={() => handleMouseEnter()}
               className="coverflow-item"
+              style={{ viewTransitionName: "image" + song._id }}
             />
           ))}
         </div>
