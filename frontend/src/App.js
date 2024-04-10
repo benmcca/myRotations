@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import { flushSync } from "react-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import MusicList from "./components/musicList";
 import Song from "./components/song";
 import AddComment from "./components/addComment";
 import Login from "./components/login";
+import "./App.css";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" className="Navbar">
         <Navbar.Brand
           // as={NavLink}
           // to={"/"}

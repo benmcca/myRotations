@@ -8,6 +8,8 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
+import "./style.css";
+
 const Song = ({ user }) => {
   const [song, setSong] = useState({
     id: null,
@@ -39,13 +41,14 @@ const Song = ({ user }) => {
   const imageId = location.state.imageId;
 
   return (
-    <div>
+    <div className="songPage">
       <Row>
         <Col>
           <img
             src={imageURL}
             style={{
               viewTransitionName: "image" + imageId,
+              borderRadius: "10px",
             }}
             width="700"
             height="700"
@@ -54,19 +57,8 @@ const Song = ({ user }) => {
         </Col>
         <Col>
           <Card>
-            <Card.Header as="h5">{song.collectionName}</Card.Header>
-            <Card.Body>
-              <Card.Title as="h6">{song.trackName}</Card.Title>
-              {songPreview && (
-                <>
-                  <audio controls>
-                    <source src={songPreview} type="audio/mp4" />
-                    Your browser does not support the audio element.
-                  </audio>
-                </>
-              )}
-              <Card.Text>{song.artistName}</Card.Text>
-              <Card.Text>{song.collectionName}</Card.Text>
+            <Card.Header as="h5">
+              {song.collectionName + " by " + song.artistName}
               <Card.Text>
                 {new Date(Date.parse(song.releaseDate)).toLocaleDateString(
                   "en-US",
@@ -77,6 +69,18 @@ const Song = ({ user }) => {
                   }
                 )}
               </Card.Text>
+            </Card.Header>
+            <Card.Body>
+              {songPreview && (
+                <>
+                  <audio controls>
+                    <source src={songPreview} type="audio/mp4" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </>
+              )}
+              <Card.Title as="h6">{song.trackName}</Card.Title>
+              
               {user && (
                 <Link to={"/music/" + id + "/comments"}>Add Comment</Link>
               )}

@@ -19,6 +19,7 @@ const MusicList = () => {
   const [searchArtist, setSearchArtist] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeUser, setActiveUser] = useState(false);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,17 +41,29 @@ const MusicList = () => {
     const searchTitle = e.target.value;
     setSearchTitle(searchTitle);
   };
-  useEffect(() => {
-    findByTitle(); // only call the search once searchTitle state is fully updated
-  }, [searchTitle]);
+  // useEffect(() => {
+  //   findByTitle(); // only call the search once searchTitle state is fully updated
+  // }, [searchTitle]);
 
   const onChangeSearchArtist = (e) => {
     const searchArtist = e.target.value;
     setSearchArtist(searchArtist);
   };
-  useEffect(() => {
-    findByArtist(); // only call the search once searchArtist state is fully updated
-  }, [searchArtist]);
+  // useEffect(() => {
+  //   findByArtist(); // only call the search once searchArtist state is fully updated
+  // }, [searchArtist]);
+
+  const handleSearchTitle = (e) => {
+    if (e.key === "Enter") {
+      findByTitle();
+    }
+  };
+
+  const handleSearchArtist = (e) => {
+    if (e.key === "Enter") {
+      findByArtist();
+    }
+  };
 
   const find = (query, by) => {
     MusicDataService.find(query, by)
@@ -82,11 +95,10 @@ const MusicList = () => {
   }
 
   useEffect(() => {
-    target(Math.floor(0));
-    // target(Math.floor(music.length * 0.5));
+    target();
   }, [music]);
 
-  function target(index, _id, albumCover) {
+  function target(index = 0, _id, albumCover) {
     if (el.current) {
       if (index == currentIndex && activeUser) {
         document.startViewTransition(() => {
@@ -133,51 +145,68 @@ const MusicList = () => {
     }
   }
 
+  useEffect(() => {
+    // Simulate loading for 0.5 seconds
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 750);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const handleMouseEnter = () => {
     setActiveUser(true);
   };
 
   return (
-    <div className="App">
-      <Container>
-        <Form>
-          <Row>
-            <Col>
-              <Form.Group>
-                <Form.Control
-                  type="text"
-                  placeholder="Search"
-                  value={searchTitle}
-                  onChange={onChangeSearchTitle}
-                />
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group>
-                <Form.Control
-                  type="text"
-                  placeholder="Artist"
-                  value={searchArtist}
-                  onChange={onChangeSearchArtist}
-                />
-              </Form.Group>
-            </Col>
-          </Row>
-        </Form>
+    <div className="app">
+      {/* Overlay div */}
+      {loading && <div className="overlay"></div>}
 
-        <div className="coverflow" ref={el}>
-          {music.map((song, index) => (
-            <img
-              onClick={() => target(index, song._id, song.albumCover)}
-              key={index}
-              src={song.albumCover}
-              onMouseEnter={() => handleMouseEnter()}
-              className="coverflow-item"
-              style={{ viewTransitionName: "image" + song._id }}
-            />
-          ))}
-        </div>
-      </Container>
+      {/* Content */}
+      <div className={`content ${loading ? "non-interactable" : ""}`}>
+        <Container>
+          <Form>
+            <Row>
+              <Col>
+                <Form.Group>
+                  <Form.Control
+                    type="text"
+                    placeholder="Search"
+                    value={searchTitle}
+                    onChange={(e) => setSearchTitle(e.target.value)}
+                    onKeyPress={handleSearchTitle}
+                  />
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group>
+                  <Form.Control
+                    type="text"
+                    placeholder="Artist"
+                    value={searchArtist}
+                    onChange={(e) => setSearchArtist(e.target.value)}
+                    onKeyPress={handleSearchArtist}
+                  />
+                </Form.Group>
+              </Col>
+            </Row>
+          </Form>
+
+          <div className="coverflow" ref={el}>
+            {music.map((song, index) => (
+              <img
+                onClick={() => target(index, song._id, song.albumCover)}
+                key={index}
+                src={song.albumCover}
+                onMouseEnter={() => handleMouseEnter()}
+                className="coverflow-item"
+                style={{ viewTransitionName: "image" + song._id }}
+              />
+            ))}
+          </div>
+        </Container>
+      </div>
     </div>
   );
 };
