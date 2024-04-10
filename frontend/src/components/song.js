@@ -1,80 +1,94 @@
 import React, { useState, useEffect } from "react";
 import MusicDataService from "../services/musicDataService";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
+import { flushSync } from "react-dom";
 
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-import { motion } from "framer-motion";
+import "./style.css";
 
-const Song = (user) => {
+const Song = ({ user }) => {
   const [song, setSong] = useState({
     id: null,
     title: "",
     comments: [],
-    results: [],
   });
+  const [songPreview, setSongPreview] = useState(null);
   let { id } = useParams();
+  const navigate = useNavigate();
+
+  const getSong = (id) => {
+    MusicDataService.get(id)
+      .then((response) => {
+        setSong(response.data);
+        setSongPreview(response.data.previewUrl);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
 
   useEffect(() => {
-    const getSong = async () => {
-      try {
-        const response = await MusicDataService.get(id);
-        setSong(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getSong();
+    console.log("useEffect");
+    getSong(id);
   }, [id]);
 
-  // Wait for song to be loaded
-  if (!song.results.length) {
-    return <div>Loading...</div>;
-  }
+  const location = useLocation();
+  const imageURL = location.state.imageURL;
+  const imageId = location.state.imageId;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Container>
-        <Row>
-          <Col>
-            <Image src={song.results[0].albumCover} fluid />
-          </Col>
-          <Col>
-            <Card>
-              <Card.Header as="h5">{song.results[0].trackName}</Card.Header>
-              <Card.Body>
-                <audio controls>
-                  <source src={song.results[0].previewUrl} type="audio/mp4" />
-                  Your browser does not support the audio element.
-                </audio>
-                <Card.Text>{song.results[0].artistName}</Card.Text>
-                <Card.Text>{song.results[0].collectionName}</Card.Text>
-                <Card.Text>
-                  {new Date(
-                    Date.parse(song.results[0].releaseDate)
-                  ).toLocaleDateString("en-US", {
+    <div className="songPage">
+      <Row>
+        <Col>
+          <img
+            src={imageURL}
+            style={{
+              viewTransitionName: "image" + imageId,
+              borderRadius: "10px",
+            }}
+            width="700"
+            height="700"
+          />
+          {console.log(`image ${song._id}`)}
+        </Col>
+        <Col>
+          <Card>
+            <Card.Header as="h5">
+              {song.collectionName + " by " + song.artistName}
+              <Card.Text>
+                {new Date(Date.parse(song.releaseDate)).toLocaleDateString(
+                  "en-US",
+                  {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
-                  })}
-                </Card.Text>
-                {user && (
-                  <Link to={"/music/" + id + "/comments"}>Add Comment</Link>
+                  }
                 )}
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </motion.div>
+              </Card.Text>
+            </Card.Header>
+            <Card.Body>
+              {songPreview && (
+                <>
+                  <audio controls>
+                    <source src={songPreview} type="audio/mp4" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </>
+              )}
+              <Card.Title as="h6">{song.trackName}</Card.Title>
+              
+              {user && (
+                <Link to={"/music/" + id + "/comments"}>Add Comment</Link>
+              )}
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </div>
   );
 };
 
