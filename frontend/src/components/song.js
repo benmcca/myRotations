@@ -32,7 +32,6 @@ const Song = ({ user }) => {
   };
 
   useEffect(() => {
-    console.log("useEffect");
     getSong(id);
   }, [id]);
 
@@ -40,21 +39,28 @@ const Song = ({ user }) => {
   const imageURL = location.state.imageURL;
   const imageId = location.state.imageId;
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      const image = document.getElementById("songImage");
+      if (image) {
+        image.classList.add("scaledDown");
+      }
+    }, 30);
+    return () => clearTimeout(timeout); // Cleanup function to clear the timeout on unmount
+  }, []);
+
   return (
     <div className="songPage">
       <Row>
         <Col>
           <img
+            id="songImage"
             src={imageURL}
             style={{
               viewTransitionName: "image" + imageId,
-              borderRadius: "10px",
             }}
-            width="700"
-            height="700"
             className="songPageImage"
           />
-          {console.log(`image ${song._id}`)}
         </Col>
         <Col>
           <Card>
@@ -81,7 +87,7 @@ const Song = ({ user }) => {
                 </>
               )}
               <Card.Title as="h6">{song.trackName}</Card.Title>
-              
+
               {user && (
                 <Link to={"/music/" + id + "/comments"}>Add Comment</Link>
               )}

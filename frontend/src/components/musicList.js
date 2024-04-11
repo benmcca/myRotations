@@ -18,14 +18,11 @@ const MusicList = () => {
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
   const [currentIndex, setCurrentIndex] = useState(null);
-  // const [activeUser, setActiveUser] = useState(false);
-  // const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     retrieveMusic();
   }, []);
-
   const retrieveMusic = () => {
     musicDataService
       .getAll()
@@ -38,32 +35,29 @@ const MusicList = () => {
   };
 
   const handleSearchTitle = (e) => {
-    if (e.key === "Enter") {
-      findByTitle();
-    }
+    e.preventDefault(); // stop form from reloading page
+    findByTitle();
   };
-
   const handleSearchArtist = (e) => {
-    if (e.key === "Enter") {
-      findByArtist();
-    }
+    e.preventDefault(); // stop form from reloading page
+    findByArtist();
   };
-
+  const findByTitle = () => {
+    find(searchTitle, "trackName");
+  };
+  const findByArtist = () => {
+    find(searchArtist, "artistName");
+  };
   const find = (query, by) => {
+    setMusic([]);
     MusicDataService.find(query, by)
       .then((response) => {
+        console.log(response.data.songs);
         setMusic(response.data.songs);
       })
       .catch((e) => {
         console.log(e);
       });
-  };
-  const findByTitle = () => {
-    find(searchTitle, "trackName");
-  };
-
-  const findByArtist = () => {
-    find(searchArtist, "artistName");
   };
 
   const ITEM_DISTANCE = 200;
@@ -80,6 +74,7 @@ const MusicList = () => {
 
   useEffect(() => {
     target();
+    console.log("targetran");
   }, [music]);
 
   function target(index = 0, _id, albumCover) {
@@ -131,34 +126,30 @@ const MusicList = () => {
 
   return (
     <div className="app">
-      {/* Content */}
       <div>
         <Container>
           <Form>
-            <Row>
-              <Col>
-                <Form.Group>
                   <input
                     type="text"
-                    placeholder="Search"
+                    placeholder="Search..."
                     value={searchTitle}
                     onChange={(e) => setSearchTitle(e.target.value)}
-                    onKeyPress={handleSearchTitle}
+                    onKeyPress={(e) =>
+                      e.key === "Enter" && handleSearchTitle(e)
+                    }
                   />
-                </Form.Group>
-              </Col>
-              <Col>
+              {/* <Col>
                 <Form.Group>
-                  <Form.Control
+                  <input
                     type="text"
                     placeholder="Artist"
                     value={searchArtist}
                     onChange={(e) => setSearchArtist(e.target.value)}
-                    onKeyPress={handleSearchArtist}
+                    onKeyPress={(e) => e.key === "Enter" && handleSearchArtist(e)}
                   />
                 </Form.Group>
-              </Col>
-            </Row>
+              </Col> */}
+            {/* </Row> */}
           </Form>
 
           <div className="coverflow" ref={el}>
