@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import MusicDataService from "../services/musicDataService";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { flushSync } from "react-dom";
 import musicDataService from "../services/musicDataService";
 
@@ -18,7 +18,9 @@ const MusicList = () => {
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [goToIndex, setGoToIndex] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     retrieveMusic();
@@ -50,9 +52,9 @@ const MusicList = () => {
   };
   const find = (query, by) => {
     setMusic([]);
+    setGoToIndex(0)
     MusicDataService.find(query, by)
       .then((response) => {
-        console.log(response.data.songs);
         setMusic(response.data.songs);
       })
       .catch((e) => {
@@ -66,6 +68,12 @@ const MusicList = () => {
   const CENTER_ITEM_DISTANCE = 80;
 
   const el = useRef(null);
+  useEffect(() => {
+    if (location.state) {
+      setGoToIndex(location.state.goToIndex);
+      console.log(location.state.goToIndex);
+    }
+  }, []);
 
   // Help function to set element style transform property
   function setTransform(el, xpos, zpos, yAngle) {
@@ -73,8 +81,11 @@ const MusicList = () => {
   }
 
   useEffect(() => {
-    target();
-    console.log("targetran");
+    if (goToIndex) {
+      target(goToIndex);
+    } else {
+      target();
+    }
   }, [music]);
 
   function target(index = 0, _id, albumCover) {
@@ -82,10 +93,8 @@ const MusicList = () => {
       if (index == currentIndex && _id) {
         document.startViewTransition(() => {
           flushSync(() => {
-            console.log(`going to /music/${_id}`);
-            console.log(_id);
             navigate(`/music/${_id}`, {
-              state: { imageId: _id, imageURL: albumCover },
+              state: { imageId: _id, imageURL: albumCover, imageIndex: index },
             });
           });
         });
@@ -129,16 +138,14 @@ const MusicList = () => {
       <div>
         <Container>
           <Form>
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchTitle}
-                    onChange={(e) => setSearchTitle(e.target.value)}
-                    onKeyPress={(e) =>
-                      e.key === "Enter" && handleSearchTitle(e)
-                    }
-                  />
-              {/* <Col>
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchTitle}
+              onChange={(e) => setSearchTitle(e.target.value)}
+              onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
+            />
+            {/* <Col>
                 <Form.Group>
                   <input
                     type="text"
