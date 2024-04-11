@@ -17,9 +17,9 @@ const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeUser, setActiveUser] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(null);
+  // const [activeUser, setActiveUser] = useState(false);
+  // const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -36,22 +36,6 @@ const MusicList = () => {
         console.log(e);
       });
   };
-
-  const onChangeSearchTitle = (e) => {
-    const searchTitle = e.target.value;
-    setSearchTitle(searchTitle);
-  };
-  // useEffect(() => {
-  //   findByTitle(); // only call the search once searchTitle state is fully updated
-  // }, [searchTitle]);
-
-  const onChangeSearchArtist = (e) => {
-    const searchArtist = e.target.value;
-    setSearchArtist(searchArtist);
-  };
-  // useEffect(() => {
-  //   findByArtist(); // only call the search once searchArtist state is fully updated
-  // }, [searchArtist]);
 
   const handleSearchTitle = (e) => {
     if (e.key === "Enter") {
@@ -100,7 +84,7 @@ const MusicList = () => {
 
   function target(index = 0, _id, albumCover) {
     if (el.current) {
-      if (index == currentIndex && activeUser) {
+      if (index == currentIndex && _id) {
         document.startViewTransition(() => {
           flushSync(() => {
             console.log(`going to /music/${_id}`);
@@ -145,26 +129,10 @@ const MusicList = () => {
     }
   }
 
-  useEffect(() => {
-    // Simulate loading for 0.5 seconds
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 750);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-  const handleMouseEnter = () => {
-    setActiveUser(true);
-  };
-
   return (
     <div className="app">
-      {/* Overlay div */}
-      {loading && <div className="overlay"></div>}
-
       {/* Content */}
-      <div className={`content ${loading ? "non-interactable" : ""}`}>
+      <div>
         <Container>
           <Form>
             <Row>
@@ -199,7 +167,6 @@ const MusicList = () => {
                 onClick={() => target(index, song._id, song.albumCover)}
                 key={index}
                 src={song.albumCover}
-                onMouseEnter={() => handleMouseEnter()}
                 className="coverflow-item"
                 style={{ viewTransitionName: "image" + song._id }}
               />
