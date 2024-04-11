@@ -26,7 +26,11 @@ const MusicList = () => {
     const fetchData = async () => {
       if (location.state) {
         await setSearchTitle(location.state.searchValue);
-        await findByTitle(location.state.searchValue);
+        if (location.state.searchValue != "") {
+          await findByTitle(location.state.searchValue);
+        } else {
+          await retrieveMusic();
+        }
         setGoToIndex(location.state.goToIndex);
       } else {
         await retrieveMusic();
@@ -46,7 +50,7 @@ const MusicList = () => {
 
   const retrieveMusic = () => {
     musicDataService
-      .getAll()
+      .getAll(1)
       .then((response) => {
         setMusic(response.data.songs);
       })
