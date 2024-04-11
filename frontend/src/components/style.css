@@ -24,7 +24,7 @@ input {
   border-top: none;
   border-left: none;
   border-right: none;
-  width: 500px;
+  width: 600px;
   height: 30px;
   font-size: 24px;
   transition: all 0.2s;
@@ -106,7 +106,7 @@ input:focus::placeholder {
   border-radius: 10px;
 }
 .songPageImage.scaledDown {
-  scale: 0.95;
+  scale: 0.94;
 }
 .songPageImage:hover {
   scale: 0.98;

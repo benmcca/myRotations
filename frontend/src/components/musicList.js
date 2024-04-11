@@ -16,15 +16,35 @@ import "./style.css";
 const MusicList = () => {
   const [music, setMusic] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
-  const [searchArtist, setSearchArtist] = useState("");
   const [currentIndex, setCurrentIndex] = useState(null);
   const [goToIndex, setGoToIndex] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const el = useRef(null);
 
   useEffect(() => {
-    retrieveMusic();
+    const fetchData = async () => {
+      if (location.state) {
+        await setSearchTitle(location.state.searchValue);
+        await findByTitle(location.state.searchValue);
+        setGoToIndex(location.state.goToIndex);
+      } else {
+        await retrieveMusic();
+        console.log("retrieve all");
+      }
+    };
+
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    if (goToIndex) {
+      target(goToIndex);
+    } else {
+      target();
+    }
+  }, [music]);
+
   const retrieveMusic = () => {
     musicDataService
       .getAll()
@@ -40,19 +60,16 @@ const MusicList = () => {
     e.preventDefault(); // stop form from reloading page
     findByTitle();
   };
-  const handleSearchArtist = (e) => {
-    e.preventDefault(); // stop form from reloading page
-    findByArtist();
-  };
-  const findByTitle = () => {
-    find(searchTitle, "trackName");
-  };
-  const findByArtist = () => {
-    find(searchArtist, "artistName");
+  const findByTitle = (searchValue) => {
+    if (searchValue) {
+      find(searchValue, "trackName");
+    } else {
+      find(searchTitle, "trackName");
+    }
   };
   const find = (query, by) => {
     setMusic([]);
-    setGoToIndex(0)
+    setGoToIndex(0);
     MusicDataService.find(query, by)
       .then((response) => {
         setMusic(response.data.songs);
@@ -66,35 +83,21 @@ const MusicList = () => {
   const ITEM_ANGLE = -45;
   const CENTER_ITEM_POP = 500;
   const CENTER_ITEM_DISTANCE = 80;
-
-  const el = useRef(null);
-  useEffect(() => {
-    if (location.state) {
-      setGoToIndex(location.state.goToIndex);
-      console.log(location.state.goToIndex);
-    }
-  }, []);
-
-  // Help function to set element style transform property
   function setTransform(el, xpos, zpos, yAngle) {
     el.style.transform = `translateX(${xpos}px) translateZ(${zpos}px) rotateY(${yAngle}deg)`;
   }
-
-  useEffect(() => {
-    if (goToIndex) {
-      target(goToIndex);
-    } else {
-      target();
-    }
-  }, [music]);
-
-  function target(index = 0, _id, albumCover) {
+  function target(index = 0, _id, albumCover, searchValue) {
     if (el.current) {
       if (index == currentIndex && _id) {
         document.startViewTransition(() => {
           flushSync(() => {
             navigate(`/music/${_id}`, {
-              state: { imageId: _id, imageURL: albumCover, imageIndex: index },
+              state: {
+                imageId: _id,
+                imageURL: albumCover,
+                imageIndex: index,
+                searchValue: searchValue,
+              },
             });
           });
         });
@@ -145,24 +148,15 @@ const MusicList = () => {
               onChange={(e) => setSearchTitle(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
             />
-            {/* <Col>
-                <Form.Group>
-                  <input
-                    type="text"
-                    placeholder="Artist"
-                    value={searchArtist}
-                    onChange={(e) => setSearchArtist(e.target.value)}
-                    onKeyPress={(e) => e.key === "Enter" && handleSearchArtist(e)}
-                  />
-                </Form.Group>
-              </Col> */}
-            {/* </Row> */}
+            <i class="fas fa-search"></i>
           </Form>
 
           <div className="coverflow" ref={el}>
             {music.map((song, index) => (
               <img
-                onClick={() => target(index, song._id, song.albumCover)}
+                onClick={() =>
+                  target(index, song._id, song.albumCover, searchTitle)
+                }
                 key={index}
                 src={song.albumCover}
                 className="coverflow-item"
