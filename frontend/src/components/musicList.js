@@ -30,7 +30,6 @@ const MusicList = () => {
         setGoToIndex(location.state.goToIndex);
       } else {
         await retrieveMusic();
-        console.log("retrieve all");
       }
     };
 
@@ -88,7 +87,7 @@ const MusicList = () => {
   }
   function target(index = 0, _id, albumCover, searchValue) {
     if (el.current) {
-      if (index == currentIndex && _id) {
+      if (index === currentIndex && _id) {
         document.startViewTransition(() => {
           flushSync(() => {
             navigate(`/music/${_id}`, {
@@ -158,6 +157,7 @@ const MusicList = () => {
                   target(index, song._id, song.albumCover, searchTitle)
                 }
                 key={index}
+                alt={song.trackName}
                 src={song.albumCover}
                 className="coverflow-item"
                 style={{ viewTransitionName: "image" + song._id }}

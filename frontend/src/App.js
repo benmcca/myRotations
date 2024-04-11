@@ -36,7 +36,6 @@ function App() {
               document.startViewTransition(() => {
                 flushSync(() => {
                   navigate(`/music`);
-                  console.log("NAV BAR MUSIC");
                 });
               });
             }
