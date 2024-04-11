@@ -52,6 +52,7 @@ const Song = ({ user }) => {
             }}
             width="700"
             height="700"
+            className="songPageImage"
           />
           {console.log(`image ${song._id}`)}
         </Col>

@@ -170,7 +170,7 @@ const MusicList = () => {
             <Row>
               <Col>
                 <Form.Group>
-                  <Form.Control
+                  <input
                     type="text"
                     placeholder="Search"
                     value={searchTitle}
@@ -205,6 +205,14 @@ const MusicList = () => {
               />
             ))}
           </div>
+          {music[currentIndex] && (
+            <div className="songInfo">
+              <div>
+                <h3>{music[currentIndex].collectionName}</h3>
+                <h6>{music[currentIndex].artistName}</h6>
+              </div>
+            </div>
+          )}
         </Container>
       </div>
     </div>
