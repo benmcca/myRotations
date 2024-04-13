@@ -1,3 +1,9 @@
+/* Benjamin McCabe
+4/12/24
+IT302 - 002
+Phase 4 Project
+bsm25@njit.edu */
+
 .container {
   max-width: 100% !important;
   width: 100%;
@@ -20,7 +26,7 @@ form {
 input {
   margin: 50px 0;
   background: none;
-  border-bottom: 2px solid rgb(112, 112, 112);
+  border-bottom: 2px solid rgb(134, 134, 134);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -41,6 +47,21 @@ input:focus {
 }
 input:focus::placeholder {
   color: #999; /* Change the color to your desired color */
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+.search-icon {
+  width: 25px;
+}
+
+.add-icon {
+  width: 17px;
+  opacity: 0.7;
+  margin-left: 2px;
 }
 
 .coverflow {
@@ -80,6 +101,11 @@ input:focus::placeholder {
   scale: 1.05;
 }
 
+.rightHandSide {
+  display: flex;
+  flex-direction: column;
+}
+
 .songInfo {
   position: absolute;
   top: 80%;
@@ -88,11 +114,6 @@ input:focus::placeholder {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* backface-visibility: visible;
-  transform: scale(1) translateZ(-400px);
-  transform-style: preserve-3d;
-  transform-origin: 50% 50%;
-  cursor: pointer; */
 }
 
 .songPage {
@@ -103,21 +124,92 @@ input:focus::placeholder {
   box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
   transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
   height: 700px;
+  scale: 1.12;
   border-radius: 10px;
 }
 .songPageImage.scaledDown {
-  scale: 0.94;
+  scale: 1;
 }
 .songPageImage:hover {
-  scale: 0.98;
+  scale: 1.02;
+}
+
+.albumName {
+  margin: 0;
+  padding: 0;
+}
+
+.artistName {
+  margin: 0;
+  padding: 0;
+}
+
+.date {
+  font-weight: 300;
+}
+
+.musicContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.audioNameDiv {
+  padding: 10px;
+  padding-left: 15px;
+  flex-grow: 1; /* Allow it to grow as much as possible */
+  min-width: 100px;
+  max-width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.audioDiv {
+  flex-grow: 0;
+  width: 80%;
+  display: flex;
 }
 
 audio {
   width: 100%;
-  margin-bottom: 5px;
+  margin-left: auto;
+  height: 100%;
+  padding: 5px;
+}
+
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-control-container {
+  display: none;
+}
+audio::-webkit-media-controls-overflow-button {
+  display: none;
 }
 
 audio::-webkit-media-controls-panel {
-  background-color: #f8f8f8;
-  border-radius: 5px;
+  background-color: white;
+}
+
+audio::-webkit-media-controls {
+  background-color: transparent;
+}
+
+/* Add more styles as needed */
+
+.commentsSectionHeader {
+  margin-top: 20px;
+}
+
+.commentsDiv {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.comment {
+  background-color: red;
 }

@@ -1,3 +1,9 @@
+// Benjamin McCabe
+// 4/12/24
+// IT302 - 002
+// Phase 4 Project
+// bsm25@njit.edu
+
 import axios from "axios";
 
 class MusicDataService {
@@ -33,7 +39,7 @@ class MusicDataService {
     );
   }
 
-  deleteReview(id, userId) {
+  deleteComment(id, userId) {
     return axios.delete(
       `${process.env.REACT_APP_BACKEND_URL}/api/v1/bsm25/music/comments`,
       { data: { commentId: id, userId: userId } }

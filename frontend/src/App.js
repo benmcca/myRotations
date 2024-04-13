@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+// Benjamin McCabe
+// 4/12/24
+// IT302 - 002
+// Phase 4 Project
+// bsm25@njit.edu
+
+import React, { useState, useCallback } from "react";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import { flushSync } from "react-dom";
 
@@ -23,12 +29,22 @@ function App() {
     setUser(null);
   }
 
+  const loginSetter = useCallback(
+    (user) => {
+      setUser(user);
+    },
+    [setUser]
+  );
+
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg" className="Navbar">
+      <Navbar
+        bg="light"
+        expand="lg"
+        className="Navbar"
+        style={{ paddingLeft: "20px" }}
+      >
         <Navbar.Brand
-          // as={NavLink}
-          // to={"/"}
           onClick={() => {
             if (!document.startViewTransition) {
               navigate(`/music`);
@@ -46,9 +62,6 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            {/* <Nav.Link as={NavLink} to={"/music"}>
-              Songs
-            </Nav.Link> */}
             <Nav.Link as={NavLink} to={user ? "" : "/login"}>
               {user ? "Logout" : "Login"}
             </Nav.Link>
@@ -64,7 +77,10 @@ function App() {
           path="/music/:id/comment"
           element={<AddComment user={user} />}
         ></Route>
-        <Route path="/login" element={<Login login={login} />}></Route>
+        <Route
+          path="/login"
+          element={<Login user={user} loginSetter={loginSetter} />}
+        ></Route>
       </Routes>
     </div>
   );

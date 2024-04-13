@@ -1,3 +1,9 @@
+// Benjamin McCabe
+// 4/12/24
+// IT302 - 002
+// Phase 4 Project
+// bsm25@njit.ed
+
 import React, { useState, useEffect, useRef } from "react";
 import MusicDataService from "../services/musicDataService";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -5,11 +11,7 @@ import { flushSync } from "react-dom";
 import musicDataService from "../services/musicDataService";
 
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
-import Card from "react-bootstrap/Card";
 
 import "./style.css";
 
@@ -50,7 +52,7 @@ const MusicList = () => {
 
   const retrieveMusic = () => {
     musicDataService
-      .getAll(1)
+      .getAll()
       .then((response) => {
         setMusic(response.data.songs);
       })
@@ -91,6 +93,7 @@ const MusicList = () => {
   }
   function target(index = 0, _id, albumCover, searchValue) {
     if (el.current) {
+      // if clicked on an item and it is in the currentIndex, take user to songPage
       if (index === currentIndex && _id) {
         document.startViewTransition(() => {
           flushSync(() => {
@@ -105,14 +108,13 @@ const MusicList = () => {
           });
         });
       } else {
+        // bring selected song to the center
         setCurrentIndex(index);
       }
 
       const items = el.current.children;
-
       for (let i = 0; i < items.length; i++) {
         const item = items[i];
-
         // Center item position and angle
         if (i === index) {
           setTransform(item, 0, CENTER_ITEM_POP, 0);
@@ -144,6 +146,13 @@ const MusicList = () => {
       <div>
         <Container>
           <Form>
+            <button onClick={handleSearchTitle}>
+              <img
+                src="https://cdn1.iconfinder.com/data/icons/pointed-edge-web-navigation/117/search-grey-512.png"
+                alt="Search"
+                className="search-icon"
+              />
+            </button>
             <input
               type="text"
               placeholder="Search..."
@@ -151,7 +160,6 @@ const MusicList = () => {
               onChange={(e) => setSearchTitle(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
             />
-            <i class="fas fa-search"></i>
           </Form>
 
           <div className="coverflow" ref={el}>
@@ -171,7 +179,7 @@ const MusicList = () => {
           {music[currentIndex] && (
             <div className="songInfo">
               <div>
-                <h3>{music[currentIndex].collectionName}</h3>
+                <h3>{music[currentIndex].collectionCensoredName}</h3>
                 <h6>{music[currentIndex].artistName}</h6>
               </div>
             </div>
