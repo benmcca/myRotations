@@ -12,11 +12,8 @@ export default class MusicController {
         const page = req.query.page ? parseInt(req.query.page) : 0
 
         let filters = {}
-        if (req.query.trackName) {
-            filters.trackName = req.query.trackName
-        }
-        if (req.query.artistName) {
-            filters.artistName = req.query.artistName
+        if (req.query.any) {
+            filters.any = req.query.any
         }
 
         const {songList, totalNumSongs} = await MusicDAO.getMusic({filters, page, songsPerPage})

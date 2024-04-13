@@ -67,9 +67,9 @@ const MusicList = () => {
   };
   const findByTitle = (searchValue) => {
     if (searchValue) {
-      find(searchValue, "trackName");
+      find(searchValue, "any");
     } else {
-      find(searchTitle, "trackName");
+      find(searchTitle, "any");
     }
   };
   const find = (query, by) => {

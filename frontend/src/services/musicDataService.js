@@ -19,7 +19,7 @@ class MusicDataService {
     );
   }
 
-  find(query, by = "trackName", page = 0) {
+  find(query, by = "any", page = 0) {
     return axios.get(
       `${process.env.REACT_APP_BACKEND_URL}/api/v1/bsm25/music?${by}=${query}&page=${page}`
     );
