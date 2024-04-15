@@ -54,8 +54,52 @@ button {
   border: none;
 }
 
-.search-icon {
-  width: 25px;
+.dice-icon {
+  width: 32px;
+  opacity: 0.8;
+  transition: 0.3s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(5deg);
+  }
+  10% {
+    transform: translate(-1px, -1px) rotate(-3deg);
+  }
+  20% {
+    transform: translate(-1px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(1px, 1px) rotate(5deg);
+  }
+  40% {
+    transform: translate(0px, -1px) rotate(3deg);
+  }
+  50% {
+    transform: translate(-1px, 1px) rotate(-5deg);
+  }
+  60% {
+    transform: translate(-1px, 0px) rotate(3deg);
+  }
+  70% {
+    transform: translate(1px, 0px) rotate(-3deg);
+  }
+  80% {
+    transform: translate(0px, -1px) rotate(5deg);
+  }
+  90% {
+    transform: translate(0px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, -1px) rotate(3deg);
+  }
+}
+
+.dice-icon:hover {
+  animation: shake 1.5s;
+  animation-iteration-count: infinite;
+  scale: 1.1;
 }
 
 .add-icon {
@@ -63,6 +107,20 @@ button {
   opacity: 0.7;
   margin-left: 4px;
   margin-bottom: 2px;
+}
+
+.back-icon {
+  position: absolute;
+  width: 25px;
+  left: 20px;
+  top: 75px;
+  rotate: 180deg;
+  opacity: 0.6;
+}
+
+.back-icon:hover {
+  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+  scale: 1.1;
 }
 
 .coverflow {
@@ -132,7 +190,7 @@ button {
   scale: 1;
 }
 .songPageImage:hover {
-  scale: 1.02;
+  scale: 1.01;
 }
 
 .albumName {

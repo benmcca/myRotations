@@ -84,6 +84,12 @@ const MusicList = () => {
       });
   };
 
+  const handleRandomize = async (e) => {
+    e.preventDefault();
+    find("", "any");
+    setSearchTitle("");
+  };
+
   const ITEM_DISTANCE = 200;
   const ITEM_ANGLE = -45;
   const CENTER_ITEM_POP = 500;
@@ -147,11 +153,11 @@ const MusicList = () => {
       <div>
         <Container>
           <Form>
-            <button onClick={handleSearchTitle}>
+            <button onClick={handleRandomize}>
               <img
-                src="https://cdn1.iconfinder.com/data/icons/pointed-edge-web-navigation/117/search-grey-512.png"
+                src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
                 alt="Search"
-                className="search-icon"
+                className="dice-icon"
               />
             </button>
             <input

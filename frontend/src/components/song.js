@@ -71,6 +71,24 @@ const Song = ({ user }) => {
 
   return (
     <div className="songPage">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+        alt="backButton"
+        className="back-icon"
+        onClick={() => {
+          document.startViewTransition(() => {
+            flushSync(() => {
+              navigate(`/music`, {
+                state: {
+                  goToIndex: imageIndex,
+                  searchValue: searchValue,
+                  music: music,
+                },
+              });
+            });
+          });
+        }}
+      />
       <Row>
         <Col>
           <img
