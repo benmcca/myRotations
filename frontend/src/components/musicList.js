@@ -30,10 +30,9 @@ const MusicList = () => {
         await setSearchTitle(location.state.searchValue);
         if (location.state.searchValue != "") {
           await findByTitle(location.state.searchValue);
-        } else {
-          await retrieveMusic();
         }
         setGoToIndex(location.state.goToIndex);
+        setMusic(location.state.music);
       } else {
         await retrieveMusic();
       }
@@ -51,6 +50,7 @@ const MusicList = () => {
   }, [music]);
 
   const retrieveMusic = () => {
+    console.log("RETRIEVE MUSIC");
     musicDataService
       .getAll()
       .then((response) => {
@@ -91,7 +91,7 @@ const MusicList = () => {
   function setTransform(el, xpos, zpos, yAngle) {
     el.style.transform = `translateX(${xpos}px) translateZ(${zpos}px) rotateY(${yAngle}deg)`;
   }
-  function target(index = 0, _id, albumCover, searchValue) {
+  function target(index = 0, _id, albumCover, searchValue, music) {
     if (el.current) {
       // if clicked on an item and it is in the currentIndex, take user to songPage
       if (index === currentIndex && _id) {
@@ -103,6 +103,7 @@ const MusicList = () => {
                 imageURL: albumCover,
                 imageIndex: index,
                 searchValue: searchValue,
+                music: music,
               },
             });
           });
@@ -166,7 +167,7 @@ const MusicList = () => {
             {music.map((song, index) => (
               <img
                 onClick={() =>
-                  target(index, song._id, song.albumCover, searchTitle)
+                  target(index, song._id, song.albumCover, searchTitle, music)
                 }
                 key={index}
                 alt={song.trackName}

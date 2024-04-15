@@ -31,6 +31,8 @@ const Song = ({ user }) => {
   const imageId = location.state.imageId;
   const imageIndex = location.state.imageIndex;
   const searchValue = location.state.searchValue;
+  const music = location.state.music;
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       const image = document.getElementById("songImage");
@@ -82,7 +84,11 @@ const Song = ({ user }) => {
               document.startViewTransition(() => {
                 flushSync(() => {
                   navigate(`/music`, {
-                    state: { goToIndex: imageIndex, searchValue: searchValue },
+                    state: {
+                      goToIndex: imageIndex,
+                      searchValue: searchValue,
+                      music: music,
+                    },
                   });
                 });
               });

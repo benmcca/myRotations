@@ -8,7 +8,7 @@ import MusicDAO from "../dao/musicDAO.js";
 
 export default class MusicController {
     static async apiGetMusic(req, res, next) {
-        const songsPerPage = req.query.songsPerPage ? parseInt(req.query.songsPerPage) : 20
+        const songsPerPage = req.query.songsPerPage ? parseInt(req.query.songsPerPage) : 30
         const page = req.query.page ? parseInt(req.query.page) : 0
 
         let filters = {}

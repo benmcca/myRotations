@@ -3,9 +3,9 @@
 // IT302 - 002
 // Phase 2 Assignment
 // bsm25@njit.edu
-import mongodb from "mongodb"
-const ObjectId = mongodb.ObjectId
-let music
+import mongodb from "mongodb";
+const ObjectId = mongodb.ObjectId;
+let music;
 
 export default class MusicDAO {
   static async injectDB(conn) {
@@ -20,29 +20,41 @@ export default class MusicDAO {
   }
   // The parameters in here are default parameters. The value will change if a value is passed.
   static async getMusic({ filters = null, page = 0, songsPerPage = 20 } = {}) {
-    let query = {};
+    let pipeline = [];
     if (filters && filters.any) {
       const anySubString = new RegExp(filters.any, "i");
-      query = {
-        $or: [
-          { trackName: { $regex: anySubString } },
-          { collectionCensoredName: { $regex: anySubString } },
-          { artistName: { $regex: anySubString } },
-        ],
-      };
+      pipeline.push({
+        $match: {
+          $or: [
+            { artistName: { $regex: anySubString } },
+            { collectionCensoredName: { $regex: anySubString } },
+            { trackName: { $regex: anySubString } },
+          ],
+        },
+      });
+    } else {
+      // Generate random sampling pipeline
+      pipeline.push({ $sample: { size: songsPerPage } });
     }
 
     let cursor;
     try {
-      cursor = await music
-        .find(query)
-        .limit(songsPerPage)
-        .skip(songsPerPage * page);
+      cursor = await music.aggregate([
+        ...pipeline,
+        { $skip: songsPerPage * page },
+        { $limit: songsPerPage },
+      ]);
       const songList = await cursor.toArray();
-      const totalNumSongs = await music.countDocuments(query);
+      let totalNumSongs;
+      if (filters && filters.any) {
+        totalNumSongs = await music.countDocuments(pipeline[0].$match);
+      } else {
+        // Count all documents if no filters
+        totalNumSongs = await music.countDocuments();
+      }
       return { songList, totalNumSongs };
     } catch (e) {
-      console.error(`Unable to issue find command, ${e}`);
+      console.error(`Unable to issue aggregate command, ${e}`);
       console.error(e);
       return { songList: [], totalNumSongs: 0 };
     }
