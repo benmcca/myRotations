@@ -97,7 +97,7 @@ button {
 }
 
 .dice-icon:hover {
-  animation: shake 1.5s;
+  animation: shake 2s;
   animation-iteration-count: infinite;
   scale: 1.1;
 }
@@ -257,18 +257,50 @@ audio::-webkit-media-controls {
   background-color: transparent;
 }
 
-/* Add more styles as needed */
-
 .commentsSectionHeader {
   margin-top: 20px;
 }
 
 .commentsDiv {
-  flex-grow: 1;
+  height: 500px;
+  overflow: auto;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
 
 .comment {
-  background-color: red;
+  margin: 0;
+  padding: 0;
+}
+
+.commentHeader {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+}
+
+.commentName {
+  font-weight: 600;
+}
+
+.commentDate {
+  width: 100%;
+}
+
+.commentDate h6 {
+  font-weight: 200;
+  text-align: right;
+}
+
+.commentContent {
+  margin: 0;
+  margin-top: -8px;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px rgb(228, 228, 228) solid;
 }

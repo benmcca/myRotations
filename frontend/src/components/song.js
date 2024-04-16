@@ -144,7 +144,16 @@ const Song = ({ user }) => {
           <h5 className="commentsSectionHeader">
             Comments
             {user ? (
-              <Link to={"/music/" + id + "/comment"}>
+              <Link
+                to={"/music/" + id + "/comment"}
+                state={{
+                  imageURL: imageURL,
+                  imageId: imageId,
+                  imageIndex: imageIndex,
+                  searchValue: searchValue,
+                  music: music,
+                }}
+              >
                 <img
                   src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
                   alt="AddComment"
@@ -166,18 +175,22 @@ const Song = ({ user }) => {
             {song.comments.map((comment, index) => {
               return (
                 <div className="comment">
-                  <h6>{comment.name}</h6>
-                  <h6 className="date">
-                    {new Date(Date.parse(comment.date)).toLocaleDateString(
-                      "en-US",
-                      {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      }
-                    )}
-                  </h6>
-                  <p>{comment.comment}</p>
+                  <div className="commentHeader">
+                    <h6 className="commentName">{comment.name}</h6>
+                    <div className="commentDate">
+                      <h6>
+                        {new Date(Date.parse(comment.date)).toLocaleDateString(
+                          "en-US",
+                          {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          }
+                        )}
+                      </h6>
+                    </div>
+                  </div>
+                  <p className="commentContent">{comment.comment}</p>
                   {user && user.id === comment.userId && (
                     <Row>
                       <Col>
