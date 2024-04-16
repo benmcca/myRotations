@@ -6,7 +6,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import MusicDataService from "../services/musicDataService";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { flushSync } from "react-dom";
 import musicDataService from "../services/musicDataService";
 
@@ -27,17 +27,16 @@ const MusicList = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (location.state) {
-        await setSearchTitle(location.state.searchValue);
+        setSearchTitle(location.state.searchValue);
         if (location.state.searchValue != "") {
-          await findByTitle(location.state.searchValue);
+          findByTitle(location.state.searchValue);
         }
         setGoToIndex(location.state.goToIndex);
         setMusic(location.state.music);
       } else {
-        await retrieveMusic();
+        retrieveMusic();
       }
     };
-
     fetchData();
   }, []);
 
@@ -50,7 +49,6 @@ const MusicList = () => {
   }, [music]);
 
   const retrieveMusic = () => {
-    console.log("RETRIEVE MUSIC");
     musicDataService
       .getAll()
       .then((response) => {
@@ -65,6 +63,7 @@ const MusicList = () => {
     e.preventDefault(); // stop form from reloading page
     findByTitle();
   };
+
   const findByTitle = (searchValue) => {
     if (searchValue) {
       find(searchValue, "any");
@@ -72,6 +71,7 @@ const MusicList = () => {
       find(searchTitle, "any");
     }
   };
+
   const find = (query, by) => {
     setMusic([]);
     setGoToIndex(0);
@@ -90,6 +90,7 @@ const MusicList = () => {
     setSearchTitle("");
   };
 
+  //COVER FLOW VARIABLES
   const ITEM_DISTANCE = 200;
   const ITEM_ANGLE = -45;
   const CENTER_ITEM_POP = 500;
@@ -155,9 +156,9 @@ const MusicList = () => {
           <Form>
             <button onClick={handleRandomize}>
               <img
-                src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
-                alt="Search"
                 className="dice-icon"
+                alt="Randomize"
+                src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
               />
             </button>
             <input
@@ -172,14 +173,14 @@ const MusicList = () => {
           <div className="coverflow" ref={el}>
             {music.map((song, index) => (
               <img
+                className="coverflow-item"
+                alt={song.trackName}
+                style={{ viewTransitionName: "image" + song._id }}
+                src={song.albumCover}
+                key={index}
                 onClick={() =>
                   target(index, song._id, song.albumCover, searchTitle, music)
                 }
-                key={index}
-                alt={song.trackName}
-                src={song.albumCover}
-                className="coverflow-item"
-                style={{ viewTransitionName: "image" + song._id }}
               />
             ))}
           </div>

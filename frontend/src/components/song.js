@@ -33,6 +33,7 @@ const Song = ({ user }) => {
   useEffect(() => {
     getSong(id);
   }, [id]);
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       const image = document.getElementById("songImage");
@@ -76,9 +77,9 @@ const Song = ({ user }) => {
   return (
     <div className="songPage">
       <img
-        src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
-        alt="backButton"
         className="back-icon"
+        alt="backButton"
+        src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
         onClick={() => {
           document.startViewTransition(() => {
             flushSync(() => {
@@ -96,12 +97,10 @@ const Song = ({ user }) => {
       <Row>
         <Col>
           <img
-            id="songImage"
-            src={imageURL}
-            style={{
-              viewTransitionName: "image" + imageId,
-            }}
             className="songPageImage"
+            id="songImage"
+            style={{ viewTransitionName: "image" + imageId }}
+            src={imageURL}
             onClick={() => {
               document.startViewTransition(() => {
                 flushSync(() => {
@@ -159,9 +158,9 @@ const Song = ({ user }) => {
                 }}
               >
                 <img
-                  src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
-                  alt="AddComment"
                   className="add-icon"
+                  alt="AddComment"
+                  src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
                 />
               </Link>
             ) : (
@@ -177,9 +176,9 @@ const Song = ({ user }) => {
                 }}
               >
                 <img
-                  src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
-                  alt="AddComment"
                   className="add-icon"
+                  alt="AddComment"
+                  src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
                 />
               </Link>
             )}
@@ -219,8 +218,8 @@ const Song = ({ user }) => {
                         }}
                       >
                         <img
-                          src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
                           className="edit-icon"
+                          src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
                         />
                       </Link>
                       <button
@@ -228,8 +227,8 @@ const Song = ({ user }) => {
                         onClick={() => deleteComment(comment._id, index)}
                       >
                         <img
-                          src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
                           className="delete-icon"
+                          src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
                         />
                       </button>
                     </div>
