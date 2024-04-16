@@ -5,6 +5,7 @@
 // bsm25@njit.edu
 
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -12,6 +13,17 @@ function Login({ loginSetter }) {
   const [name, setName] = useState("");
   const [id, setId] = useState("");
   const [user, setUser] = useState(null);
+  const location = useLocation();
+
+  let songId, imageURL, imageId, imageIndex, searchValue, music;
+  if (location && location.state) {
+    songId = location.state.songId;
+    imageURL = location.state.imageURL;
+    imageId = location.state.imageId;
+    imageIndex = location.state.imageIndex;
+    searchValue = location.state.searchValue;
+    music = location.state.music;
+  }
   useEffect(() => {
     loginSetter(user);
   }, [loginSetter, user]);
@@ -56,6 +68,20 @@ function Login({ loginSetter }) {
       ) : (
         <p>
           {name} ({id}) logged in successful.
+          {location && location.state && (
+            <Link
+              to={"/music/" + songId}
+              state={{
+                imageURL: imageURL,
+                imageId: imageId,
+                imageIndex: imageIndex,
+                searchValue: searchValue,
+                music: music,
+              }}
+            >
+              Back to Song
+            </Link>
+          )}
         </p>
       )}
     </div>

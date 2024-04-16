@@ -23,9 +23,6 @@ const Song = ({ user }) => {
   const [songPreview, setSongPreview] = useState(null);
   let { id } = useParams();
   const navigate = useNavigate();
-  useEffect(() => {
-    getSong(id);
-  }, [id]);
   const location = useLocation();
   const imageURL = location.state.imageURL;
   const imageId = location.state.imageId;
@@ -33,6 +30,9 @@ const Song = ({ user }) => {
   const searchValue = location.state.searchValue;
   const music = location.state.music;
 
+  useEffect(() => {
+    getSong(id);
+  }, [id]);
   useEffect(() => {
     const timeout = setTimeout(() => {
       const image = document.getElementById("songImage");
@@ -72,7 +72,6 @@ const Song = ({ user }) => {
         console.log(e);
       });
   };
-
 
   return (
     <div className="songPage">
@@ -166,7 +165,17 @@ const Song = ({ user }) => {
                 />
               </Link>
             ) : (
-              <Link to={"/login"}>
+              <Link
+                to={"/login"}
+                state={{
+                  songId: id,
+                  imageURL: imageURL,
+                  imageId: imageId,
+                  imageIndex: imageIndex,
+                  searchValue: searchValue,
+                  music: music,
+                }}
+              >
                 <img
                   src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
                   alt="AddComment"
