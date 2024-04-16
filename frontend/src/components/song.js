@@ -196,7 +196,14 @@ const Song = ({ user }) => {
                       <Col>
                         <Link
                           to={"/music/" + id + "/comment"}
-                          state={{ currentComment: comment }}
+                          state={{
+                            currentComment: comment,
+                            imageURL: imageURL,
+                            imageId: imageId,
+                            imageIndex: imageIndex,
+                            searchValue: searchValue,
+                            music: music,
+                          }}
                         >
                           Edit
                         </Link>

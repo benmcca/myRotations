@@ -10,7 +10,7 @@ import { Link, useParams, useLocation } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-const AddComment = (props) => {
+const AddComment = ({ user }) => {
   let editing = false;
   let initialCommentState = "";
   const location = useLocation();
@@ -19,7 +19,7 @@ const AddComment = (props) => {
   const imageIndex = location.state.imageIndex;
   const searchValue = location.state.searchValue;
   const music = location.state.music;
-  if (location.state && location.state.currentReview) {
+  if (location.state && location.state.currentComment) {
     editing = true;
     initialCommentState = location.state.currentComment.comment;
   }
@@ -36,8 +36,8 @@ const AddComment = (props) => {
   const saveComment = () => {
     var data = {
       comment: comment,
-      name: props.user.name,
-      user_id: props.user.id,
+      name: user.name,
+      userId: user.id,
       songId: id,
     };
     if (editing) {
