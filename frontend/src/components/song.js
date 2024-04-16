@@ -57,17 +57,22 @@ const Song = ({ user }) => {
   const deleteComment = (commentId, index) => {
     MusicDataService.deleteComment(commentId, user.id)
       .then((response) => {
-        setSong((prevState) => {
-          prevState.comments.splice(index, 1);
-          return {
-            ...prevState,
-          };
-        });
+        // Create a new array without the deleted comment
+        const updatedComments = [
+          ...song.comments.slice(0, index),
+          ...song.comments.slice(index + 1),
+        ];
+        // Update the state with the new array
+        setSong((prevState) => ({
+          ...prevState,
+          comments: updatedComments,
+        }));
       })
       .catch((e) => {
         console.log(e);
       });
   };
+
 
   return (
     <div className="songPage">
@@ -192,31 +197,33 @@ const Song = ({ user }) => {
                   </div>
                   <p className="commentContent">{comment.comment}</p>
                   {user && user.id === comment.userId && (
-                    <Row>
-                      <Col>
-                        <Link
-                          to={"/music/" + id + "/comment"}
-                          state={{
-                            currentComment: comment,
-                            imageURL: imageURL,
-                            imageId: imageId,
-                            imageIndex: imageIndex,
-                            searchValue: searchValue,
-                            music: music,
-                          }}
-                        >
-                          Edit
-                        </Link>
-                      </Col>
-                      <Col>
-                        <button
-                          variant="link"
-                          onClick={() => deleteComment(comment._id, index)}
-                        >
-                          Delete
-                        </button>
-                      </Col>
-                    </Row>
+                    <div className="commentActions">
+                      <Link
+                        to={"/music/" + id + "/comment"}
+                        state={{
+                          currentComment: comment,
+                          imageURL: imageURL,
+                          imageId: imageId,
+                          imageIndex: imageIndex,
+                          searchValue: searchValue,
+                          music: music,
+                        }}
+                      >
+                        <img
+                          src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
+                          className="edit-icon"
+                        />
+                      </Link>
+                      <button
+                        variant="link"
+                        onClick={() => deleteComment(comment._id, index)}
+                      >
+                        <img
+                          src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
+                          className="delete-icon"
+                        />
+                      </button>
+                    </div>
                   )}
                 </div>
               );
