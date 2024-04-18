@@ -6,13 +6,13 @@
 
 import React, { useState } from "react";
 import MusicDataService from "../services/musicDataService";
-import { Link, useParams, useLocation } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
+import { flushSync } from "react-dom";
 
 const AddComment = ({ user }) => {
   let editing = false;
   let initialCommentState = "";
+  const navigate = useNavigate();
   const location = useLocation();
   const imageURL = location.state.imageURL;
   const imageId = location.state.imageId;
@@ -64,6 +64,26 @@ const AddComment = ({ user }) => {
 
   return (
     <div>
+      <img
+        className="back-icon"
+        alt="backButton"
+        src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+        onClick={() => {
+          document.startViewTransition(() => {
+            flushSync(() => {
+              navigate(`/music/${id}`, {
+                state: {
+                  imageURL: imageURL,
+                  imageId: imageId,
+                  imageIndex: imageIndex,
+                  searchValue: searchValue,
+                  music: music,
+                },
+              });
+            });
+          });
+        }}
+      />
       <div className="centered">
         <div className="addCommentSong">
           <img className="addCommentImage" src={imageURL} />

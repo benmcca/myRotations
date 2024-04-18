@@ -406,3 +406,38 @@ audio::-webkit-media-controls {
 .addCommentResponse {
   text-align: center;
 }
+
+.loginSection {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 200px;
+}
+
+.loginSection h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.loginSection input {
+  border-radius: 5px;
+  border: 1px solid rgb(211, 211, 211);
+  margin-top: 10px;
+  height: 40px;
+  padding: 5px;
+}
+
+.loginSection button {
+  margin: 10px;
+  margin-left: 5px;
+  color: white;
+  background-color: #4c71f9;
+  width: 75px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loginSection button:hover {
+  background-color: #3953b2;
+}

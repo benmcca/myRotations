@@ -37,38 +37,33 @@ function Login({ loginSetter }) {
     setId(id);
   };
   const handleSubmit = () => {
-    setUser({ name: name, id: id });
+    if (name != "" && id != "") {
+      setUser({ name: name, id: id });
+    }
   };
   return (
-    <div>
+    <div className="centered">
       {user == null ? (
-        <Form>
-          <Form.Group>
-            <Form.Label>Username</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter username"
-              value={name}
-              onChange={onChangeName}
-            />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>ID</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter id"
-              value={id}
-              onChange={onChangeId}
-            />
-          </Form.Group>
-          <Button variant="primary" onClick={handleSubmit}>
-            Submit
-          </Button>
-        </Form>
+        <div className="loginSection">
+          <h3>Login</h3>
+          <input
+            type="text"
+            placeholder="Username"
+            value={name}
+            onChange={onChangeName}
+          />
+          <input
+            type="text"
+            placeholder="ID"
+            value={id}
+            onChange={onChangeId}
+          />
+          <button onClick={handleSubmit}>Login</button>
+        </div>
       ) : (
         <p>
           {name} ({id}) logged in successful.
-          {location && location.state && (
+          {location && location.state ? (
             <Link
               to={"/music/" + songId}
               state={{
@@ -81,6 +76,8 @@ function Login({ loginSetter }) {
             >
               Back to Song
             </Link>
+          ) : (
+            <Link to="/music">Back to Music</Link>
           )}
         </p>
       )}
