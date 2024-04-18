@@ -155,6 +155,7 @@ const Song = ({ user }) => {
                   imageIndex: imageIndex,
                   searchValue: searchValue,
                   music: music,
+                  song: song,
                 }}
               >
                 <img
@@ -215,6 +216,7 @@ const Song = ({ user }) => {
                           imageIndex: imageIndex,
                           searchValue: searchValue,
                           music: music,
+                          song: song,
                         }}
                       >
                         <img

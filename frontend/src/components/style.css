@@ -14,7 +14,6 @@ bsm25@njit.edu */
   transform-style: preserve-3d;
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 form {
@@ -23,7 +22,7 @@ form {
   justify-content: center;
 }
 
-input {
+.musicListSearch {
   margin: 50px 0;
   background: none;
   border-bottom: 2px solid rgb(134, 134, 134);
@@ -192,7 +191,7 @@ button {
 .songPageImage {
   box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
   transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
-  height: 700px;
+  width: 700px;
   scale: 1.12;
   border-radius: 10px;
 }
@@ -297,6 +296,7 @@ audio::-webkit-media-controls {
 
 .commentName {
   font-weight: 600;
+  width: 400px;
 }
 
 .commentDate {
@@ -314,10 +314,95 @@ audio::-webkit-media-controls {
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
+  word-wrap: break-word; /* Ensure text wraps even without spaces */
+  hyphens: auto;
 }
 
 .commentActions {
   margin-left: 10px;
   margin-bottom: 5px;
   padding: 0;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addCommentSong {
+  display: flex;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 5px;
+  width: 500px;
+  height: 100px;
+  padding: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.addCommentImage {
+  border-radius: 5px;
+}
+
+.addCommentInfoSection {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.addcommentSongInfoh3 {
+  margin: 0;
+  padding: 0;
+}
+
+.addcommentSongInfoh5 {
+  margin: 0;
+  margin-top: -2px;
+  margin-bottom: 2px;
+  padding: 0;
+}
+
+.addcommentSongInfoh6 {
+  margin: 0;
+  padding: 0;
+}
+
+.addCommentInputArea {
+  width: 500px;
+}
+
+.addCommentInputArea h3 {
+  margin-left: 5px;
+}
+
+.addCommentInputArea textarea {
+  vertical-align: top;
+  justify-content: top;
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.addCommentInputArea button {
+  margin: 10px;
+  margin-left: 5px;
+  color: white;
+  background-color: #4c71f9;
+  width: 75px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.addCommentInputArea button:hover {
+  background-color: #3953b2;
+}
+
+.addCommentResponse {
+  text-align: center;
 }

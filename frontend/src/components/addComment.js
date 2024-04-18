@@ -19,6 +19,7 @@ const AddComment = ({ user }) => {
   const imageIndex = location.state.imageIndex;
   const searchValue = location.state.searchValue;
   const music = location.state.music;
+  const song = location.state.song;
   if (location.state && location.state.currentComment) {
     editing = true;
     initialCommentState = location.state.currentComment.comment;
@@ -34,65 +35,78 @@ const AddComment = ({ user }) => {
   };
 
   const saveComment = () => {
-    var data = {
-      comment: comment,
-      name: user.name,
-      userId: user.id,
-      songId: id,
-    };
-    if (editing) {
-      data.commentId = location.state.currentComment._id;
-      MusicDataService.updateComment(data)
-        .then((response) => {
-          setSubmitted(true);
-          console.log(response.data);
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    } else {
-      MusicDataService.createComment(data)
-        .then((response) => {
-          setSubmitted(true);
-        })
-        .catch((e) => {});
+    if (comment != "") {
+      var data = {
+        comment: comment,
+        name: user.name,
+        userId: user.id,
+        songId: id,
+      };
+      if (editing) {
+        data.commentId = location.state.currentComment._id;
+        MusicDataService.updateComment(data)
+          .then((response) => {
+            setSubmitted(true);
+            console.log(response.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      } else {
+        MusicDataService.createComment(data)
+          .then((response) => {
+            setSubmitted(true);
+          })
+          .catch((e) => {});
+      }
     }
   };
 
   return (
     <div>
+      <div className="centered">
+        <div className="addCommentSong">
+          <img className="addCommentImage" src={imageURL} />
+          <div className="addCommentInfoSection">
+            <h3 className="addcommentSongInfoh3">
+              {song.collectionCensoredName}
+            </h3>
+            <h5 className="addcommentSongInfoh5">{song.artistName}</h5>
+            <h6 className="addcommentSongInfoh6">{song.trackName}</h6>
+          </div>
+        </div>
+      </div>
       {submitted ? (
-        <div>
-          <h5>Comment Successful</h5>
-          <Link
-            to={"/music/" + id}
-            state={{
-              imageURL: imageURL,
-              imageId: imageId,
-              imageIndex: imageIndex,
-              searchValue: searchValue,
-              music: music,
-            }}
-          >
-            Back to Song
-          </Link>
+        <div className="centered">
+          <div className="addCommentResponse">
+            <h5>Comment Successful</h5>
+            <Link
+              to={"/music/" + id}
+              state={{
+                imageURL: imageURL,
+                imageId: imageId,
+                imageIndex: imageIndex,
+                searchValue: searchValue,
+                music: music,
+              }}
+            >
+              Back to Song
+            </Link>
+          </div>
         </div>
       ) : (
-        <Form>
-          <Form.Group>
-            <Form.Label>{editing ? "Edit" : "Add"} Comment</Form.Label>
-            <Form.Control
+        <div className="centered">
+          <div className="addCommentInputArea">
+            <h3>{editing ? "Edit" : "Add"} Comment</h3>
+            <textarea
               type="text"
               required
               value={comment}
               onChange={onChangeComment}
             />
-          </Form.Group>
-
-          <Button variant="primary" onClick={saveComment}>
-            Done
-          </Button>
-        </Form>
+            <button onClick={saveComment}>Done</button>
+          </div>
+        </div>
       )}
     </div>
   );
