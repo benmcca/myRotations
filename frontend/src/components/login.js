@@ -58,7 +58,9 @@ function Login({ loginSetter }) {
             value={id}
             onChange={onChangeId}
           />
-          <button onClick={handleSubmit}>Login</button>
+          <div className="buttonRow">
+            <button onClick={handleSubmit}>Login</button>
+          </div>
         </div>
       ) : (
         <p>

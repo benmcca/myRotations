@@ -120,11 +120,14 @@ const AddComment = ({ user }) => {
             <h3>{editing ? "Edit" : "Add"} Comment</h3>
             <textarea
               type="text"
+              placeholder="Comment"
               required
               value={comment}
               onChange={onChangeComment}
             />
-            <button onClick={saveComment}>Done</button>
+            <div className="buttonRow">
+              <button onClick={saveComment}>Done</button>
+            </div>
           </div>
         </div>
       )}

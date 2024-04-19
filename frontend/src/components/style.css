@@ -334,7 +334,7 @@ audio::-webkit-media-controls {
   display: flex;
   border: 1px solid rgb(211, 211, 211);
   border-radius: 5px;
-  width: 500px;
+  width: 700px;
   height: 100px;
   padding: 5px;
   margin-top: 50px;
@@ -371,7 +371,7 @@ audio::-webkit-media-controls {
 }
 
 .addCommentInputArea {
-  width: 500px;
+  width: 700px;
 }
 
 .addCommentInputArea h3 {
@@ -381,7 +381,7 @@ audio::-webkit-media-controls {
 .addCommentInputArea textarea {
   vertical-align: top;
   justify-content: top;
-  width: 500px;
+  width: 700px;
   height: 200px;
   border-radius: 5px;
   padding: 10px;
@@ -390,17 +390,23 @@ audio::-webkit-media-controls {
 
 .addCommentInputArea button {
   margin: 10px;
-  margin-left: 5px;
+  margin-right: 0px;
   color: white;
   background-color: #4c71f9;
   width: 75px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .addCommentInputArea button:hover {
   background-color: #3953b2;
+}
+
+.buttonRow {
+  display: flex;
+  width: 100%;
+  justify-content: right;
 }
 
 .addCommentResponse {
@@ -429,12 +435,12 @@ audio::-webkit-media-controls {
 
 .loginSection button {
   margin: 10px;
-  margin-left: 5px;
+  margin-right: 0px;
   color: white;
   background-color: #4c71f9;
   width: 75px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
