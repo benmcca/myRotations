@@ -63,25 +63,29 @@ function Login({ loginSetter }) {
           </div>
         </div>
       ) : (
-        <p>
-          {name} ({id}) logged in successful.
-          {location && location.state ? (
-            <Link
-              to={"/music/" + songId}
-              state={{
-                imageURL: imageURL,
-                imageId: imageId,
-                imageIndex: imageIndex,
-                searchValue: searchValue,
-                music: music,
-              }}
-            >
-              Back to Song
-            </Link>
-          ) : (
-            <Link to="/music">Back to Music</Link>
-          )}
-        </p>
+        <div className="centered">
+          <div className="addCommentResponse">
+            <h5>
+              {name} ({id}) logged in successful.
+            </h5>
+            {location && location.state ? (
+              <Link
+                to={"/music/" + songId}
+                state={{
+                  imageURL: imageURL,
+                  imageId: imageId,
+                  imageIndex: imageIndex,
+                  searchValue: searchValue,
+                  music: music,
+                }}
+              >
+                Back to Song
+              </Link>
+            ) : (
+              <Link to="/music">Back to Music</Link>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );

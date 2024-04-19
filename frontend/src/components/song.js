@@ -95,7 +95,7 @@ const Song = ({ user }) => {
         }}
       />
       <Row>
-        <Col>
+        <Col className="leftHandSide">
           <img
             className="songPageImage"
             id="songImage"
@@ -169,40 +169,27 @@ const Song = ({ user }) => {
                 }}
               />
             ) : (
-              // </Link>
-              // <Link
-              //   to={"/login"}
-              //   state={{
-              //     songId: id,
-              //     imageURL: imageURL,
-              //     imageId: imageId,
-              //     imageIndex: imageIndex,
-              //     searchValue: searchValue,
-              //     music: music,
-              //   }}
-              // >
-                <img
-                  className="add-icon"
-                  alt="AddComment"
-                  src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
-                  onClick={() => {
-                    document.startViewTransition(() => {
-                      flushSync(() => {
-                        navigate("/login", {
-                          state: {
-                            songId: id,
-                            imageURL: imageURL,
-                            imageId: imageId,
-                            imageIndex: imageIndex,
-                            searchValue: searchValue,
-                            music: music,
-                          },
-                        });
+              <img
+                className="add-icon"
+                alt="AddComment"
+                src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
+                onClick={() => {
+                  document.startViewTransition(() => {
+                    flushSync(() => {
+                      navigate("/login", {
+                        state: {
+                          songId: id,
+                          imageURL: imageURL,
+                          imageId: imageId,
+                          imageIndex: imageIndex,
+                          searchValue: searchValue,
+                          music: music,
+                        },
                       });
                     });
-                  }}
-                />
-              // </Link>
+                  });
+                }}
+              />
             )}
           </h5>
 

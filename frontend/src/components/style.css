@@ -106,6 +106,7 @@ button {
   opacity: 0.7;
   margin-left: 4px;
   margin-bottom: 2px;
+  cursor: pointer;
 }
 
 .back-icon {
@@ -115,6 +116,7 @@ button {
   top: 75px;
   rotate: 180deg;
   opacity: 0.6;
+  cursor: pointer;
 }
 
 .back-icon:hover {
@@ -169,6 +171,12 @@ button {
   scale: 1.05;
 }
 
+.leftHandSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .rightHandSide {
   display: flex;
   flex-direction: column;
@@ -191,9 +199,10 @@ button {
 .songPageImage {
   box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
   transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
-  width: 700px;
+  height: 700px;
   scale: 1.12;
   border-radius: 10px;
+  cursor: pointer;
 }
 .songPageImage.scaledDown {
   scale: 1;
@@ -227,9 +236,6 @@ button {
 .audioNameDiv {
   padding: 10px;
   padding-left: 15px;
-  flex-grow: 1; /* Allow it to grow as much as possible */
-  min-width: 100px;
-  max-width: 500px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -237,8 +243,9 @@ button {
 }
 
 .audioDiv {
-  flex-grow: 0;
-  width: 80%;
+  flex-grow: 1; /* Allow it to grow as much as possible */
+  max-width: 90%;
+  min-width: 70%;
   display: flex;
 }
 
@@ -411,6 +418,7 @@ audio::-webkit-media-controls {
 
 .addCommentResponse {
   text-align: center;
+  margin-top: 50px;
 }
 
 .loginSection {
