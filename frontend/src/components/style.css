@@ -4,6 +4,10 @@ IT302 - 002
 Phase 4 Project
 bsm25@njit.edu */
 
+.app {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 100% !important;
   width: 100%;
@@ -117,10 +121,11 @@ button {
   rotate: 180deg;
   opacity: 0.6;
   cursor: pointer;
+  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
 }
 
 .back-icon:hover {
-  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+  opacity: 0.45;
   scale: 1.1;
 }
 

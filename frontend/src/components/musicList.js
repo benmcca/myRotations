@@ -162,7 +162,7 @@ const MusicList = () => {
               />
             </button>
             <input
-            className="musicListSearch"
+              className="musicListSearch"
               type="text"
               placeholder="Search..."
               value={searchTitle}
