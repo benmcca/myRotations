@@ -5,15 +5,15 @@
 // bsm25@njit.edu
 
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { flushSync } from "react-dom";
 
 function Login({ loginSetter }) {
   const [name, setName] = useState("");
   const [id, setId] = useState("");
   const [user, setUser] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   let songId, imageURL, imageId, imageIndex, searchValue, music;
   if (location && location.state) {
@@ -45,6 +45,41 @@ function Login({ loginSetter }) {
     <div className="centered">
       {user == null ? (
         <div className="loginSection">
+          {location && location.state ? (
+            <img
+              className="back-icon"
+              alt="backButton"
+              src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+              onClick={() => {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    navigate(`/music/${songId}`, {
+                      state: {
+                        imageURL: imageURL,
+                        imageId: imageId,
+                        imageIndex: imageIndex,
+                        searchValue: searchValue,
+                        music: music,
+                      },
+                    });
+                  });
+                });
+              }}
+            />
+          ) : (
+            <img
+              className="back-icon"
+              alt="backButton"
+              src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+              onClick={() => {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    navigate(`/music`);
+                  });
+                });
+              }}
+            />
+          )}
           <h3>Login</h3>
           <input
             type="text"
