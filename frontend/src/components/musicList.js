@@ -165,20 +165,24 @@ const MusicList = () => {
             />
           </Form>
 
-          <div className="coverflow" ref={el}>
-            {music.map((song, index) => (
-              <img
-                className="coverflow-item"
-                alt={song.trackName}
-                style={{ viewTransitionName: "image" + song._id }}
-                src={song.albumCover}
-                key={index}
-                onClick={() =>
-                  target(index, song._id, song.albumCover, searchTitle, music)
-                }
-              />
-            ))}
-          </div>
+          {music.length > 0 ? (
+            <div className="coverflow" ref={el}>
+              {music.map((song, index) => (
+                <img
+                  className="coverflow-item"
+                  alt={song.trackName}
+                  style={{ viewTransitionName: "image" + song._id }}
+                  src={song.albumCover}
+                  key={index}
+                  onClick={() =>
+                    target(index, song._id, song.albumCover, searchTitle, music)
+                  }
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="noResults">No Results</div>
+          )}
           {music[currentIndex] && (
             <div className="songInfo">
               <div>

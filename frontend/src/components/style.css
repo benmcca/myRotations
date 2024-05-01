@@ -170,6 +170,15 @@ button {
   scale: 1.05;
 }
 
+.noResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: #8f8f8f;
+  height: 100px;
+}
+
 .leftHandSide {
   display: flex;
   justify-content: center;
