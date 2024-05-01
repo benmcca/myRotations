@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 4/12/24
-// IT302 - 002
-// Phase 5 Project
-// bsm25@njit.edu
-
 import React, { useState } from "react";
 import MusicDataService from "../services/musicDataService";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";

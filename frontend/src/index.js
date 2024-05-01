@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 4/12/24
-// IT302 - 002
-// Phase 4 Project
-// bsm25@njit.edu
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";

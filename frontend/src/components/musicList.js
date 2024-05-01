@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 4/12/24
-// IT302 - 002
-// Phase 4 Project
-// bsm25@njit.ed
-
 import React, { useState, useEffect, useRef } from "react";
 import MusicDataService from "../services/musicDataService";
 import { useNavigate, useLocation } from "react-router-dom";
