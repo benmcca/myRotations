@@ -118,7 +118,9 @@ const Song = ({ user }) => {
         </Col>
         <Col className="rightHandSide">
           <h3 className="albumName">{song.collectionCensoredName}</h3>
-          <h5 className="artistName">{song.artistName}</h5>
+          <Link className="artistLink" to={song.artistViewUrl} target="_blank">
+            <h5 className="artistName">{song.artistName}</h5>
+          </Link>
           <p className="date">
             {new Date(Date.parse(song.releaseDate)).toLocaleDateString(
               "en-US",

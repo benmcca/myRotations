@@ -62,7 +62,11 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link as={NavLink} to={user ? "" : "/login"}>
+            <Nav.Link
+              as={NavLink}
+              to={user ? "" : "/login"}
+              onClick={user ? logout : null}
+            >
               {user ? "Logout" : "Login"}
             </Nav.Link>
           </Nav>

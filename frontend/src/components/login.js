@@ -12,6 +12,7 @@ function Login({ loginSetter }) {
   const [name, setName] = useState("");
   const [id, setId] = useState("");
   const [user, setUser] = useState(null);
+  const [newUser, setNewUser] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -35,6 +36,10 @@ function Login({ loginSetter }) {
   const onChangeId = (e) => {
     const id = e.target.value;
     setId(id);
+  };
+
+  const handleNewUser = () => {
+    setNewUser(true);
   };
   const handleSubmit = () => {
     if (name != "" && id != "") {
@@ -80,7 +85,7 @@ function Login({ loginSetter }) {
               }}
             />
           )}
-          <h3>Login</h3>
+          <h3>{newUser ? "Sign Up" : "Login"}</h3>
           <input
             type="text"
             placeholder="Username"
@@ -93,15 +98,24 @@ function Login({ loginSetter }) {
             value={id}
             onChange={onChangeId}
           />
-          <div className="buttonRow">
-            <button onClick={handleSubmit}>Login</button>
+          <div className="loginActions">
+            {!newUser && (
+              <div className="signup" onClick={handleNewUser}>
+                Don't have an account? Sign Up
+              </div>
+            )}
+            <div className="loginButton">
+              <button onClick={handleSubmit}>
+                {newUser ? "Sign Up" : "Login"}
+              </button>
+            </div>
           </div>
         </div>
       ) : (
         <div className="centered">
           <div className="addCommentResponse">
             <h5>
-              {name} ({id}) logged in successful.
+              {name} logged in successful.
             </h5>
             {location && location.state ? (
               <Link
