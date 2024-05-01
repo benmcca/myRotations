@@ -7,6 +7,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { flushSync } from "react-dom";
+import Cookies from "js-cookie";
 
 function Login({ loginSetter }) {
   const [name, setName] = useState("");
@@ -25,14 +26,12 @@ function Login({ loginSetter }) {
     searchValue = location.state.searchValue;
     music = location.state.music;
   }
-  useEffect(() => {
-    loginSetter(user);
-  }, [loginSetter, user]);
 
   const onChangeName = (e) => {
     const name = e.target.value;
     setName(name);
   };
+
   const onChangeId = (e) => {
     const id = e.target.value;
     setId(id);
@@ -41,11 +40,18 @@ function Login({ loginSetter }) {
   const handleNewUser = () => {
     setNewUser(true);
   };
+
   const handleSubmit = () => {
-    if (name != "" && id != "") {
+    if (name !== "" && id !== "") {
       setUser({ name: name, id: id });
+      const expirationTime = new Date(new Date().getTime() + 60000);
+      Cookies.set("auth", JSON.stringify({ name: name, id: id }), {
+        expires: expirationTime,
+      });
+      loginSetter({ name: name, id: id });
     }
   };
+
   return (
     <div className="centered">
       {user == null ? (
@@ -114,9 +120,7 @@ function Login({ loginSetter }) {
       ) : (
         <div className="centered">
           <div className="addCommentResponse">
-            <h5>
-              {name} logged in successful.
-            </h5>
+            <h5>{name} logged in successful.</h5>
             {location && location.state ? (
               <Link
                 to={"/music/" + songId}

@@ -1,12 +1,7 @@
-// Benjamin McCabe
-// 4/12/24
-// IT302 - 002
-// Phase 4 Project
-// bsm25@njit.edu
-
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import { flushSync } from "react-dom";
+import Cookies from "js-cookie";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import MusicList from "./components/musicList";
@@ -20,21 +15,23 @@ import Navbar from "react-bootstrap/Navbar";
 
 function App() {
   const [user, setUser] = useState(null);
+  const isAuthenticated = !!Cookies.get("auth");
   const navigate = useNavigate();
 
-  async function login(user = null) {
+  useEffect(() => {
+    if (!user && isAuthenticated) {
+      setUser(JSON.parse(Cookies.get("auth")));
+    }
+  }, [user, isAuthenticated]);
+
+  const loginSetter = (user) => {
     setUser(user);
-  }
+  };
+
   async function logout() {
     setUser(null);
+    Cookies.remove("auth");
   }
-
-  const loginSetter = useCallback(
-    (user) => {
-      setUser(user);
-    },
-    [setUser]
-  );
 
   return (
     <div className="App">
