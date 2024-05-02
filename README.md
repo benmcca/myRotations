@@ -1,4 +1,4 @@
-# [myRotations](https://my-rotations-api.vercel.app/)
+# [myRotations](https://my-rotations.vercel.app/)
 myRotations is a full-stack application developed with the **MERN (MongoDB, Express, React, Node) stack**. It leverages the iTunes API to retrieve data on my most listened-to albums and presents them in an immersive gallery format.
 
 ## Key Features
