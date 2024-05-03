@@ -342,7 +342,7 @@ audio::-webkit-media-controls {
   padding: 0;
   margin-left: 10px;
   margin-right: 10px;
-  word-wrap: break-word; /* Ensure text wraps even without spaces */
+  overflow-wrap: break-word;
   hyphens: auto;
 }
 

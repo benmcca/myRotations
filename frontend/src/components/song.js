@@ -209,36 +209,38 @@ const Song = ({ user }) => {
                     </div>
                   </div>
                   <p className="commentContent">{comment.comment}</p>
-                  {user && user.id === comment.userId && (
-                    <div className="commentActions">
-                      <Link
-                        to={"/music/" + id + "/comment"}
-                        state={{
-                          currentComment: comment,
-                          imageURL: imageURL,
-                          imageId: imageId,
-                          imageIndex: imageIndex,
-                          searchValue: searchValue,
-                          music: music,
-                          song: song,
-                        }}
-                      >
-                        <img
-                          className="edit-icon"
-                          src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
-                        />
-                      </Link>
-                      <button
-                        variant="link"
-                        onClick={() => deleteComment(comment._id, index)}
-                      >
-                        <img
-                          className="delete-icon"
-                          src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
-                        />
-                      </button>
-                    </div>
-                  )}
+                  {user &&
+                    user.name === comment.name &&
+                    user.id === comment.userId && (
+                      <div className="commentActions">
+                        <Link
+                          to={"/music/" + id + "/comment"}
+                          state={{
+                            currentComment: comment,
+                            imageURL: imageURL,
+                            imageId: imageId,
+                            imageIndex: imageIndex,
+                            searchValue: searchValue,
+                            music: music,
+                            song: song,
+                          }}
+                        >
+                          <img
+                            className="edit-icon"
+                            src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
+                          />
+                        </Link>
+                        <button
+                          variant="link"
+                          onClick={() => deleteComment(comment._id, index)}
+                        >
+                          <img
+                            className="delete-icon"
+                            src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
+                          />
+                        </button>
+                      </div>
+                    )}
                 </div>
               );
             })}
