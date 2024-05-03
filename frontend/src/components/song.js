@@ -190,60 +190,112 @@ const Song = ({ user }) => {
           </h5>
 
           <div className="commentsDiv">
-            {song.comments.map((comment, index) => {
-              return (
-                <div className="comment">
-                  <div className="commentHeader">
-                    <h6 className="commentName">{comment.name}</h6>
-                    <div className="commentDate">
-                      <h6>
-                        {new Date(Date.parse(comment.date)).toLocaleDateString(
-                          "en-US",
-                          {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          }
-                        )}
-                      </h6>
-                    </div>
-                  </div>
-                  <p className="commentContent">{comment.comment}</p>
-                  {user &&
-                    user.name === comment.name &&
-                    user.id === comment.userId && (
-                      <div className="commentActions">
-                        <Link
-                          to={"/music/" + id + "/comment"}
-                          state={{
-                            currentComment: comment,
-                            imageURL: imageURL,
-                            imageId: imageId,
-                            imageIndex: imageIndex,
-                            searchValue: searchValue,
-                            music: music,
-                            song: song,
-                          }}
-                        >
-                          <img
-                            className="edit-icon"
-                            src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
-                          />
-                        </Link>
-                        <button
-                          variant="link"
-                          onClick={() => deleteComment(comment._id, index)}
-                        >
-                          <img
-                            className="delete-icon"
-                            src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
-                          />
-                        </button>
+            {song.comments.length > 0 ? (
+              <div>
+                {song.comments.map((comment, index) => {
+                  return (
+                    <div className="comment">
+                      <div className="commentHeader">
+                        <h6 className="commentName">{comment.name}</h6>
+                        <div className="commentDate">
+                          <h6>
+                            {new Date(
+                              Date.parse(comment.date)
+                            ).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </h6>
+                        </div>
                       </div>
-                    )}
-                </div>
-              );
-            })}
+                      <p className="commentContent">{comment.comment}</p>
+                      {user &&
+                        user.name === comment.name &&
+                        user.id === comment.userId && (
+                          <div className="commentActions">
+                            <Link
+                              to={"/music/" + id + "/comment"}
+                              state={{
+                                currentComment: comment,
+                                imageURL: imageURL,
+                                imageId: imageId,
+                                imageIndex: imageIndex,
+                                searchValue: searchValue,
+                                music: music,
+                                song: song,
+                              }}
+                            >
+                              <img
+                                className="edit-icon"
+                                src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
+                              />
+                            </Link>
+                            <button
+                              variant="link"
+                              onClick={() => deleteComment(comment._id, index)}
+                            >
+                              <img
+                                className="delete-icon"
+                                src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
+                              />
+                            </button>
+                          </div>
+                        )}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div>
+                <div className="noComments">No Comments</div>
+                {user ? (
+                  <div
+                    className="noCommentsDescription"
+                    onClick={() => {
+                      document.startViewTransition(() => {
+                        flushSync(() => {
+                          navigate("/music/" + id + "/comment", {
+                            state: {
+                              imageURL: imageURL,
+                              imageId: imageId,
+                              imageIndex: imageIndex,
+                              searchValue: searchValue,
+                              music: music,
+                              song: song,
+                            },
+                          });
+                        });
+                      });
+                    }}
+                  >
+                    Be the first to share what you think!
+                  </div>
+                ) : (
+                  <div
+                    className="noCommentsDescription"
+                    onClick={() => {
+                      document.startViewTransition(() => {
+                        flushSync(() => {
+                          navigate("/login", {
+                            state: {
+                              songId: id,
+                              imageURL: imageURL,
+                              imageId: imageId,
+                              imageIndex: imageIndex,
+                              searchValue: searchValue,
+                              music: music,
+                            },
+                          });
+                        });
+                      });
+                    }}
+                  >
+                    Be the first to share what you think!
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </Col>
       </Row>

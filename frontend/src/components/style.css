@@ -179,6 +179,24 @@ button {
   height: 100px;
 }
 
+.noComments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #7b7b7b;
+  margin-top: 50px;
+}
+.noCommentsDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #8f8f8f;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .leftHandSide {
   display: flex;
   justify-content: center;
