@@ -93,7 +93,7 @@ function Login({ loginSetter }) {
             onChange={onChangeName}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             value={id}
             onChange={onChangeId}
