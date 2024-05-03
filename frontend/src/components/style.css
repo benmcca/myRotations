@@ -192,9 +192,10 @@ button {
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  color: #8f8f8f;
+  color: #4c71f9;
   cursor: pointer;
   text-decoration: underline;
+  transition: all 0.1s;
 }
 
 .leftHandSide {
