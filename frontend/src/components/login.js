@@ -38,11 +38,17 @@ function Login({ loginSetter }) {
   const handleSubmit = () => {
     if (name !== "" && id !== "") {
       setUser({ name: name, id: id });
-      const expirationTime = new Date(new Date().getTime() + 60000);
+      loginSetter({ name: name, id: id });
+
+      const currentDate = new Date();
+      const expirationTime = new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth() + 1,
+        currentDate.getDate()
+      );
       Cookies.set("auth", JSON.stringify({ name: name, id: id }), {
         expires: expirationTime,
       });
-      loginSetter({ name: name, id: id });
     }
   };
 
