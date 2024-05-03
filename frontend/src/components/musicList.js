@@ -79,7 +79,7 @@ const MusicList = () => {
           const dateB = new Date(b.releaseDate);
 
           // Compare dates
-          return dateB - dateA;
+          return dateA - dateB;
         });
 
         setMusic(sortedSongs);
