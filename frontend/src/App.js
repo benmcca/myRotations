@@ -43,14 +43,14 @@ function App() {
       >
         <Navbar.Brand
           onClick={() => {
-            if (!document.startViewTransition) {
-              navigate(`/music`);
-            } else {
+            if (typeof document.startViewTransition === "function") {
               document.startViewTransition(() => {
                 flushSync(() => {
                   navigate(`/music`);
                 });
               });
+            } else {
+              navigate(`/music`);
             }
           }}
         >

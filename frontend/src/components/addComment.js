@@ -63,19 +63,31 @@ const AddComment = ({ user }) => {
         alt="backButton"
         src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
         onClick={() => {
-          document.startViewTransition(() => {
-            flushSync(() => {
-              navigate(`/music/${id}`, {
-                state: {
-                  imageURL: imageURL,
-                  imageId: imageId,
-                  imageIndex: imageIndex,
-                  searchValue: searchValue,
-                  music: music,
-                },
+          if (typeof document.startViewTransition === "function") {
+            document.startViewTransition(() => {
+              flushSync(() => {
+                navigate(`/music/${id}`, {
+                  state: {
+                    imageURL: imageURL,
+                    imageId: imageId,
+                    imageIndex: imageIndex,
+                    searchValue: searchValue,
+                    music: music,
+                  },
+                });
               });
             });
-          });
+          } else {
+            navigate(`/music/${id}`, {
+              state: {
+                imageURL: imageURL,
+                imageId: imageId,
+                imageIndex: imageIndex,
+                searchValue: searchValue,
+                music: music,
+              },
+            });
+          }
         }}
       />
       <div className="centered">

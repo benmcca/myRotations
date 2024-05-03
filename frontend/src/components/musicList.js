@@ -96,19 +96,31 @@ const MusicList = () => {
     if (el.current) {
       // if clicked on an item and it is in the currentIndex, take user to songPage
       if (index === currentIndex && _id) {
-        document.startViewTransition(() => {
-          flushSync(() => {
-            navigate(`/music/${_id}`, {
-              state: {
-                imageId: _id,
-                imageURL: albumCover,
-                imageIndex: index,
-                searchValue: searchValue,
-                music: music,
-              },
+        if (typeof document.startViewTransition === "function") {
+          document.startViewTransition(() => {
+            flushSync(() => {
+              navigate(`/music/${_id}`, {
+                state: {
+                  imageId: _id,
+                  imageURL: albumCover,
+                  imageIndex: index,
+                  searchValue: searchValue,
+                  music: music,
+                },
+              });
             });
           });
-        });
+        } else {
+          navigate(`/music/${_id}`, {
+            state: {
+              imageId: _id,
+              imageURL: albumCover,
+              imageIndex: index,
+              searchValue: searchValue,
+              music: music,
+            },
+          });
+        }
       } else {
         // bring selected song to the center
         setCurrentIndex(index);

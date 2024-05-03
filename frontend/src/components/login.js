@@ -56,19 +56,31 @@ function Login({ loginSetter }) {
               alt="backButton"
               src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
               onClick={() => {
-                document.startViewTransition(() => {
-                  flushSync(() => {
-                    navigate(`/music/${songId}`, {
-                      state: {
-                        imageURL: imageURL,
-                        imageId: imageId,
-                        imageIndex: imageIndex,
-                        searchValue: searchValue,
-                        music: music,
-                      },
+                if (typeof document.startViewTransition === "function") {
+                  document.startViewTransition(() => {
+                    flushSync(() => {
+                      navigate(`/music/${songId}`, {
+                        state: {
+                          imageURL: imageURL,
+                          imageId: imageId,
+                          imageIndex: imageIndex,
+                          searchValue: searchValue,
+                          music: music,
+                        },
+                      });
                     });
                   });
-                });
+                } else {
+                  navigate(`/music/${songId}`, {
+                    state: {
+                      imageURL: imageURL,
+                      imageId: imageId,
+                      imageIndex: imageIndex,
+                      searchValue: searchValue,
+                      music: music,
+                    },
+                  });
+                }
               }}
             />
           ) : (
@@ -77,11 +89,15 @@ function Login({ loginSetter }) {
               alt="backButton"
               src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
               onClick={() => {
-                document.startViewTransition(() => {
-                  flushSync(() => {
-                    navigate(`/music`);
+                if (typeof document.startViewTransition === "function") {
+                  document.startViewTransition(() => {
+                    flushSync(() => {
+                      navigate(`/music`);
+                    });
                   });
-                });
+                } else {
+                  navigate(`/music`);
+                }
               }}
             />
           )}

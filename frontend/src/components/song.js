@@ -75,17 +75,27 @@ const Song = ({ user }) => {
         alt="backButton"
         src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
         onClick={() => {
-          document.startViewTransition(() => {
-            flushSync(() => {
-              navigate(`/music`, {
-                state: {
-                  goToIndex: imageIndex,
-                  searchValue: searchValue,
-                  music: music,
-                },
+          if (typeof document.startViewTransition === "function") {
+            document.startViewTransition(() => {
+              flushSync(() => {
+                navigate(`/music`, {
+                  state: {
+                    goToIndex: imageIndex,
+                    searchValue: searchValue,
+                    music: music,
+                  },
+                });
               });
             });
-          });
+          } else {
+            navigate(`/music`, {
+              state: {
+                goToIndex: imageIndex,
+                searchValue: searchValue,
+                music: music,
+              },
+            });
+          }
         }}
       />
       <Row>
@@ -96,17 +106,27 @@ const Song = ({ user }) => {
             style={{ viewTransitionName: "image" + imageId }}
             src={imageURL}
             onClick={() => {
-              document.startViewTransition(() => {
-                flushSync(() => {
-                  navigate(`/music`, {
-                    state: {
-                      goToIndex: imageIndex,
-                      searchValue: searchValue,
-                      music: music,
-                    },
+              if (typeof document.startViewTransition === "function") {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    navigate(`/music`, {
+                      state: {
+                        goToIndex: imageIndex,
+                        searchValue: searchValue,
+                        music: music,
+                      },
+                    });
                   });
                 });
-              });
+              } else {
+                navigate(`/music`, {
+                  state: {
+                    goToIndex: imageIndex,
+                    searchValue: searchValue,
+                    music: music,
+                  },
+                });
+              }
             }}
           />
         </Col>
@@ -148,20 +168,33 @@ const Song = ({ user }) => {
                 alt="AddComment"
                 src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
                 onClick={() => {
-                  document.startViewTransition(() => {
-                    flushSync(() => {
-                      navigate("/music/" + id + "/comment", {
-                        state: {
-                          imageURL: imageURL,
-                          imageId: imageId,
-                          imageIndex: imageIndex,
-                          searchValue: searchValue,
-                          music: music,
-                          song: song,
-                        },
+                  if (typeof document.startViewTransition === "function") {
+                    document.startViewTransition(() => {
+                      flushSync(() => {
+                        navigate("/music/" + id + "/comment", {
+                          state: {
+                            imageURL: imageURL,
+                            imageId: imageId,
+                            imageIndex: imageIndex,
+                            searchValue: searchValue,
+                            music: music,
+                            song: song,
+                          },
+                        });
                       });
                     });
-                  });
+                  } else {
+                    navigate("/music/" + id + "/comment", {
+                      state: {
+                        imageURL: imageURL,
+                        imageId: imageId,
+                        imageIndex: imageIndex,
+                        searchValue: searchValue,
+                        music: music,
+                        song: song,
+                      },
+                    });
+                  }
                 }}
               />
             ) : (
@@ -170,20 +203,33 @@ const Song = ({ user }) => {
                 alt="AddComment"
                 src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
                 onClick={() => {
-                  document.startViewTransition(() => {
-                    flushSync(() => {
-                      navigate("/login", {
-                        state: {
-                          songId: id,
-                          imageURL: imageURL,
-                          imageId: imageId,
-                          imageIndex: imageIndex,
-                          searchValue: searchValue,
-                          music: music,
-                        },
+                  if (typeof document.startViewTransition === "function") {
+                    document.startViewTransition(() => {
+                      flushSync(() => {
+                        navigate("/login", {
+                          state: {
+                            songId: id,
+                            imageURL: imageURL,
+                            imageId: imageId,
+                            imageIndex: imageIndex,
+                            searchValue: searchValue,
+                            music: music,
+                          },
+                        });
                       });
                     });
-                  });
+                  } else {
+                    navigate("/login", {
+                      state: {
+                        songId: id,
+                        imageURL: imageURL,
+                        imageId: imageId,
+                        imageIndex: imageIndex,
+                        searchValue: searchValue,
+                        music: music,
+                      },
+                    });
+                  }
                 }}
               />
             )}
@@ -253,20 +299,33 @@ const Song = ({ user }) => {
                   <div
                     className="noCommentsDescription"
                     onClick={() => {
-                      document.startViewTransition(() => {
-                        flushSync(() => {
-                          navigate("/music/" + id + "/comment", {
-                            state: {
-                              imageURL: imageURL,
-                              imageId: imageId,
-                              imageIndex: imageIndex,
-                              searchValue: searchValue,
-                              music: music,
-                              song: song,
-                            },
+                      if (typeof document.startViewTransition === "function") {
+                        document.startViewTransition(() => {
+                          flushSync(() => {
+                            navigate("/music/" + id + "/comment", {
+                              state: {
+                                imageURL: imageURL,
+                                imageId: imageId,
+                                imageIndex: imageIndex,
+                                searchValue: searchValue,
+                                music: music,
+                                song: song,
+                              },
+                            });
                           });
                         });
-                      });
+                      } else {
+                        navigate("/music/" + id + "/comment", {
+                          state: {
+                            imageURL: imageURL,
+                            imageId: imageId,
+                            imageIndex: imageIndex,
+                            searchValue: searchValue,
+                            music: music,
+                            song: song,
+                          },
+                        });
+                      }
                     }}
                   >
                     Be the first to share what you think!
@@ -275,20 +334,33 @@ const Song = ({ user }) => {
                   <div
                     className="noCommentsDescription"
                     onClick={() => {
-                      document.startViewTransition(() => {
-                        flushSync(() => {
-                          navigate("/login", {
-                            state: {
-                              songId: id,
-                              imageURL: imageURL,
-                              imageId: imageId,
-                              imageIndex: imageIndex,
-                              searchValue: searchValue,
-                              music: music,
-                            },
+                      if (typeof document.startViewTransition === "function") {
+                        document.startViewTransition(() => {
+                          flushSync(() => {
+                            navigate("/login", {
+                              state: {
+                                songId: id,
+                                imageURL: imageURL,
+                                imageId: imageId,
+                                imageIndex: imageIndex,
+                                searchValue: searchValue,
+                                music: music,
+                              },
+                            });
                           });
                         });
-                      });
+                      } else {
+                        navigate("/login", {
+                          state: {
+                            songId: id,
+                            imageURL: imageURL,
+                            imageId: imageId,
+                            imageIndex: imageIndex,
+                            searchValue: searchValue,
+                            music: music,
+                          },
+                        });
+                      }
                     }}
                   >
                     Be the first to share what you think!
