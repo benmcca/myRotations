@@ -245,19 +245,16 @@ button {
   padding: 0;
 }
 
-.artistLink {
-  text-decoration: none;
-  color: #4c71f9;
-}
-
-.artistLink:hover {
-  text-decoration: underline;
-}
-
 .artistName {
   margin: 0;
   padding: 0;
   font-size: 22px;
+  text-decoration: none;
+  color: #4c71f9;
+  cursor: pointer;
+}
+.artistName:hover {
+  text-decoration: underline;
 }
 
 .date {

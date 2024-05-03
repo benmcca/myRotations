@@ -18,11 +18,14 @@ const Song = ({ user }) => {
   let { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const imageURL = location.state.imageURL;
-  const imageId = location.state.imageId;
-  const imageIndex = location.state.imageIndex;
-  const searchValue = location.state.searchValue;
-  const music = location.state.music;
+  let imageURL, imageId, imageIndex, searchValue, music;
+  if (location.state) {
+    imageURL = location.state.imageURL;
+    imageId = location.state.imageId;
+    imageIndex = location.state.imageIndex;
+    searchValue = location.state.searchValue;
+    music = location.state.music;
+  }
 
   useEffect(() => {
     getSong(id);
@@ -132,9 +135,31 @@ const Song = ({ user }) => {
         </Col>
         <Col className="rightHandSide">
           <h3 className="albumName">{song.collectionCensoredName}</h3>
-          <Link className="artistLink" to={song.artistViewUrl} target="_blank">
-            <h5 className="artistName">{song.artistName}</h5>
-          </Link>
+
+          <h5
+            className="artistName"
+            onClick={() => {
+              if (typeof document.startViewTransition === "function") {
+                document.startViewTransition(() => {
+                  flushSync(() => {
+                    navigate(`/music`, {
+                      state: {
+                        artist: song.artistName,
+                      },
+                    });
+                  });
+                });
+              } else {
+                navigate(`/music`, {
+                  state: {
+                    artist: song.artistName,
+                  },
+                });
+              }
+            }}
+          >
+            {song.artistName}
+          </h5>
           <p className="date">
             {new Date(Date.parse(song.releaseDate)).toLocaleDateString(
               "en-US",

@@ -21,12 +21,14 @@ const MusicList = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (location.state) {
-        setSearchTitle(location.state.searchValue);
-        if (location.state.searchValue != "") {
-          findByTitle(location.state.searchValue);
+        if (location.state.artist) {
+          setSearchTitle(location.state.artist);
+          find(location.state.artist, "any");
+        } else {
+          setSearchTitle(location.state.searchValue);
+          setGoToIndex(location.state.goToIndex);
+          setMusic(location.state.music);
         }
-        setGoToIndex(location.state.goToIndex);
-        setMusic(location.state.music);
       } else {
         retrieveMusic();
       }
