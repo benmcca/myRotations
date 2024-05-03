@@ -73,7 +73,16 @@ const MusicList = () => {
     setGoToIndex(0);
     MusicDataService.find(query, by)
       .then((response) => {
-        setMusic(response.data.songs);
+        const sortedSongs = response.data.songs.sort((a, b) => {
+          // Convert releaseDate strings to Date objects
+          const dateA = new Date(a.releaseDate);
+          const dateB = new Date(b.releaseDate);
+
+          // Compare dates
+          return dateB - dateA;
+        });
+
+        setMusic(sortedSongs);
       })
       .catch((e) => {
         console.log(e);
