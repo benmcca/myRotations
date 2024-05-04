@@ -110,7 +110,7 @@ function Login({ loginSetter }) {
           <h3>{newUser ? "Sign Up" : "Login"}</h3>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Display Name"
             value={name}
             onChange={onChangeName}
           />
