@@ -34,6 +34,14 @@ const MusicList = () => {
       }
     };
     fetchData();
+
+    // Add event listeners for arrow keys
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   useEffect(() => {
@@ -75,12 +83,38 @@ const MusicList = () => {
       .then((response) => {
         if (query != "") {
           const sortedSongs = response.data.songs.sort((a, b) => {
-            // Convert releaseDate strings to Date objects
-            const dateA = new Date(a.releaseDate);
-            const dateB = new Date(b.releaseDate);
+            // Sort the results by artistName, collectionName, then trackName.
+            // Sort the results within each category by date.
+            const queryInArtistA = a.artistName
+              .toLowerCase()
+              .includes(query.toLowerCase());
+            const queryInCollectionA = a.collectionName
+              .toLowerCase()
+              .includes(query.toLowerCase());
+            const queryInTrackA = a.trackName
+              .toLowerCase()
+              .includes(query.toLowerCase());
 
-            // Compare dates
-            return dateA - dateB;
+            const queryInArtistB = b.artistName
+              .toLowerCase()
+              .includes(query.toLowerCase());
+            const queryInCollectionB = b.collectionName
+              .toLowerCase()
+              .includes(query.toLowerCase());
+            const queryInTrackB = b.trackName
+              .toLowerCase()
+              .includes(query.toLowerCase());
+
+            if (queryInArtistA !== queryInArtistB) {
+              return queryInArtistB - queryInArtistA;
+            } else if (queryInCollectionA !== queryInCollectionB) {
+              return queryInCollectionB - queryInCollectionA;
+            } else {
+              // If the query matches in all categories, sort by date
+              const dateA = new Date(a.releaseDate);
+              const dateB = new Date(b.releaseDate);
+              return dateA - dateB; // Sort in ascending order (earliest first)
+            }
           });
           setMusic(sortedSongs);
         } else {
@@ -93,7 +127,9 @@ const MusicList = () => {
   };
 
   const handleRandomize = async (e) => {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
     find("", "any");
     setSearchTitle("");
   };
@@ -136,7 +172,7 @@ const MusicList = () => {
           });
         }
       } else {
-        // bring selected song to the center
+        // update the text below album to current info
         setCurrentIndex(index);
       }
 
@@ -168,6 +204,33 @@ const MusicList = () => {
       }
     }
   }
+
+  // Handle arrow key presses
+  const handleKeyDown = (event) => {
+    if (event.key === "R" || event.key === "r") {
+      handleRandomize();
+    } else {
+      setCurrentIndex((prevIndex) => {
+        if (prevIndex == null) {
+          console.log("null");
+          return 0; // Starting index
+        } else {
+          if (event.key === "ArrowRight" || event.key === "ArrowUp") {
+            // Increment index, but ensure it doesn't exceed the length of results
+            target(Math.min(prevIndex + 1, 29));
+            return Math.min(prevIndex + 1, 29);
+          } else if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
+            // Decrement index, but ensure it doesn't go below 0
+            target(Math.max(prevIndex - 1, 0));
+            return Math.max(prevIndex - 1, 0);
+          } else {
+            // For other keys, return the current index
+            return prevIndex;
+          }
+        }
+      });
+    }
+  };
 
   return (
     <div className="app">
