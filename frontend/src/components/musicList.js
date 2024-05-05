@@ -207,6 +207,9 @@ const MusicList = () => {
 
   // Handle arrow key presses
   const handleKeyDown = (event) => {
+    if (event.target.tagName.toLowerCase() === "input") {
+      return;
+    }
     if (event.key === "R" || event.key === "r") {
       handleRandomize();
     } else {
