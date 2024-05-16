@@ -41,6 +41,16 @@ const Song = ({ user }) => {
     return () => clearTimeout(timeout); // Cleanup function to clear the timeout on unmount
   }, []);
 
+  useEffect(() => {
+    // Add event listeners for arrow keys
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const getSong = (id) => {
     MusicDataService.get(id)
       .then((response) => {
@@ -69,6 +79,39 @@ const Song = ({ user }) => {
       .catch((e) => {
         console.log(e);
       });
+  };
+
+  const handleKeyDown = (event) => {
+    // Check if any media element has focus
+    const mediaElementsFocused =
+      document.activeElement.nodeName === "AUDIO" ||
+      document.activeElement.nodeName === "VIDEO";
+
+    if (!mediaElementsFocused) {
+      if (event.key === " " || event.key === "Escape") {
+        if (typeof document.startViewTransition === "function") {
+          document.startViewTransition(() => {
+            flushSync(() => {
+              navigate(`/music`, {
+                state: {
+                  goToIndex: imageIndex,
+                  searchValue: searchValue,
+                  music: music,
+                },
+              });
+            });
+          });
+        } else {
+          navigate(`/music`, {
+            state: {
+              goToIndex: imageIndex,
+              searchValue: searchValue,
+              music: music,
+            },
+          });
+        }
+      }
+    }
   };
 
   return (
