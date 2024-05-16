@@ -120,7 +120,6 @@ button {
 
 .back-icon:hover {
   opacity: 0.45;
-  scale: 1.1;
 }
 
 .edit-icon {
@@ -168,6 +167,10 @@ button {
 
 .coverflow-item:hover {
   scale: 1.05;
+}
+
+.coverflow-item.hover-opacity {
+  filter: brightness(50%);
 }
 
 .noResults {

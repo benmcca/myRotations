@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import MusicDataService from "../services/musicDataService";
 import { useNavigate, useLocation } from "react-router-dom";
 import { flushSync } from "react-dom";
@@ -14,6 +14,7 @@ const MusicList = () => {
   const [searchTitle, setSearchTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(null);
   const [goToIndex, setGoToIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
   const el = useRef(null);
@@ -206,34 +207,71 @@ const MusicList = () => {
   }
 
   // Handle arrow key presses
-  const handleKeyDown = (event) => {
-    if (event.target.tagName.toLowerCase() === "input") {
-      return;
-    }
-    if (event.key === "R" || event.key === "r") {
-      handleRandomize();
-    } else {
-      setCurrentIndex((prevIndex) => {
-        if (prevIndex == null) {
-          console.log("null");
-          return 0; // Starting index
-        } else {
-          if (event.key === "ArrowRight" || event.key === "ArrowUp") {
-            // Increment index, but ensure it doesn't exceed the length of results
-            target(Math.min(prevIndex + 1, 29));
-            return Math.min(prevIndex + 1, 29);
-          } else if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
-            // Decrement index, but ensure it doesn't go below 0
-            target(Math.max(prevIndex - 1, 0));
-            return Math.max(prevIndex - 1, 0);
+  const handleKeyDown = useCallback(
+    (event) => {
+      // Event handling logic using the latest state values
+      if (event.target.tagName.toLowerCase() === "input") {
+        return;
+      }
+      if (event.key === "R" || event.key === "r") {
+        handleRandomize();
+      } else {
+        setCurrentIndex((prevIndex) => {
+          if (prevIndex == null) {
+            console.log("null");
+            return 0; // Starting index
           } else {
-            // For other keys, return the current index
-            return prevIndex;
+            if (
+              event.key === "ArrowRight" ||
+              event.key === "ArrowUp" ||
+              event.key === "D" ||
+              event.key === "d" ||
+              event.key === "W" ||
+              event.key === "w"
+            ) {
+              // Increment index, but ensure it doesn't exceed the length of results
+              target(Math.min(prevIndex + 1, music.length - 1));
+              return Math.min(prevIndex + 1, music.length - 1);
+            } else if (
+              event.key === "ArrowLeft" ||
+              event.key === "ArrowDown" ||
+              event.key === "A" ||
+              event.key === "a" ||
+              event.key === "S" ||
+              event.key === "s"
+            ) {
+              // Decrement index, but ensure it doesn't go below 0
+              target(Math.max(prevIndex - 1, 0));
+              return Math.max(prevIndex - 1, 0);
+            } else if (event.key === " " || event.key === "Enter") {
+              target(
+                prevIndex,
+                music[prevIndex]._id,
+                music[prevIndex].albumCover,
+                searchTitle,
+                music
+              );
+              return prevIndex;
+            } else {
+              // For other keys, return the current index
+              return prevIndex;
+            }
           }
-        }
-      });
-    }
-  };
+        });
+      }
+    },
+    [handleRandomize, music, setCurrentIndex, target]
+  );
+
+  // Attach event listener using useEffect
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
     <div className="app">
@@ -261,7 +299,11 @@ const MusicList = () => {
             <div className="coverflow" ref={el}>
               {music.map((song, index) => (
                 <img
-                  className="coverflow-item"
+                  className={`coverflow-item ${
+                    index === hoveredIndex && index === currentIndex
+                      ? "hover-opacity"
+                      : ""
+                  }`}
                   alt={song.trackName}
                   style={{ viewTransitionName: "image" + song._id }}
                   src={song.albumCover}
@@ -269,6 +311,8 @@ const MusicList = () => {
                   onClick={() =>
                     target(index, song._id, song.albumCover, searchTitle, music)
                   }
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 />
               ))}
             </div>
