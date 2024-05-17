@@ -83,33 +83,27 @@ const Song = ({ user }) => {
 
   const handleKeyDown = (event) => {
     // Check if any media element has focus
-    const mediaElementsFocused =
-      document.activeElement.nodeName === "AUDIO" ||
-      document.activeElement.nodeName === "VIDEO";
-
-    if (!mediaElementsFocused) {
-      if (event.key === " " || event.key === "Escape") {
-        if (typeof document.startViewTransition === "function") {
-          document.startViewTransition(() => {
-            flushSync(() => {
-              navigate(`/music`, {
-                state: {
-                  goToIndex: imageIndex,
-                  searchValue: searchValue,
-                  music: music,
-                },
-              });
+    if (event.key === "Escape") {
+      if (typeof document.startViewTransition === "function") {
+        document.startViewTransition(() => {
+          flushSync(() => {
+            navigate(`/music`, {
+              state: {
+                goToIndex: imageIndex,
+                searchValue: searchValue,
+                music: music,
+              },
             });
           });
-        } else {
-          navigate(`/music`, {
-            state: {
-              goToIndex: imageIndex,
-              searchValue: searchValue,
-              music: music,
-            },
-          });
-        }
+        });
+      } else {
+        navigate(`/music`, {
+          state: {
+            goToIndex: imageIndex,
+            searchValue: searchValue,
+            music: music,
+          },
+        });
       }
     }
   };
@@ -451,7 +445,7 @@ const Song = ({ user }) => {
       </div>
       <div className="controls centered">
         <div className="control">
-          <div className="keys">Space</div> Back to Gallery
+          <div className="keys">Esc</div> Back to Gallery
         </div>
       </div>
     </div>

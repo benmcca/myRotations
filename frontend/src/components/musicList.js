@@ -298,23 +298,37 @@ const MusicList = () => {
           {music.length > 0 ? (
             <div className="coverflow" ref={el}>
               {music.map((song, index) => (
-                <img
-                  className={`coverflow-item ${
-                    index === hoveredIndex && index === currentIndex
-                      ? "hover-opacity"
-                      : ""
-                  }`}
-                  alt={song.trackName}
-                  style={{ viewTransitionName: "image" + song._id }}
-                  draggable="false"
-                  src={song.albumCover}
-                  key={index}
+                <div
+                  className="coverflow-item"
                   onClick={() =>
                     target(index, song._id, song.albumCover, searchTitle, music)
                   }
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                />
+                >
+                  <img
+                    className={`coverflow-image ${
+                      index === hoveredIndex && index === currentIndex
+                        ? "hover-brightness"
+                        : ""
+                    }`}
+                    alt={song.trackName}
+                    style={{ viewTransitionName: "image" + song._id }}
+                    draggable="false"
+                    src={song.albumCover}
+                    key={index}
+                  />
+                  <img
+                    // className="coverflow-overlay"
+                    className={
+                      index === hoveredIndex && index === currentIndex
+                        ? "coverflow-overlay"
+                        : "coverflow-overlay-hide"
+                    }
+                    src="https://icons.veryicon.com/png/o/miscellaneous/winsion/play-button-6.png"
+                    alt="Play Button"
+                  />
+                </div>
               ))}
             </div>
           ) : (
