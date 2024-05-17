@@ -145,6 +145,7 @@ const MusicList = () => {
   }
   function target(index = 0, _id, albumCover, searchValue, music) {
     if (el.current) {
+      setHoveredIndex(null);
       // if clicked on an item and it is in the currentIndex, take user to songPage
       if (index === currentIndex && _id) {
         if (typeof document.startViewTransition === "function") {
@@ -319,7 +320,6 @@ const MusicList = () => {
                     key={index}
                   />
                   <img
-                    // className="coverflow-overlay"
                     className={
                       index === hoveredIndex && index === currentIndex
                         ? "coverflow-overlay"
