@@ -146,6 +146,7 @@ const Song = ({ user }) => {
               id="songImage"
               style={{ viewTransitionName: "image" + imageId }}
               src={imageURL}
+              draggable="false"
               onClick={() => {
                 if (typeof document.startViewTransition === "function") {
                   document.startViewTransition(() => {
@@ -172,7 +173,12 @@ const Song = ({ user }) => {
             />
           </Col>
           <Col className="rightHandSide">
-            <h3 className="albumName">{song.collectionCensoredName}</h3>
+            <h3 className="albumName">
+              {song.collectionCensoredName}
+              <div className="genreDiv">
+                <div className="genreName">{song.primaryGenreName}</div>
+              </div>
+            </h3>
 
             <h5
               className="artistName"

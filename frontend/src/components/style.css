@@ -308,6 +308,26 @@ button {
 .albumName {
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+.genreDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.genreName {
+  background-color: #e4e4e4;
+  color: #6d6d6d;
+  font-size: 15px;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-left: 7px;
+  height: 20px;
 }
 
 .artistName {
@@ -357,11 +377,11 @@ audio {
   padding: 5px;
 }
 
-audio::-webkit-media-controls-volume-slider,
+/* audio::-webkit-media-controls-volume-slider,
 audio::-webkit-media-controls-volume-slider-container,
 audio::-webkit-media-controls-volume-control-container {
   display: none;
-}
+} */
 audio::-webkit-media-controls-overflow-button {
   display: none;
 }
