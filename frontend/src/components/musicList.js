@@ -8,6 +8,7 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 
 import "./style.css";
+import playButton from "./playButton.png";
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
@@ -325,7 +326,7 @@ const MusicList = () => {
                         ? "coverflow-overlay"
                         : "coverflow-overlay-hide"
                     }
-                    src="https://icons.veryicon.com/png/o/miscellaneous/winsion/play-button-6.png"
+                    src={playButton}
                     alt="Play Button"
                   />
                 </div>
