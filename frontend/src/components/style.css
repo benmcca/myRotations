@@ -120,7 +120,6 @@ button {
 
 .back-icon:hover {
   opacity: 0.45;
-  scale: 1.1;
 }
 
 .edit-icon {
@@ -145,6 +144,14 @@ button {
 }
 
 .coverflow-item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: 0.4s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+}
+
+.coverflow-image {
+  display: block;
   width: 400px;
   height: 400px;
   transform-origin: 50% 50%;
@@ -166,8 +173,41 @@ button {
   box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
 }
 
-.coverflow-item:hover {
+.coverflow-item:hover .coverflow-image {
   scale: 1.05;
+}
+
+.coverflow-item:hover .coverflow-image.hover-brightness {
+  filter: brightness(60%);
+}
+
+.coverflow-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  opacity: 0;
+  filter: invert(100%);
+  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+}
+
+.coverflow-overlay-hide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  opacity: 0;
+  filter: invert(100%);
+}
+
+.coverflow-item:hover .coverflow-overlay {
+  scale: 1.25;
+  opacity: 1;
+  transform: translate(-40%, -25%);
 }
 
 .noResults {
@@ -218,6 +258,31 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.controls {
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.control {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.keys {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 5px;
 }
 
 .songPage {
