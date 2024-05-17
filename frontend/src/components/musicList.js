@@ -306,6 +306,7 @@ const MusicList = () => {
                   }`}
                   alt={song.trackName}
                   style={{ viewTransitionName: "image" + song._id }}
+                  draggable="false"
                   src={song.albumCover}
                   key={index}
                   onClick={() =>
@@ -327,6 +328,17 @@ const MusicList = () => {
               </div>
             </div>
           )}
+          <div className="controls centered">
+            <div className="control">
+              <div className="keys">← →</div> Navigate
+            </div>
+            <div className="control">
+              <div className="keys">Space</div> View Album
+            </div>
+            <div className="control">
+              <div className="keys">R</div> Randomize
+            </div>
+          </div>
         </Container>
       </div>
     </div>

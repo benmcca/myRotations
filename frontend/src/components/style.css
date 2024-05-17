@@ -223,6 +223,31 @@ button {
   text-align: center;
 }
 
+.controls {
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.control {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.keys {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 5px;
+}
+
 .songPage {
   margin: 100px;
 }
