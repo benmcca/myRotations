@@ -13,7 +13,8 @@ const router = express.Router();
 
 //MUSIC CONTROLLER
 router.route("/").get(MusicController.apiGetMusic);
-router.route("/:id").get(MusicController.apiGetSongById);
+router.route("/id/:id").get(MusicController.apiGetSongById);
+router.route("/genres").get(MusicController.apiGetGenres);
 
 //COMMENTS CONTROLLER
 router

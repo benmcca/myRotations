@@ -84,4 +84,15 @@ export default class MusicDAO {
       throw e;
     }
   }
+
+  static async getGenres() {
+    let genres = [];
+    try {
+      genres = await music.distinct("primaryGenreName");
+      return genres;
+    } catch (e) {
+      console.error(`unable to get genres, ${e}`);
+      return genres;
+    }
+  }
 }

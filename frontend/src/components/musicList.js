@@ -12,6 +12,7 @@ import playButton from "./playButton.png";
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
+  const [genres, setGenres] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(null);
   const [goToIndex, setGoToIndex] = useState(null);
@@ -34,6 +35,7 @@ const MusicList = () => {
       } else {
         retrieveMusic();
       }
+      retrieveGenres();
     };
     fetchData();
 
@@ -59,6 +61,17 @@ const MusicList = () => {
       .getAll()
       .then((response) => {
         setMusic(response.data.songs);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  const retrieveGenres = () => {
+    musicDataService
+      .getGenres()
+      .then((response) => {
+        setGenres(response.data);
       })
       .catch((e) => {
         console.log(e);
@@ -296,6 +309,13 @@ const MusicList = () => {
               onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
             />
           </Form>
+
+          <div className="genres">
+            Genres:
+            {genres.map((genre) => {
+              return <div>{genre}</div>;
+            })}
+          </div>
 
           {music.length > 0 ? (
             <div className="coverflow" ref={el}>

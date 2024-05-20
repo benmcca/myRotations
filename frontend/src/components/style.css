@@ -135,7 +135,7 @@ button {
 .coverflow {
   position: absolute;
   top: 45%;
-  left: 51%;
+  left: 50.7%;
   backface-visibility: visible;
   transform: scale(1) translateZ(-400px);
   transform-style: preserve-3d;
