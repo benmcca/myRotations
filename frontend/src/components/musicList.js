@@ -315,6 +315,7 @@ const MusicList = () => {
                 className="dice-icon"
                 alt="Randomize"
                 src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
+                draggable="false"
               />
             </button>
             <input
@@ -374,6 +375,7 @@ const MusicList = () => {
                         ? "coverflow-overlay"
                         : "coverflow-overlay-hide"
                     }
+                    draggable="false"
                     src={playButton}
                     alt="Play Button"
                   />
