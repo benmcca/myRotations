@@ -18,13 +18,14 @@ const Song = ({ user }) => {
   let { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  let imageURL, imageId, imageIndex, searchValue, music;
+  let imageURL, imageId, imageIndex, searchValue, music, genre;
   if (location.state) {
     imageURL = location.state.imageURL;
     imageId = location.state.imageId;
     imageIndex = location.state.imageIndex;
     searchValue = location.state.searchValue;
     music = location.state.music;
+    genre = location.state.genre;
   }
 
   useEffect(() => {
@@ -92,6 +93,7 @@ const Song = ({ user }) => {
                 goToIndex: imageIndex,
                 searchValue: searchValue,
                 music: music,
+                genre: genre,
               },
             });
           });
@@ -102,6 +104,7 @@ const Song = ({ user }) => {
             goToIndex: imageIndex,
             searchValue: searchValue,
             music: music,
+            genre: genre,
           },
         });
       }
@@ -124,6 +127,7 @@ const Song = ({ user }) => {
                       goToIndex: imageIndex,
                       searchValue: searchValue,
                       music: music,
+                      genre: genre,
                     },
                   });
                 });
@@ -134,6 +138,7 @@ const Song = ({ user }) => {
                   goToIndex: imageIndex,
                   searchValue: searchValue,
                   music: music,
+                  genre: genre,
                 },
               });
             }
@@ -156,6 +161,7 @@ const Song = ({ user }) => {
                           goToIndex: imageIndex,
                           searchValue: searchValue,
                           music: music,
+                          genre: genre,
                         },
                       });
                     });
@@ -166,6 +172,7 @@ const Song = ({ user }) => {
                       goToIndex: imageIndex,
                       searchValue: searchValue,
                       music: music,
+                      genre: genre,
                     },
                   });
                 }
@@ -248,6 +255,7 @@ const Song = ({ user }) => {
                               searchValue: searchValue,
                               music: music,
                               song: song,
+                              genre: genre,
                             },
                           });
                         });
@@ -261,6 +269,7 @@ const Song = ({ user }) => {
                           searchValue: searchValue,
                           music: music,
                           song: song,
+                          genre: genre,
                         },
                       });
                     }
@@ -283,6 +292,7 @@ const Song = ({ user }) => {
                               imageIndex: imageIndex,
                               searchValue: searchValue,
                               music: music,
+                              genre: genre,
                             },
                           });
                         });
@@ -296,6 +306,7 @@ const Song = ({ user }) => {
                           imageIndex: imageIndex,
                           searchValue: searchValue,
                           music: music,
+                          genre: genre,
                         },
                       });
                     }
@@ -341,6 +352,7 @@ const Song = ({ user }) => {
                                     searchValue: searchValue,
                                     music: music,
                                     song: song,
+                                    genre: genre,
                                   }}
                                 >
                                   <img
@@ -385,6 +397,7 @@ const Song = ({ user }) => {
                                   searchValue: searchValue,
                                   music: music,
                                   song: song,
+                                  genre: genre,
                                 },
                               });
                             });
@@ -398,6 +411,7 @@ const Song = ({ user }) => {
                               searchValue: searchValue,
                               music: music,
                               song: song,
+                              genre: genre,
                             },
                           });
                         }
@@ -422,6 +436,7 @@ const Song = ({ user }) => {
                                   imageIndex: imageIndex,
                                   searchValue: searchValue,
                                   music: music,
+                                  genre: genre,
                                 },
                               });
                             });
@@ -435,6 +450,7 @@ const Song = ({ user }) => {
                               imageIndex: imageIndex,
                               searchValue: searchValue,
                               music: music,
+                              genre: genre,
                             },
                           });
                         }

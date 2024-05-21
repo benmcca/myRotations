@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 3/1/2024
-// IT302 - 002
-// Phase 2 Assignment
-// bsm25@njit.edu
-
 import app from './server.js'
 import mongodb from "mongodb"
 import dotenv from "dotenv"

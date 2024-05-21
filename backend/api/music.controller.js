@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 3/1/2024
-// IT302 - 002
-// Phase 2 Assignment
-// bsm25@njit.edu
-
 import MusicDAO from "../dao/musicDAO.js";
 
 export default class MusicController {
@@ -16,6 +10,9 @@ export default class MusicController {
     let filters = {};
     if (req.query.any) {
       filters.any = req.query.any;
+    }
+    if (req.query.genre) {
+      filters.genre = req.query.genre;
     }
 
     const { songList, totalNumSongs } = await MusicDAO.getMusic({

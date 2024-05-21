@@ -11,7 +11,7 @@ function Login({ loginSetter }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  let songId, imageURL, imageId, imageIndex, searchValue, music;
+  let songId, imageURL, imageId, imageIndex, searchValue, music, genre;
   if (location && location.state) {
     songId = location.state.songId;
     imageURL = location.state.imageURL;
@@ -19,6 +19,7 @@ function Login({ loginSetter }) {
     imageIndex = location.state.imageIndex;
     searchValue = location.state.searchValue;
     music = location.state.music;
+    genre = location.state.genre;
   }
 
   const onChangeName = (e) => {
@@ -72,6 +73,7 @@ function Login({ loginSetter }) {
                           imageIndex: imageIndex,
                           searchValue: searchValue,
                           music: music,
+                          genre: genre,
                         },
                       });
                     });
@@ -84,6 +86,7 @@ function Login({ loginSetter }) {
                       imageIndex: imageIndex,
                       searchValue: searchValue,
                       music: music,
+                      genre: genre,
                     },
                   });
                 }
@@ -146,6 +149,7 @@ function Login({ loginSetter }) {
                   imageIndex: imageIndex,
                   searchValue: searchValue,
                   music: music,
+                  genre: genre,
                 }}
               >
                 Back to Song

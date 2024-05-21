@@ -13,14 +13,18 @@ class MusicDataService {
     );
   }
 
-  find(query, by = "any", page = 0) {
-    return axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}api/v1/bsm25/music?${by}=${query}&page=${page}`
-    );
+  find(query, by = "any", genre = null, page = 0) {
+    let url = `${
+      process.env.REACT_APP_BACKEND_URL
+    }api/v1/bsm25/music?${by}=${encodeURIComponent(query)}&page=${page}`;
+
+    if (genre) {
+      url += `&genre=${encodeURIComponent(genre)}`;
+    }
+    return axios.get(url);
   }
 
   getGenres() {
-    console.log("GET GENRES");
     return axios.get(
       `${process.env.REACT_APP_BACKEND_URL}api/v1/bsm25/music/genres`
     );

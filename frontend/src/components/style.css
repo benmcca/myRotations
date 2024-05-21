@@ -21,7 +21,6 @@ form {
 }
 
 .musicListSearch {
-  margin: 50px 0;
   background: none;
   border-bottom: 2px solid rgb(134, 134, 134);
   border-top: none;
@@ -49,6 +48,12 @@ input:focus::placeholder {
 button {
   background-color: white;
   border: none;
+}
+
+.searchBarRegion {
+  /* background-color: burlywood; */
+  height: 50px;
+  padding-top: 30px;
 }
 
 .dice-icon {
@@ -97,6 +102,29 @@ button {
   animation: shake 2s;
   animation-iteration-count: infinite;
   scale: 1.1;
+}
+
+.genres {
+  padding-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.genreButton,
+.activeGenreButton {
+  font-size: 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.genreButton {
+  background-color: #e4e4e4;
+  color: #6d6d6d;
+}
+
+.activeGenreButton {
+  background-color: #4c71f9;
+  color: white;
 }
 
 .add-icon {

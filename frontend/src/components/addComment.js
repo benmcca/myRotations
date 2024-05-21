@@ -14,6 +14,7 @@ const AddComment = ({ user }) => {
   const searchValue = location.state.searchValue;
   const music = location.state.music;
   const song = location.state.song;
+  const genre = location.state.genre;
   if (location.state && location.state.currentComment) {
     editing = true;
     initialCommentState = location.state.currentComment.comment;
@@ -73,6 +74,7 @@ const AddComment = ({ user }) => {
                     imageIndex: imageIndex,
                     searchValue: searchValue,
                     music: music,
+                    genre: genre,
                   },
                 });
               });
@@ -85,6 +87,7 @@ const AddComment = ({ user }) => {
                 imageIndex: imageIndex,
                 searchValue: searchValue,
                 music: music,
+                genre: genre,
               },
             });
           }
@@ -114,6 +117,7 @@ const AddComment = ({ user }) => {
                 imageIndex: imageIndex,
                 searchValue: searchValue,
                 music: music,
+                genre: genre,
               }}
             >
               Back to Song

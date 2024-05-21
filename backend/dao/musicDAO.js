@@ -1,8 +1,3 @@
-// Benjamin McCabe
-// 3/1/2024
-// IT302 - 002
-// Phase 2 Assignment
-// bsm25@njit.edu
 import mongodb from "mongodb";
 const ObjectId = mongodb.ObjectId;
 let music;
@@ -21,6 +16,7 @@ export default class MusicDAO {
   // The parameters in here are default parameters. The value will change if a value is passed.
   static async getMusic({ filters = null, page = 0, songsPerPage = 20 } = {}) {
     let pipeline = [];
+
     if (filters && filters.any) {
       const anySubString = new RegExp(filters.any, "i");
       pipeline.push({
@@ -32,8 +28,21 @@ export default class MusicDAO {
           ],
         },
       });
-    } else {
-      // Generate random sampling pipeline
+    }
+
+    if (filters && filters.genre) {
+      pipeline.push({
+        $match: {
+          primaryGenreName: filters.genre,
+        },
+      });
+    }
+
+    // If genre filter is applied, sample random documents that match the genre
+    if (filters && filters.genre) {
+      pipeline.push({ $sample: { size: songsPerPage } });
+    } else if (!filters || !filters.any) {
+      // If no filters are applied, sample random documents
       pipeline.push({ $sample: { size: songsPerPage } });
     }
 
@@ -44,18 +53,25 @@ export default class MusicDAO {
         { $skip: songsPerPage * page },
         { $limit: songsPerPage },
       ]);
+
       const songList = await cursor.toArray();
+
       let totalNumSongs;
-      if (filters && filters.any) {
-        totalNumSongs = await music.countDocuments(pipeline[0].$match);
+      if (pipeline.length > 0) {
+        const matchStage = pipeline.find((stage) => stage.$match);
+        if (matchStage) {
+          totalNumSongs = await music.countDocuments(matchStage.$match);
+        } else {
+          totalNumSongs = await music.countDocuments();
+        }
       } else {
         // Count all documents if no filters
         totalNumSongs = await music.countDocuments();
       }
+
       return { songList, totalNumSongs };
     } catch (e) {
       console.error(`Unable to issue aggregate command, ${e}`);
-      console.error(e);
       return { songList: [], totalNumSongs: 0 };
     }
   }

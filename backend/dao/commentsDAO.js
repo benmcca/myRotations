@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 3/18/2024
-// IT302 - 002
-// Phase 3 Assignment
-// bsm25@njit.edu
-
 import mongodb from "mongodb"
 const ObjectId = mongodb.ObjectId
 
