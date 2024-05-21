@@ -12,6 +12,8 @@ import playButton from "./playButton.png";
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
+  const [genres, setGenres] = useState([]);
+  const [selectedGenre, setSelectedGenre] = useState(null);
   const [searchTitle, setSearchTitle] = useState("");
   const [currentIndex, setCurrentIndex] = useState(null);
   const [goToIndex, setGoToIndex] = useState(null);
@@ -30,10 +32,12 @@ const MusicList = () => {
           setSearchTitle(location.state.searchValue);
           setGoToIndex(location.state.goToIndex);
           setMusic(location.state.music);
+          setSelectedGenre(location.state.genre);
         }
       } else {
         retrieveMusic();
       }
+      retrieveGenres();
     };
     fetchData();
 
@@ -65,12 +69,24 @@ const MusicList = () => {
       });
   };
 
+  const retrieveGenres = () => {
+    musicDataService
+      .getGenres()
+      .then((response) => {
+        setGenres(response.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   const handleSearchTitle = (e) => {
     e.preventDefault(); // stop form from reloading page
     findByTitle();
   };
 
   const findByTitle = (searchValue) => {
+    setSelectedGenre(null);
     if (searchValue) {
       find(searchValue, "any");
     } else {
@@ -78,10 +94,11 @@ const MusicList = () => {
     }
   };
 
-  const find = (query, by) => {
+  const find = (query, by, genre) => {
     setMusic([]);
     setGoToIndex(0);
-    MusicDataService.find(query, by)
+    console.log(genre);
+    MusicDataService.find(query, by, genre)
       .then((response) => {
         if (query != "") {
           const sortedSongs = response.data.songs.sort((a, b) => {
@@ -132,7 +149,18 @@ const MusicList = () => {
     if (e) {
       e.preventDefault();
     }
-    find("", "any");
+    find("", "any", selectedGenre);
+    setSearchTitle("");
+  };
+
+  const handleGenreSelect = (genre) => {
+    if (selectedGenre === genre) {
+      setSelectedGenre(null);
+      find("", "any", null);
+    } else {
+      setSelectedGenre(genre);
+      find("", "any", genre);
+    }
     setSearchTitle("");
   };
 
@@ -159,6 +187,7 @@ const MusicList = () => {
                   imageIndex: index,
                   searchValue: searchValue,
                   music: music,
+                  genre: selectedGenre,
                 },
               });
             });
@@ -171,6 +200,7 @@ const MusicList = () => {
               imageIndex: index,
               searchValue: searchValue,
               music: music,
+              genre: selectedGenre,
             },
           });
         }
@@ -279,8 +309,8 @@ const MusicList = () => {
     <div className="app">
       <div>
         <Container>
-          <Form>
-            <button onClick={handleRandomize}>
+          <Form className="searchBarRegion">
+            <button className="randomButton" onClick={handleRandomize}>
               <img
                 className="dice-icon"
                 alt="Randomize"
@@ -296,6 +326,24 @@ const MusicList = () => {
               onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
             />
           </Form>
+
+          <div className="genres centered">
+            {genres.map((genre) => {
+              return (
+                <button
+                  key={genre}
+                  onClick={() => handleGenreSelect(genre)}
+                  className={
+                    genre === selectedGenre
+                      ? "activeGenreButton"
+                      : "genreButton"
+                  }
+                >
+                  {genre}
+                </button>
+              );
+            })}
+          </div>
 
           {music.length > 0 ? (
             <div className="coverflow" ref={el}>

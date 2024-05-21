@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 3/1/2024
-// IT302 - 002
-// Phase 2 Assignment
-// bsm25@njit.edu
-
 import express from "express";
 
 import MusicController from "./music.controller.js";
@@ -13,7 +7,8 @@ const router = express.Router();
 
 //MUSIC CONTROLLER
 router.route("/").get(MusicController.apiGetMusic);
-router.route("/:id").get(MusicController.apiGetSongById);
+router.route("/id/:id").get(MusicController.apiGetSongById);
+router.route("/genres").get(MusicController.apiGetGenres);
 
 //COMMENTS CONTROLLER
 router

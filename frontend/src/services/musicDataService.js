@@ -1,9 +1,3 @@
-// Benjamin McCabe
-// 4/12/24
-// IT302 - 002
-// Phase 4 Project
-// bsm25@njit.edu
-
 import axios from "axios";
 
 class MusicDataService {
@@ -15,13 +9,24 @@ class MusicDataService {
 
   get(id) {
     return axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}api/v1/bsm25/music/${id}`
+      `${process.env.REACT_APP_BACKEND_URL}api/v1/bsm25/music/id/${id}`
     );
   }
 
-  find(query, by = "any", page = 0) {
+  find(query, by = "any", genre = null, page = 0) {
+    let url = `${
+      process.env.REACT_APP_BACKEND_URL
+    }api/v1/bsm25/music?${by}=${encodeURIComponent(query)}&page=${page}`;
+
+    if (genre) {
+      url += `&genre=${encodeURIComponent(genre)}`;
+    }
+    return axios.get(url);
+  }
+
+  getGenres() {
     return axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}api/v1/bsm25/music?${by}=${query}&page=${page}`
+      `${process.env.REACT_APP_BACKEND_URL}api/v1/bsm25/music/genres`
     );
   }
 
