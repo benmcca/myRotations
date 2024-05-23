@@ -42,7 +42,6 @@ const AddComment = ({ user }) => {
         MusicDataService.updateComment(data)
           .then((response) => {
             setSubmitted(true);
-            console.log(response.data);
           })
           .catch((e) => {
             console.log(e);
