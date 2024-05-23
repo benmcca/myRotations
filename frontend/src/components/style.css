@@ -5,7 +5,7 @@
 .container {
   max-width: 100% !important;
   width: 100%;
-  height: 900px;
+  height: 95vh;
   perspective: 1000;
   -webkit-perspective: 1000;
   perspective-origin: 50% 50%;
@@ -127,39 +127,6 @@ button {
   color: white;
 }
 
-.add-icon {
-  width: 17px;
-  opacity: 0.7;
-  margin-left: 4px;
-  margin-bottom: 2px;
-  cursor: pointer;
-}
-
-.back-icon {
-  position: absolute;
-  width: 25px;
-  left: 20px;
-  top: 75px;
-  rotate: 180deg;
-  opacity: 0.6;
-  cursor: pointer;
-  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
-}
-
-.back-icon:hover {
-  opacity: 0.45;
-}
-
-.edit-icon {
-  width: 15px;
-  opacity: 0.6;
-}
-
-.delete-icon {
-  width: 20px;
-  opacity: 0.6;
-}
-
 .coverflow {
   position: absolute;
   top: 45%;
@@ -175,24 +142,21 @@ button {
   position: relative;
   margin: 0;
   padding: 0;
-  transition: 0.4s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+  transition: 0.4s all cubic-bezier(0.17, 0.75, 0.58, 0.95); /*Coverflow transition*/
 }
 
 .coverflow-image {
   display: block;
   width: 400px;
   height: 400px;
-  transform-origin: 50% 50%;
   position: absolute;
   backface-visibility: visible;
   top: -175px;
   left: -200px;
   border-radius: 5px;
-  background-color: #111;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transition: 0.5s all ease-out;
 
   /*Improvement*/
   transition: 0.4s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
@@ -209,6 +173,7 @@ button {
   filter: brightness(60%);
 }
 
+/* play button */
 .coverflow-overlay {
   position: absolute;
   top: 50%;
@@ -232,10 +197,46 @@ button {
   filter: invert(100%);
 }
 
+/* Play button when coverflow item is hovered */
 .coverflow-item:hover .coverflow-overlay {
   scale: 1.25;
   opacity: 1;
   transform: translate(-40%, -25%);
+}
+
+.songInfo {
+  position: absolute;
+  top: 75vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.controls {
+  position: absolute;
+  top: 95%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.control {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.keys {
+  background-color: #e4e4e4;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 5px;
 }
 
 .noResults {
@@ -244,7 +245,7 @@ button {
   align-items: center;
   font-size: 25px;
   color: #8f8f8f;
-  height: 100px;
+  height: 700px;
 }
 
 .noComments {
@@ -278,39 +279,37 @@ button {
   flex-direction: column;
 }
 
-.songInfo {
+.add-icon {
+  width: 17px;
+  opacity: 0.7;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.back-icon {
   position: absolute;
-  top: 80%;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 25px;
+  left: 20px;
+  top: 75px;
+  rotate: 180deg;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
 }
 
-.controls {
-  position: absolute;
-  top: 95%;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  color: #6d6d6d;
+.back-icon:hover {
+  opacity: 0.45;
 }
 
-.control {
-  display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
+.edit-icon {
+  width: 15px;
+  opacity: 0.6;
 }
 
-.keys {
-  background-color: #e4e4e4;
-  border-radius: 5px;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-right: 5px;
+.delete-icon {
+  width: 20px;
+  opacity: 0.6;
 }
 
 .songPage {
@@ -320,8 +319,7 @@ button {
 .songPageImage {
   box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
   transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
-  max-height: 700px;
-  height: 45vw;
+  height: 65vh;
   scale: 1.12;
   border-radius: 10px;
   cursor: pointer;
@@ -330,7 +328,7 @@ button {
   scale: 1;
 }
 .songPageImage:hover {
-  scale: 1.01;
+  scale: 1.02;
 }
 
 .albumName {
@@ -354,14 +352,15 @@ button {
   border-radius: 5px;
   padding-left: 4px;
   padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   margin-left: 7px;
-  height: 20px;
 }
 
 .artistName {
   margin: 0;
   padding: 0;
-  font-size: 22px;
+  font-size: 24px;
   text-decoration: none;
   color: #4c71f9;
   cursor: pointer;

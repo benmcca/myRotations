@@ -118,6 +118,7 @@ const Song = ({ user }) => {
           className="back-icon"
           alt="backButton"
           src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
+          draggable="false"
           onClick={() => {
             if (typeof document.startViewTransition === "function") {
               document.startViewTransition(() => {
@@ -243,6 +244,7 @@ const Song = ({ user }) => {
                   className="add-icon"
                   alt="AddComment"
                   src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
+                  draggable="false"
                   onClick={() => {
                     if (typeof document.startViewTransition === "function") {
                       document.startViewTransition(() => {
@@ -280,6 +282,7 @@ const Song = ({ user }) => {
                   className="add-icon"
                   alt="AddComment"
                   src="https://png.pngtree.com/element_our/sm/20180516/sm_5afbe35ff3ec9.jpg"
+                  draggable="false"
                   onClick={() => {
                     if (typeof document.startViewTransition === "function") {
                       document.startViewTransition(() => {
@@ -358,6 +361,7 @@ const Song = ({ user }) => {
                                   <img
                                     className="edit-icon"
                                     src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
+                                    draggable="false"
                                   />
                                 </Link>
                                 <button
@@ -369,6 +373,7 @@ const Song = ({ user }) => {
                                   <img
                                     className="delete-icon"
                                     src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
+                                    draggable="false"
                                   />
                                 </button>
                               </div>

@@ -97,7 +97,6 @@ const MusicList = () => {
   const find = (query, by, genre) => {
     setMusic([]);
     setGoToIndex(0);
-    console.log(genre);
     MusicDataService.find(query, by, genre)
       .then((response) => {
         if (query != "") {
@@ -307,102 +306,100 @@ const MusicList = () => {
 
   return (
     <div className="app">
-      <div>
-        <Container>
-          <Form className="searchBarRegion">
-            <button className="randomButton" onClick={handleRandomize}>
-              <img
-                className="dice-icon"
-                alt="Randomize"
-                src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
-              />
-            </button>
-            <input
-              className="musicListSearch"
-              type="text"
-              placeholder="Search..."
-              value={searchTitle}
-              onChange={(e) => setSearchTitle(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
+      <div className="container">
+        <Form className="searchBarRegion">
+          <button className="randomButton" onClick={handleRandomize}>
+            <img
+              className="dice-icon"
+              alt="Randomize"
+              src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
+              draggable="false"
             />
-          </Form>
+          </button>
+          <input
+            className="musicListSearch"
+            type="text"
+            placeholder="Search..."
+            value={searchTitle}
+            onChange={(e) => setSearchTitle(e.target.value)}
+            onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
+          />
+        </Form>
 
-          <div className="genres centered">
-            {genres.map((genre) => {
-              return (
-                <button
-                  key={genre}
-                  onClick={() => handleGenreSelect(genre)}
+        <div className="genres centered">
+          {genres.map((genre) => {
+            return (
+              <button
+                key={genre}
+                onClick={() => handleGenreSelect(genre)}
+                className={
+                  genre === selectedGenre ? "activeGenreButton" : "genreButton"
+                }
+              >
+                {genre}
+              </button>
+            );
+          })}
+        </div>
+
+        {music.length > 0 ? (
+          <div className="coverflow" ref={el}>
+            {music.map((song, index) => (
+              <div
+                className="coverflow-item"
+                onClick={() =>
+                  target(index, song._id, song.albumCover, searchTitle, music)
+                }
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <img
+                  className={`coverflow-image ${
+                    index === hoveredIndex && index === currentIndex
+                      ? "hover-brightness"
+                      : ""
+                  }`}
+                  alt={song.trackName}
+                  style={{ viewTransitionName: "image" + song._id }}
+                  draggable="false"
+                  src={song.albumCover}
+                  key={index}
+                />
+                <img
                   className={
-                    genre === selectedGenre
-                      ? "activeGenreButton"
-                      : "genreButton"
+                    index === hoveredIndex && index === currentIndex
+                      ? "coverflow-overlay"
+                      : "coverflow-overlay-hide"
                   }
-                >
-                  {genre}
-                </button>
-              );
-            })}
-          </div>
-
-          {music.length > 0 ? (
-            <div className="coverflow" ref={el}>
-              {music.map((song, index) => (
-                <div
-                  className="coverflow-item"
-                  onClick={() =>
-                    target(index, song._id, song.albumCover, searchTitle, music)
-                  }
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <img
-                    className={`coverflow-image ${
-                      index === hoveredIndex && index === currentIndex
-                        ? "hover-brightness"
-                        : ""
-                    }`}
-                    alt={song.trackName}
-                    style={{ viewTransitionName: "image" + song._id }}
-                    draggable="false"
-                    src={song.albumCover}
-                    key={index}
-                  />
-                  <img
-                    className={
-                      index === hoveredIndex && index === currentIndex
-                        ? "coverflow-overlay"
-                        : "coverflow-overlay-hide"
-                    }
-                    src={playButton}
-                    alt="Play Button"
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="noResults">No Results</div>
-          )}
-          {music[currentIndex] && (
-            <div className="songInfo">
-              <div>
-                <h3>{music[currentIndex].collectionCensoredName}</h3>
-                <h6>{music[currentIndex].artistName}</h6>
+                  draggable="false"
+                  src={playButton}
+                  alt="Play Button"
+                />
               </div>
-            </div>
-          )}
-          <div className="controls centered">
-            <div className="control">
-              <div className="keys">← →</div> Navigate
-            </div>
-            <div className="control">
-              <div className="keys">Space</div> View Album
-            </div>
-            <div className="control">
-              <div className="keys">R</div> Randomize
+            ))}
+          </div>
+        ) : (
+          <div className="noResults">No Results</div>
+        )}
+        {music[currentIndex] && (
+          <div className="songInfo">
+            <div>
+              <h3>{music[currentIndex].collectionCensoredName}</h3>
+              <h6>{music[currentIndex].artistName}</h6>
             </div>
           </div>
-        </Container>
+        )}
+      </div>
+      <div className="controls centered">
+        <div className="control">
+          <div className="keys">← →</div> Navigate
+        </div>
+        <div className="control">
+          <div className="keys">Space</div> View Album
+        </div>
+        <div className="control">
+          <div className="keys">R</div> Randomize
+        </div>
       </div>
     </div>
   );
