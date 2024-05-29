@@ -503,7 +503,7 @@ audio::-webkit-media-controls {
   border: 1px solid rgb(211, 211, 211);
   border-radius: 5px;
   width: 700px;
-  height: 100px;
+  height: auto;
   padding: 5px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -511,6 +511,7 @@ audio::-webkit-media-controls {
 
 .addCommentImage {
   border-radius: 5px;
+  width: 25%;
 }
 
 .addCommentInfoSection {
@@ -710,5 +711,26 @@ audio::-webkit-media-controls {
 
   .date {
     text-align: center;
+  }
+
+  .loginSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 25px;
+    margin-top: 10vh;
+  }
+
+  .addCommentSong {
+    width: 90%;
+    margin-top: 75px;
+  }
+
+  .addCommentInputArea {
+    width: 90%;
+  }
+
+  .addCommentInputArea textarea {
+    width: 100%;
   }
 }
