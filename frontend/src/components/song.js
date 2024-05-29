@@ -181,8 +181,8 @@ const Song = ({ user }) => {
             />
           </Col>
           <Col className="rightHandSide">
-            <h3 className="albumName">
-              {song.collectionCensoredName}
+            <h3 className="albumTitleDiv">
+              <div className="albumName">{song.collectionCensoredName}</div>
               <div className="genreDiv">
                 <div className="genreName">{song.primaryGenreName}</div>
               </div>

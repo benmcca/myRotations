@@ -326,7 +326,7 @@ const MusicList = () => {
           />
         </Form>
 
-        <div className="genres centered">
+        <div className="genres">
           {genres.map((genre) => {
             return (
               <button
@@ -385,7 +385,7 @@ const MusicList = () => {
           <div className="songInfo">
             <div>
               <h3>{music[currentIndex].collectionCensoredName}</h3>
-              <h6>{music[currentIndex].artistName}</h6>
+              <h5>{music[currentIndex].artistName}</h5>
             </div>
           </div>
         )}
