@@ -1,5 +1,5 @@
 .app {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -12,6 +12,7 @@
   transform-style: preserve-3d;
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 form {
