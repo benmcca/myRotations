@@ -66,6 +66,13 @@ function App() {
             >
               {user ? "Logout" : "Login"}
             </Nav.Link>
+            <Nav.Link
+              href="https://benmcca.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              About Me
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
