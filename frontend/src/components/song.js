@@ -470,11 +470,6 @@ const Song = ({ user }) => {
           </Col>
         </Row>
       </div>
-      <div className="controls centered">
-        <div className="control">
-          <div className="keys">Esc</div> Back to Gallery
-        </div>
-      </div>
     </div>
   );
 };
