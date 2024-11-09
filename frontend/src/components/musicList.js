@@ -9,6 +9,9 @@ import Container from "react-bootstrap/Container";
 
 import "./style.css";
 import playButton from "./playButton.png";
+import skipButton from "./skipButton.png";
+import rewindButton from "./rewindButton.png";
+import shuffleButton from "./shuffleButton.png";
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
@@ -237,41 +240,61 @@ const MusicList = () => {
     }
   }
 
+  const handleControlClick = useCallback((e, buttonType) => {
+    const button = e.target;
+    button.style.transition = "0.1s all cubic-bezier(0.17, 0.75, 0.58, 0.95)";
+    button.style.transform = "scale(1)";
+
+    setTimeout(() => {
+      button.style.transition =
+        "0.15s all cubic-bezier(0.17, 0.75, 0.58, 0.95)";
+      button.style.transform = "scale(1.15)";
+    }, 100);
+
+    // Simulate key events based on button type
+    let key;
+    if (buttonType === "play") {
+      key = " ";
+    } else if (buttonType === "rewind") {
+      key = "a";
+    } else if (buttonType === "skip") {
+      key = "d";
+    }
+
+    if (key) {
+      const event = new KeyboardEvent("keydown", { key });
+      document.dispatchEvent(event);
+    }
+  }, []);
+
   // Handle arrow key presses
   const handleKeyDown = useCallback(
     (event) => {
-      // Event handling logic using the latest state values
-      if (event.target.tagName.toLowerCase() === "input") {
+      // Safe check for tagName
+      if (
+        event.target.tagName &&
+        event.target.tagName.toLowerCase() === "input"
+      ) {
         return;
       }
+
       if (event.key === "R" || event.key === "r") {
         handleRandomize();
       } else {
         setCurrentIndex((prevIndex) => {
           if (prevIndex == null) {
-            console.log("null");
             return 0; // Starting index
           } else {
             if (
-              event.key === "ArrowRight" ||
-              event.key === "ArrowUp" ||
-              event.key === "D" ||
-              event.key === "d" ||
-              event.key === "W" ||
-              event.key === "w"
+              ["ArrowRight", "ArrowUp", "D", "d", "W", "w"].includes(event.key)
             ) {
-              // Increment index, but ensure it doesn't exceed the length of results
+              // Increment index, ensure it doesn’t exceed array length
               target(Math.min(prevIndex + 1, music.length - 1));
               return Math.min(prevIndex + 1, music.length - 1);
             } else if (
-              event.key === "ArrowLeft" ||
-              event.key === "ArrowDown" ||
-              event.key === "A" ||
-              event.key === "a" ||
-              event.key === "S" ||
-              event.key === "s"
+              ["ArrowLeft", "ArrowDown", "A", "a", "S", "s"].includes(event.key)
             ) {
-              // Decrement index, but ensure it doesn't go below 0
+              // Decrement index, ensure it doesn’t go below 0
               target(Math.max(prevIndex - 1, 0));
               return Math.max(prevIndex - 1, 0);
             } else if (event.key === " " || event.key === "Enter") {
@@ -284,7 +307,6 @@ const MusicList = () => {
               );
               return prevIndex;
             } else {
-              // For other keys, return the current index
               return prevIndex;
             }
           }
@@ -391,15 +413,25 @@ const MusicList = () => {
         )}
       </div>
       <div className="controls centered">
-        <div className="control">
-          <div className="keys">← →</div> Navigate
-        </div>
-        <div className="control">
-          <div className="keys">Space</div> View Album
-        </div>
-        <div className="control">
-          <div className="keys">R</div> Randomize
-        </div>
+        {/* <img src={shuffleButton} className="controlButton" draggable="false" /> */}
+        <img
+          src={rewindButton}
+          className="controlButton"
+          draggable="false"
+          onClick={(e) => handleControlClick(e, "rewind")}
+        />
+        <img
+          src={playButton}
+          className="controlButton playButton"
+          draggable="false"
+          onClick={(e) => handleControlClick(e, "play")}
+        />
+        <img
+          src={skipButton}
+          className="controlButton"
+          draggable="false"
+          onClick={(e) => handleControlClick(e, "skip")}
+        />
       </div>
     </div>
   );

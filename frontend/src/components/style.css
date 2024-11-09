@@ -133,7 +133,7 @@ button {
 .coverflow {
   position: absolute;
   top: 45%;
-  left: 50.7%;
+  left: 50%;
   backface-visibility: visible;
   transform: scale(1) translateZ(-400px);
   transform-style: preserve-3d;
@@ -181,8 +181,6 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -30%);
-  width: 100px; /* Adjust size as needed */
   height: 100px;
   opacity: 0;
   filter: invert(100%);
@@ -215,7 +213,7 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0;
+  margin: -12px;
   padding: 0;
 }
 
@@ -225,27 +223,25 @@ button {
 
 .controls {
   position: absolute;
-  top: 95%;
+  top: 90%;
   width: 100%;
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  color: #6d6d6d;
 }
 
-.control {
-  display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
+.controlButton {
+  opacity: 50%;
+  height: 40px;
+  transition: 0.15s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
 }
-
-.keys {
-  background-color: #e4e4e4;
-  border-radius: 5px;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-right: 5px;
+.controlButton:hover {
+  scale: 1.15;
+  opacity: 65%;
+}
+.playButton {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .noResults {
