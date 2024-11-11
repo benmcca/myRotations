@@ -243,12 +243,12 @@ const MusicList = () => {
   const handleControlClick = useCallback((e, buttonType) => {
     const button = e.target;
     button.style.transition = "0.1s all cubic-bezier(0.17, 0.75, 0.58, 0.95)";
-    button.style.transform = "scale(1)";
+    button.style.transform = "scale(0.9)";
 
     setTimeout(() => {
       button.style.transition =
         "0.15s all cubic-bezier(0.17, 0.75, 0.58, 0.95)";
-      button.style.transform = "scale(1.15)";
+      button.style.transform = "scale(1)";
     }, 100);
 
     // Simulate key events based on button type
