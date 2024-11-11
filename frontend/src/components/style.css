@@ -276,12 +276,15 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 50px;
+  padding-left: 50px;
+  /* background-color: #3953b2; */
 }
 
 .rightHandSide {
   display: flex;
   flex-direction: column;
+  padding-right: 50px;
+  /* background-color: red; */
 }
 
 .add-icon {
@@ -298,13 +301,14 @@ button {
   left: 20px;
   top: 75px;
   rotate: 180deg;
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: pointer;
-  transition: 0.5s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+  transition: 0.2s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
 }
 
 .back-icon:hover {
-  opacity: 0.45;
+  scale: 1.1;
+  opacity: 0.6;
 }
 
 .edit-icon {
@@ -318,13 +322,14 @@ button {
 }
 
 .songPage {
-  margin: 100px;
+  padding: 20px;
 }
 
 .songPageImage {
   box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
   transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
   height: 65vh;
+  /* On initial loading, scale to 1.12 then scale down */
   scale: 1.12;
   border-radius: 10px;
   cursor: pointer;
@@ -414,11 +419,6 @@ audio {
   padding: 5px;
 }
 
-/* audio::-webkit-media-controls-volume-slider,
-audio::-webkit-media-controls-volume-slider-container,
-audio::-webkit-media-controls-volume-control-container {
-  display: none;
-} */
 audio::-webkit-media-controls-overflow-button {
   display: none;
 }
@@ -436,7 +436,7 @@ audio::-webkit-media-controls {
 }
 
 .commentsDiv {
-  height: 500px;
+  height: 65vh;
   overflow: auto;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -673,6 +673,10 @@ audio::-webkit-media-controls {
   }
 
   .leftHandSide {
+    padding: 0px;
+  }
+
+  .rightHandSide {
     padding: 0px;
   }
 
