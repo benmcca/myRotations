@@ -259,6 +259,8 @@ const MusicList = () => {
       key = "a";
     } else if (buttonType === "skip") {
       key = "d";
+    } else if (buttonType === "shuffle") {
+      key = "r";
     }
 
     if (key) {
@@ -412,8 +414,13 @@ const MusicList = () => {
           </div>
         )}
       </div>
-      <div className="controls centered">
-        {/* <img src={shuffleButton} className="controlButton" draggable="false" /> */}
+      <div className="controls">
+        {/* <img
+          src={shuffleButton}
+          className="controlButton shuffleButton"
+          draggable="false"
+          onClick={(e) => handleControlClick(e, "shuffle")}
+        /> */}
         <img
           src={rewindButton}
           className="controlButton"
