@@ -246,19 +246,40 @@ button {
   transition: all 0.1s;
 }
 
+.songPage {
+  padding: 20px;
+}
+.songPageContent {
+  display: flex;
+}
 .leftHandSide {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 50px;
-  /* background-color: #3953b2; */
 }
-
 .rightHandSide {
+  width: 50%;
   display: flex;
   flex-direction: column;
   padding-right: 50px;
-  /* background-color: red; */
+}
+
+.songPageImage {
+  box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
+  transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
+  height: 65vh;
+  /* On initial loading, scale to 1.12 then scale down */
+  scale: 1.12;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.songPageImage.scaledDown {
+  scale: 1;
+}
+.songPageImage:hover {
+  scale: 1.02;
 }
 
 .add-icon {
@@ -293,26 +314,6 @@ button {
 .delete-icon {
   width: 20px;
   opacity: 0.6;
-}
-
-.songPage {
-  padding: 20px;
-}
-
-.songPageImage {
-  box-shadow: 0px 10px 27px -1px rgba(0, 0, 0, 0.7);
-  transition: 0.75s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
-  height: 65vh;
-  /* On initial loading, scale to 1.12 then scale down */
-  scale: 1.12;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.songPageImage.scaledDown {
-  scale: 1;
-}
-.songPageImage:hover {
-  scale: 1.02;
 }
 
 .albumTitleDiv {
@@ -640,17 +641,24 @@ audio::-webkit-media-controls {
     font-weight: 400;
   }
 
-  .leftHandSide {
-    padding: 0px;
-  }
-
-  .rightHandSide {
-    padding: 0px;
-  }
-
   .songPage {
-    margin: 10px;
+    margin: 0px;
     margin-top: -15px;
+  }
+
+  .songPageContent {
+    flex-direction: column;
+  }
+
+  .leftHandSide {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .rightHandSide {
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .songPageImage {
@@ -686,12 +694,14 @@ audio::-webkit-media-controls {
   .musicContainer {
     flex-direction: column-reverse;
     justify-content: center;
-    height: 75px;
+    height: 95px;
   }
 
   .audioNameDiv {
     text-align: center;
     padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0px;
     font-size: 18px;
   }
