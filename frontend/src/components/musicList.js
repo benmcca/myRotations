@@ -12,6 +12,7 @@ import playButton from "./playButton.png";
 import skipButton from "./skipButton.png";
 import rewindButton from "./rewindButton.png";
 import shuffleButton from "./shuffleButton.png";
+import externalLinkButton from "./externalLinkButton.png";
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
@@ -269,6 +270,14 @@ const MusicList = () => {
     }
   }, []);
 
+  const handleExternalLinkClick = useCallback(
+    (event) => {
+      event.preventDefault();
+      window.open(music[currentIndex].collectionViewUrl, "_blank");
+    },
+    [music, currentIndex]
+  );
+
   // Handle arrow key presses
   const handleKeyDown = useCallback(
     (event) => {
@@ -332,14 +341,6 @@ const MusicList = () => {
     <div className="app">
       <div className="container">
         <Form className="searchBarRegion">
-          <button className="randomButton" onClick={handleRandomize}>
-            <img
-              className="dice-icon"
-              alt="Randomize"
-              src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/512x512/plain/dice.png"
-              draggable="false"
-            />
-          </button>
           <input
             className="musicListSearch"
             type="text"
@@ -349,7 +350,6 @@ const MusicList = () => {
             onKeyPress={(e) => e.key === "Enter" && handleSearchTitle(e)}
           />
         </Form>
-
         <div className="genres">
           {genres.map((genre) => {
             return (
@@ -365,7 +365,6 @@ const MusicList = () => {
             );
           })}
         </div>
-
         {music.length > 0 ? (
           <div className="coverflow" ref={el}>
             {music.map((song, index) => (
@@ -405,40 +404,48 @@ const MusicList = () => {
         ) : (
           <div className="noResults">No Results</div>
         )}
-        {music[currentIndex] && (
+        <div className="belowCoverflow">
           <div className="songInfo">
-            <div>
-              <h3>{music[currentIndex].collectionCensoredName}</h3>
-              <h5>{music[currentIndex].artistName}</h5>
-            </div>
+            {music[currentIndex] && (
+              <div>
+                <h3>{music[currentIndex].collectionCensoredName}</h3>
+                <h5>{music[currentIndex].artistName}</h5>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-      <div className="controls">
-        {/* <img
-          src={shuffleButton}
-          className="controlButton shuffleButton"
-          draggable="false"
-          onClick={(e) => handleControlClick(e, "shuffle")}
-        /> */}
-        <img
-          src={rewindButton}
-          className="controlButton"
-          draggable="false"
-          onClick={(e) => handleControlClick(e, "rewind")}
-        />
-        <img
-          src={playButton}
-          className="controlButton playButton"
-          draggable="false"
-          onClick={(e) => handleControlClick(e, "play")}
-        />
-        <img
-          src={skipButton}
-          className="controlButton"
-          draggable="false"
-          onClick={(e) => handleControlClick(e, "skip")}
-        />
+          <div className="controls">
+            <img
+              src={shuffleButton}
+              className="controlButton shuffleButton"
+              draggable="false"
+              onClick={(e) => handleControlClick(e, "shuffle")}
+            />
+            <img
+              src={rewindButton}
+              className="controlButton"
+              draggable="false"
+              onClick={(e) => handleControlClick(e, "rewind")}
+            />
+            <img
+              src={playButton}
+              className="controlButton playButton"
+              draggable="false"
+              onClick={(e) => handleControlClick(e, "play")}
+            />
+            <img
+              src={skipButton}
+              className="controlButton"
+              draggable="false"
+              onClick={(e) => handleControlClick(e, "skip")}
+            />
+            <img
+              src={externalLinkButton}
+              className="controlButton externalLinkButton"
+              draggable="false"
+              onClick={(e) => handleExternalLinkClick(e)}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

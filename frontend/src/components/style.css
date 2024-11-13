@@ -56,54 +56,6 @@ button {
   padding-top: 30px;
 }
 
-.dice-icon {
-  width: 32px;
-  opacity: 0.8;
-  transition: 0.3s all cubic-bezier(0.17, 0.75, 0.58, 0.95);
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(0px, 0px) rotate(5deg);
-  }
-  10% {
-    transform: translate(0px, 0px) rotate(-3deg);
-  }
-  20% {
-    transform: translate(0px, 0px) rotate(3deg);
-  }
-  30% {
-    transform: translate(0px, 0px) rotate(-5deg);
-  }
-  40% {
-    transform: translate(0px, 0px) rotate(3deg);
-  }
-  50% {
-    transform: translate(0px, 0px) rotate(-5deg);
-  }
-  60% {
-    transform: translate(0px, 0px) rotate(5deg);
-  }
-  70% {
-    transform: translate(0px, 0px) rotate(-3deg);
-  }
-  80% {
-    transform: translate(0px, 0px) rotate(3deg);
-  }
-  90% {
-    transform: translate(0px, 0px) rotate(-3deg);
-  }
-  100% {
-    transform: translate(0px, 0px) rotate(3deg);
-  }
-}
-
-.dice-icon:hover {
-  animation: shake 2s;
-  animation-iteration-count: infinite;
-  scale: 1.1;
-}
-
 .genres {
   padding-top: 25px;
   display: flex;
@@ -204,10 +156,11 @@ button {
   transform: translate(-33%, -42%);
 }
 
-.songInfo {
+.belowCoverflow {
   position: absolute;
   top: 70vh;
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -216,13 +169,23 @@ button {
   padding: 0;
 }
 
+.songInfo {
+  height: 75px;
+}
+.songInfo h3 {
+  height: 45px;
+  padding: 0;
+  margin: 0;
+}
 .songInfo h5 {
+  height: 30px;
   font-weight: 450;
+  padding: 0;
+  margin: 0;
 }
 
 .controls {
-  position: absolute;
-  top: 87%;
+  margin-top: 40px;
   width: 100%;
   text-align: center;
   justify-content: center;
@@ -242,10 +205,17 @@ button {
   margin-left: 50px;
   margin-right: 50px;
 }
-
 .shuffleButton {
   position: absolute;
   margin-left: -60px;
+}
+.externalLinkButton {
+  position: absolute;
+  margin-left: 30px;
+  scale: 0.8;
+}
+.externalLinkButton:hover {
+  scale: 0.95;
 }
 
 .noResults {
@@ -654,18 +624,18 @@ audio::-webkit-media-controls {
     transform: scale(0.7) translateZ(-400px);
   }
 
-  .songInfo {
+  .belowCoverflow {
     top: 68vh;
     width: 100%;
   }
 
-  .songInfo h3 {
+  .belowCoverflow h3 {
     font-size: 26px;
     margin-left: 30px;
     margin-right: 30px;
   }
 
-  .songInfo h5 {
+  .belowCoverflow h5 {
     font-size: 24px;
     font-weight: 400;
   }
