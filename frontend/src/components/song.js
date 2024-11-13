@@ -145,8 +145,8 @@ const Song = ({ user }) => {
             }
           }}
         />
-        <Row>
-          <Col className="leftHandSide">
+        <div className="songPageContent">
+          <div className="leftHandSide">
             <img
               className="songPageImage"
               id="songImage"
@@ -179,8 +179,8 @@ const Song = ({ user }) => {
                 }
               }}
             />
-          </Col>
-          <Col className="rightHandSide">
+          </div>
+          <div className="rightHandSide">
             <h3 className="albumTitleDiv">
               <div className="albumName">{song.collectionCensoredName}</div>
               <div className="genreDiv">
@@ -467,8 +467,8 @@ const Song = ({ user }) => {
                 </div>
               )}
             </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     </div>
   );
