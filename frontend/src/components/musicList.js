@@ -8,11 +8,11 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 
 import "./style.css";
-import playButton from "./playButton.png";
-import skipButton from "./skipButton.png";
-import rewindButton from "./rewindButton.png";
-import shuffleButton from "./shuffleButton.png";
-import externalLinkButton from "./externalLinkButton.png";
+import playButton from "./playButton.svg";
+import skipButton from "./skipButton.svg";
+import rewindButton from "./rewindButton.svg";
+import shuffleButton from "./shuffleButton.svg";
+import externalLinkButton from "./externalLinkButton.svg";
 
 const MusicList = () => {
   const [music, setMusic] = useState([]);
