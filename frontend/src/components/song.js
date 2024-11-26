@@ -3,8 +3,8 @@ import MusicDataService from "../services/musicDataService";
 import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import { flushSync } from "react-dom";
 
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import editButton from "./editIcon.png";
+import deleteButton from "./deleteIcon.webp";
 
 import "./style.css";
 
@@ -360,7 +360,7 @@ const Song = ({ user }) => {
                                 >
                                   <img
                                     className="edit-icon"
-                                    src="https://static-00.iconduck.com/assets.00/edit-pencil-icon-512x512-awl8cu9b.png"
+                                    src={editButton}
                                     draggable="false"
                                   />
                                 </Link>
@@ -372,7 +372,7 @@ const Song = ({ user }) => {
                                 >
                                   <img
                                     className="delete-icon"
-                                    src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
+                                    src={deleteButton}
                                     draggable="false"
                                   />
                                 </button>
